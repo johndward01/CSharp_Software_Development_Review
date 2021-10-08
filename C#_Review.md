@@ -4,8 +4,6 @@
 
 # Git
 
-
-
 *   **Version Control**: a means for managing your source code
 *   **Git:** A **[distributed version-control](https://en.wikipedia.org/wiki/Distributed_version_control) system (DVCS)** for tracking changes in [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development).  It is designed for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer), but it can be used to track changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file).
 *   **Github:** GitHub is where our **Remote repository** will live.  Our computer is where our **Local repository** will live. 
@@ -13,8 +11,6 @@
 
 
 ## Git Commands:
-
-
 
 *   **git init**: initializes a new repository in the current directory
 *   **git status**: The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git
@@ -33,8 +29,8 @@
 *   **git pull:** downloads content from a remote repository and immediately update the local repository to match that content  
 *   **_git log:_** display our commit history 
 *   **git diff:** enables you to compare changes in the working directory against a previously committed version
-*   **_git config --global user.email "[you@example.com](https://meet.google.com/linkredirect?authuser=0&dest=mailto%3Ayou%40example.com)" _**: sets the user email
-*   **_git config --global user.name "Your Name" _**: sets the user name
+*   **git config --global user.email "[youremailaddressgoeshere@gmail.com]"**: sets the user email
+*   **git config --global user.name "Your Name"**: sets the user name
 
 <br>
 
@@ -42,8 +38,6 @@
 
 
 ## C# Command-line
-
-
 
 *   **CLI**: The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications. The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest. 
 *   **Solution file (.sln)** - a solution is a container used by Visual Studio to organize one or more related projects.  When you open a solution in Visual Studio, it automatically loads all the projects the solution contains
@@ -53,8 +47,6 @@
 
 
 ### Dotnet Commands:
-
-
 
 *   **dotne**t **&lt;command>**: dotnet is a tool for managing .NET source code and binaries. It exposes commands that perform specific tasks, such as dotnet build and dotnet run.
 *   **dotnet new**: Creates a new project, configuration file, or solution based on the specified template.
@@ -69,8 +61,6 @@
 
 #### 	Bonus (ASP.NET MVC dotnet command): 
 
-
-
 *   **mkdir** VS_Code-MVC
 *   **cd** VS_Code-MVC
 *   **dotnet new mvc**
@@ -83,8 +73,6 @@
 ## Value and Reference Types
 
 C# is a strongly AND statically typed object-oriented programming language.
-
-
 
 *   **Strongly typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
 *   **Statically typed**: every variable must have a type at compile time.
