@@ -1,5 +1,6 @@
 # Vocabulary 
 
+<br>
 
 # Git
 
@@ -35,6 +36,7 @@
 *   **_git config --global user.email "[you@example.com](https://meet.google.com/linkredirect?authuser=0&dest=mailto%3Ayou%40example.com)" _**: sets the user email
 *   **_git config --global user.name "Your Name" _**: sets the user name
 
+<br>
 
 # C#
 
@@ -76,6 +78,7 @@
 
 **<span style="text-decoration:underline;">Type the following commands into the terminal</span>**
 
+<br>
 
 ## Value and Reference Types
 
@@ -99,16 +102,11 @@ C# is a strongly AND statically typed object-oriented programming language.
 
 ![alt_text](CSharp_Data-Types.png)
 
-
-![alt_text](images/image1.png "image_tooltip")
-
-
+<br>
 
 ## C# Variables
 
 A variable is a memory location. It has a name that is associated with that location. The memory location is used to hold data. The key difference when comparing a constant to a variable is that the value associated with a variable name may change during the execution of the program.
-
-
 
 *   **Variable**: A variable is a container for storing value. 
 *   **Constant**: A constant is a container for storing a value that never changes.
@@ -124,10 +122,9 @@ A variable is a memory location. It has a name that is associated with that loca
     *   Example: firstName = “John”;
     *   Example: int age = 11; // Declaring and Initializing a variable
 
+<br>
 
 ## C# Operators
-
-
 
 *   **Operator**: Operators are special symbols that perform actions on operands
     *   Example : 2 + 2 ( **2** is the operand and **+** is the operator)
@@ -145,10 +142,9 @@ A variable is a memory location. It has a name that is associated with that loca
 *   **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
 *   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side otherwise the compiler will raise an error.
 
+<br>
 
 ## Selection Statements
-
-
 
 *   **Selection Statement**: Selection statements enable you to branch to different sections of code, depending on one or more specified conditions. The components when concerning selection statements are **if**, **else if**, **else**, and **switch/case**.
 *   **switch**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
@@ -156,10 +152,9 @@ A variable is a memory location. It has a name that is associated with that loca
 *   **break**: Terminates the **switch/case** statement.
 *   **case**: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
 
+<br>
 
-## C# Syntax
-
-
+## C# Syntax Sugar
 
 *   **CCR**: Clear, Concise, and Readable
 *   **Syntax**: **Syntax** is the grammar for programming
@@ -173,10 +168,9 @@ A variable is a memory location. It has a name that is associated with that loca
     *   Example : DateTime day1 = new DateTime
 *   **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
 
+<br>
 
 ## Iteration Statements & Loops
-
-
 
 *   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
 *   **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
@@ -189,19 +183,16 @@ A variable is a memory location. It has a name that is associated with that loca
 
 Recap:
 
-
-
 1. Use a while loop if you need to execute some code until something happens.
 2. Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
 3. Use a for loop if you need to execute some code a specific number of times. 
 4. Use a foreach loop if you need to execute some code on each element in a collection of elements.
 
+<br>
 
 ## Methods/Functions
 
 **Method**: A method, or function, helps you separate your code into modules that perform a given task... You execute this code by calling the Method. In C# a method consists of a few things:
-
-
 
 *   **Access Modifiers**: Access modifiers are keywords used to specify the declared accessibility of a member or a type.
 *   **Return Type**: the type returned by the method, or void when not returning anything
@@ -212,10 +203,9 @@ Recap:
 *   **Scope/Body**: the block of code to be executed when the method is called
 *   **Argument**: the value you pass into the function when it is being called
 
+<br>
 
 ## Method Overloading
-
-
 
 *   **Method Overloading**: When multiple methods share the same name but have a different signature
     *   1. The number of parameters
@@ -228,25 +218,24 @@ Recap:
     *   You should not use ref or out modifiers to overload methods.
     *   You cannot overload method declarations that differ only by return type.
 
+<br>
 
 ## Arrays & Lists
-
-
 
 *   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
 *   **Collections**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
+<br>
 
 ## Classes
 
 Before classes and Object-Oriented Programming was a thing, programmers used functional programming as a programming paradigm...
 
-
-
 *   **Functional Programming**: Functional programming allows building a program using mathematical functions. In other words, it binds the program into a purely mathematical function. Using functional programming, the developer can build a program as a combination of separate mathematical functions.
 *   **Object-Oriented Programming**: Object-oriented programming (OOP) is a [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) based on the concept of "[objects](https://en.wikipedia.org/wiki/Object_(computer_science))", which can contain [data](https://en.wikipedia.org/wiki/Data) and code: data in the form of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) (often known as attributes or properties), and code, in the form of procedures (often known as [methods](https://en.wikipedia.org/wiki/Method_(computer_science))).
 *   **Class**: Classes are the cornerstone of Object-Oriented Programming. They help you take all the properties and behaviors of an object in your program, and combine them into a single object, then re-use that object wherever you need it in your program. Using classes in your code enables you to implement **Encapsulation, Abstraction, Inheritance, and Polymorphism**.
-*   **Objec**t: An object is defined as a singular instance of a class or type. A class can be thought of as a blueprint or a cookie cutter. A class describes an object, but it is not that object.
+*   **Object**: An object is defined as a singular instance of a class or type. A class can be thought of as a blueprint or a cookie cutter. A class describes an object, but it is not that object.
+
 *   **Class Members**: Classes have members sort of like how methods have variables; however, classes are not only limited to variables. Examples:
     *   **Fields** - a variable of any type that is declared directly in a class or struct.
     *   **Properties** - a member that provides a mechanism to read, write, or compute the value of a private field.
@@ -263,5 +252,7 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
     1. **Fields/Properties** - **OPTIONAL**
     2. **Methods** - **OPTIONAL**
 
+<br>
 
 ## Encapsulation
+
