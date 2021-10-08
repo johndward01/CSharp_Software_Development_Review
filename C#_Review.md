@@ -20,7 +20,7 @@
 *   `git pull`: pulls the latest version of the remote repository to our machine.
 *   `git add <filename goes here>`: stages only the specified file
 *   `git add .`: stages all files in the directory so they are ready to commit
-*   `git commit -m “message goes here”`: commits the changes in the currently staged files and includes a message
+*   `git commit -m "message goes here"`: commits the changes in the currently staged files and includes a message
 *   `git branch`: lists the branches in the repository
 *   `git branch <branchName>`: creates a new branch  
 *   `git checkout <branchName>`: switches to a specific branch  
@@ -74,8 +74,8 @@
 
 C# is a strongly AND statically typed object-oriented programming language.
 
-*   **Strongly typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
-*   **Statically typed**: every variable must have a type at compile time.
+*   **Strongly typed**: every variable must have a type at compile time.
+*   **Statically typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
 *   **Signed**: A signed integer is one with either a plus or minus sign  
 
     in front. (It can be either positive or negative)
@@ -85,7 +85,6 @@ C# is a strongly AND statically typed object-oriented programming language.
 *   **The Heap**: The Heap is used for dynamic memory allocation. This is where Reference types are stored. Elements can be removed in any order from the heap.
 *   **Value Type**: A variable of a value type contains an instance of the type.
 *   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
-
 
 
 ![alt_text](CSharp_Data-Types.png)
@@ -105,28 +104,41 @@ A variable is a memory location. It has a name that is associated with that loca
 *   **Pascal Case**: The first letter of every word is uppercase
     *   Example: PascalCaseExample
 *   **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
-    *   Example: string firstName;
+    *   Example: 
+    ```cs
+    string firstName;
+    ```
 *   **Initializing a Variable**: To initialize a variable, you must assign that variable a value
-    *   Example: firstName = “John”;
-    *   Example: int age = 11; // Declaring and Initializing a variable
+    *   Example: 
+    ```cs
+    firstName = "John";
+    ```
+*   **Declaring and Initializing a variableExample**: 
+    *   Example:
+    ```cs
+    int age = 11; // Declaring and Initializing a variable
+    ```
 
 <br>
 
 ## C# Operators
 
 *   **Operator**: Operators are special symbols that perform actions on operands
-    *   Example : 2 + 2 ( **2** is the operand and **+** is the operator)
+    *   Example : `2 + 2` ( **2** is the operand and **+** is the operator)
 *   **Operand**: The quantity on which the operation is performed.
 *   **Unary Operator**: An operator with only 1 operand.
-    *   Example: x **++**;
-    *   Example: **!** isTrue;
-    *   Example: **-** **-** x;
+    *   Example: `x++`
+    *   Example: `!isTrue;`
+    *   Example: `--x;`
 *   **Binary Operator**: An operator with 2 operands.
-    *   Example: 1 + 1; (**+** is the binary operator)
+    *   Example: `1 + 1`; (**+** is the binary operator)
 *   **Ternary Operator**: An operator that requires 3 operands.
-    *   Example: var x = x &lt; y ? true : false; (**?** is the ternary operator)
+    *   Example: 
+    ```cs
+    var x = x < y ? true : false;` //  ? is the ternary operator
+    ```
 *   **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
-*   **Relational Operator**s: Relational operators are used for comparison of two values.
+*   **Relational Operators**: Relational operators are used for comparison of two values.
 *   **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
 *   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side otherwise the compiler will raise an error.
 
