@@ -13,24 +13,24 @@
 ## Git Commands:
 
 *   `git init`: initializes a new repository in the current directory
-*   **git status**: The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git
-*   **git clone &lt;remote url>**: puts a copy of the remote repository on our machine 
-*   **git push**: push those changes to the remote repository 
-    *   You must first use **git push -u origin master** BEFORE you can just use **git push**
-*   **git pull**: pulls the latest version of the remote repository to our machine.
-*   **git add &lt;filename>**: stages only the specified file
-*   **git add .** -> stages all files in the directory so they are ready to commit
-*   **git commit -m “message”**: commits the changes in the currently staged files and includes a message
-*   **git branch**: lists the branches in the repository
-*   **git branch &lt;name>**: creates a new branch  
-*   **git checkout &lt;name>:** switches to a specific branch  
-*   **git checkout –b &lt;name>:** creates a new branch, and switches to that branch at the same time  
-*   **git merge &lt;name>:** merges a specific branch into the current branch 
-*   **git pull:** downloads content from a remote repository and immediately update the local repository to match that content  
-*   **_git log:_** display our commit history 
-*   **git diff:** enables you to compare changes in the working directory against a previously committed version
-*   **git config --global user.email "[youremailaddressgoeshere@gmail.com]"**: sets the user email
-*   **git config --global user.name "Your Name"**: sets the user name
+*   `git status`: The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git
+*   `git clone <remote url goes here>`: puts a copy of the remote repository on our machine 
+*   `git push`: push those changes to the remote repository 
+    *   You must first use `git push -u origin main` BEFORE you can just use `git push`
+*   `git pull`: pulls the latest version of the remote repository to our machine.
+*   `git add <filename goes here>`: stages only the specified file
+*   `git add .`: stages all files in the directory so they are ready to commit
+*   `git commit -m “message goes here”`: commits the changes in the currently staged files and includes a message
+*   `git branch`: lists the branches in the repository
+*   `git branch <branchName>`: creates a new branch  
+*   `git checkout <branchName>`: switches to a specific branch  
+*   `git checkout –b <branchName>`: creates a new branch, and switches to that branch at the same time  
+*   `git merge <branchName>`: merges a specific branch into the current branch 
+*   `git pull`: downloads content from a remote repository and immediately update the local repository to match that content  
+*   `git log`: display our commit history 
+*   `git diff`: enables you to compare changes in the working directory against a previously committed version
+*   `git config --global user.email "[youremailaddressgoeshere@gmail.com]"`: sets the user email
+*   `git config --global user.name "Your Name"`: sets the user name
 
 <br>
 
