@@ -29,7 +29,7 @@
 *   `git pull`: downloads content from a remote repository and immediately update the local repository to match that content  
 *   `git log`: display our commit history 
 *   `git diff`: enables you to compare changes in the working directory against a previously committed version
-*   `git config --global user.email "youremailaddressgoeshere@gmail.com"`: sets the user email
+*   `git config --global user.email "YourEmailAddressGoesHere@gmail.com"`: sets the user email
 *   `git config --global user.name "Your Name"`: sets the user name
 
 <br>
