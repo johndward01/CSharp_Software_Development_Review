@@ -103,18 +103,18 @@ A variable is a memory location. It has a name that is associated with that loca
     *   Example: camelCaseExample
 *   **Pascal Case**: The first letter of every word is uppercase
     *   Example: PascalCaseExample
+
 *   **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
-    *   Example: 
     ```cs
     string firstName;
     ```
+
 *   **Initializing a Variable**: To initialize a variable, you must assign that variable a value
-    *   Example: 
     ```cs
     firstName = "John";
     ```
+
 *   **Declaring and Initializing a variableExample**: 
-    *   Example:
     ```cs
     int age = 11; // Declaring and Initializing a variable
     ```
@@ -133,7 +133,6 @@ A variable is a memory location. It has a name that is associated with that loca
 *   **Binary Operator**: An operator with 2 operands.
     *   Example: `1 + 1`; (**+** is the binary operator)
 *   **Ternary Operator**: An operator that requires 3 operands.
-    *   Example: 
     ```cs
     var x = x < y ? true : false;` //  ? is the ternary operator
     ```
