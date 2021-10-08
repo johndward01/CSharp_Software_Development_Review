@@ -134,7 +134,7 @@ A variable is a memory location. It has a name that is associated with that loca
     *   Example: `1 + 1`; (**+** is the binary operator)
 *   **Ternary Operator**: An operator that requires 3 operands.
     ```cs
-    var x = x < y ? true : false;` //  ? is the ternary operator
+    var answer = x < y ? true : false;` //  ? is the ternary operator
     ```
 *   **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
 *   **Relational Operators**: Relational operators are used for comparison of two values.
