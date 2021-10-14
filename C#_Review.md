@@ -114,7 +114,7 @@ A variable is a memory location. It has a name that is associated with that loca
     firstName = "John";
     ```
 
-*   **Declaring and Initializing a variableExample**: 
+*   **Declaring and Initializing a variable**: 
     ```cs
     int age = 11; // Declaring and Initializing a variable
     ```
