@@ -134,12 +134,70 @@ A variable is a memory location. It has a name that is associated with that loca
     *   Example: `1 + 1`; (**+** is the binary operator)
 *   **Ternary Operator**: An operator that requires 3 operands.
     ```cs
-    var answer = x < y ? true : false;` //  ? is the ternary operator
+    var answer = x < y ? true : false;  // ? is the ternary operator
     ```
 *   **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
+```cs
+int num1 = 0;
+int num2 = 10;
+
+int answer = num1 + num2; // Add
+answer = num1 - num2; // Subtract
+answer = num1 * num2; // Multiply
+answer = num1 / num2; // Divide
+answer = num1 % num2; // Modulus (gets the remainder after division)
+answer = Math.Pow(num1, num2); // Exponent (the first number raised to the second number)
+```
 *   **Relational Operators**: Relational operators are used for comparison of two values.
+```cs
+int num1 = 0;
+int num2 = 1;
+
+bool isGreater = num1 > num2; // greater than... false
+isGreater = num1 < num2; // less than... true
+isGreater = num1 >= num2; // greater than OR equal to... false
+isGreater = num1 <= num2; // less than OR equal to... true
+```
 *   **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
+
+- `&&` **Logical AND** 
+```cs
+int x = 10;
+int y = 11;
+// the left expression AND the right expression must evaluate to be TRUE in order for the code to be run
+if (x < y && x == 10) // both conditions are true so the code runs
+{
+    x++;
+}
+```
+- `||` **Logical OR** 
+```cs
+int x = 10;
+int y = 20;
+// the left expression OR the right expression must evaluate to be TRUE in order for the code to be run
+if (x > y && x == 10) // code still runs even though x is not less than y
+{
+    x++;
+}
+```
+- `!` **Logical NOT** 
+```cs
+bool isPresent = true;
+// the NOT operator ! flips the value to the opposite one
+Console.WriteLine(!isPresent); // outputs false
+```
+
 *   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side otherwise the compiler will raise an error.
+```cs
+int x = 100; // = is the simple assignment operator
+int y = 200;
+
+x += y; // same as long form x = x + y;
+x -= y; // same as long form x = x - y;
+x *= y; // same as long form x = x * y;
+x /= y; // same as long form x = x / y;
+x %= y; // same as long form x = x % y;
+```
 
 <br>
 
