@@ -206,7 +206,7 @@ x %= y; // same as long form x = x % y;
 ## Selection Statements
 
 **Selection statements** enable you to branch to different sections of code, depending on one or more specified conditions. The components when concerning selection statements are **if**, **else if**, **else**, and **switch/case**.
-*   **if**
+*   `if`
 ```cs
 bool condition = true;
 
@@ -214,7 +214,8 @@ if (condition)
 {
     Console.WriteLine("Because the condition was true this code is executed");
 }
-
+```
+```cs
 int x = 10; 
 int y = 11;
 
@@ -223,6 +224,35 @@ if (x == y)
     Console.WriteLine("This code is not run because the condition evaluated to false");
 }
 
+```
+
+- `if/else`
+
+```cs
+int num1 = 20;
+int num2 = 30;
+
+if(num1 == num2)
+{
+    Console.WriteLine("The condition is false therefore this code is NOT executed");
+}
+else
+{
+    Console.WriteLine("The above condition was false so the code in this scope IS executed ");
+}
+```
+
+- `if/else if/else`
+
+```cs
+int x = 1;
+int y = 2;
+int z = 3;
+
+if (x > y || y > x)
+{
+    Console.WriteLine();
+}
 ```
 
 *   **switch**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
