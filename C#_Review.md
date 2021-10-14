@@ -188,7 +188,8 @@ bool isPresent = true;
 Console.WriteLine(!isPresent); // outputs false
 ```
 
-*   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. The value on the right side must be of the same data-type of the variable on the left side otherwise the compiler will raise an error.
+*   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. 
+> Note: The **value** on the right side must be of the same **data-type** as the variable on the left side, otherwise the compiler will raise an error.
 ```cs
 int x = 100; // = is the simple assignment operator
 int y = 200;
@@ -204,7 +205,26 @@ x %= y; // same as long form x = x % y;
 
 ## Selection Statements
 
-*   **Selection Statement**: Selection statements enable you to branch to different sections of code, depending on one or more specified conditions. The components when concerning selection statements are **if**, **else if**, **else**, and **switch/case**.
+**Selection statements** enable you to branch to different sections of code, depending on one or more specified conditions. The components when concerning selection statements are **if**, **else if**, **else**, and **switch/case**.
+*   **if**
+```cs
+bool condition = true;
+
+if (condition)
+{
+    Console.WriteLine("Because the condition was true this code is executed");
+}
+
+int x = 10; 
+int y = 11;
+
+if (x == y)
+{
+    Console.WriteLine("This code is not run because the condition evaluated to false");
+}
+
+```
+
 *   **switch**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
 *   **default**: Specifies the code block to run if all else fails.
 *   **break**: Terminates the **switch/case** statement.
