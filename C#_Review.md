@@ -165,9 +165,9 @@ isGreater = num1 <= num2; // less than OR equal to... true
 int x = 10;
 int y = 11;
 // the left expression AND the right expression must evaluate to be TRUE in order for the code to be run
-if (x < y && x == 10) // both conditions are true so the code runs
+if (x < y && x == 10) 
 {
-    x++;
+    x++; // both conditions are true so the code runs
 }
 ```
 - `||` **Logical OR** 
@@ -175,9 +175,9 @@ if (x < y && x == 10) // both conditions are true so the code runs
 int x = 10;
 int y = 20;
 // the left expression OR the right expression must evaluate to be TRUE in order for the code to be run
-if (x > y && x == 10) // code still runs even though x is not less than y
+if (x > y && x == 10) 
 {
-    x++;
+    x++; // code still runs even though x is not less than y
 }
 ```
 - `!` **Logical NOT** 
