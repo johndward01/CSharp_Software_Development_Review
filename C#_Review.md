@@ -74,8 +74,8 @@
 
 C# is a strongly AND statically typed object-oriented programming language.
 
-*   **Strongly typed**: every variable must have a type at compile time.
-*   **Statically typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
+*   **Strongly typed**:  once a variable’s type is declared, it cannot change. (Although you can change its value)
+*   **Statically typed**: every variable must have a type at compile time.
 *   **Signed**: A signed integer is one with either a plus or minus sign  
 
     in front. (It can be either positive or negative)
