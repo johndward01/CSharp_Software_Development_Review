@@ -184,6 +184,7 @@ if (x > y && x == 10)
 ```cs
 bool isPresent = true;
 // the NOT operator ! flips the value to the opposite one
+
 Console.WriteLine(!isPresent); // outputs false
 ```
 
