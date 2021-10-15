@@ -226,7 +226,7 @@ if (x == y)
 
 ```
 
-- `if/else`
+- `if / else`
 
 ```cs
 int num1 = 20;
@@ -242,7 +242,7 @@ else
 }
 ```
 
-- `if/else if/else`
+- `if / else if / else`
 
 ```cs
 int x = 1;
@@ -251,14 +251,50 @@ int z = 3;
 
 if (x > y || y > x)
 {
-    Console.WriteLine();
+    Console.WriteLine("The condition is false therefore this code is NOT executed");
+}
+else if (z < y || z < x)
+{
+    Console.WriteLine("The condition here is also false therefore this code is NOT executed");
+}
+else
+{
+    Console.WriteLine("If all conditions are false, then this code IS executed");
 }
 ```
 
-*   **switch**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
+*   **switch/case**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
 *   **default**: Specifies the code block to run if all else fails.
 *   **break**: Terminates the **switch/case** statement.
 *   **case**: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
+```cs
+int day = 4;
+
+switch (day)
+{
+    case 0:
+        Console.WriteLine("Sunday");
+        break;
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    case 4:
+        Console.WriteLine("Thursday");
+        break;
+    case 5:
+        Console.WriteLine("Friday");
+        break;
+    case 6:
+        Console.WriteLine("Saturday");
+        break;
+} // outputs Thursday
+```
 
 <br>
 
