@@ -296,6 +296,15 @@ switch (day)
 } // outputs Thursday
 ```
 
+```cs
+public interface ICallable {}
+public class PhoneFactory : ICallable
+{
+    public void ICallable 
+
+}
+```
+
 <br>
 
 ## C# Syntax Sugar
