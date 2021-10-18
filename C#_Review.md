@@ -352,21 +352,42 @@ public class PhoneFactory : ICallable
 
 ## Iteration Statements & Loops
 
-*   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
-*   **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
-*   **for**: The “**for**” loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
-    *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     **int i = 0;**
-    *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     **i &lt; 10;**
-    *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     **i++;**
-    *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     **{  }**
-*   **foreach**: A “**foreach**” loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable).IEnumerable;
+*   `while`: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
+```cs
+int x = 10;
+while (x > 0)
+{
+    Console.WriteLine($"Loop #: {x}");
+    x--;
+}
 
-Recap:
+// output
+// Loop #: 10
+// Loop #: 9
+// Loop #: 8
+// Loop #: 7
+// Loop #: 6
+// Loop #: 5
+// Loop #: 4
+// Loop #: 3
+// Loop #: 2
+// Loop #: 1
 
-1. Use a while loop if you need to execute some code until something happens.
-2. Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
-3. Use a for loop if you need to execute some code a specific number of times. 
-4. Use a foreach loop if you need to execute some code on each element in a collection of elements.
+```
+*   `do-while`: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+*   `for`: The **for** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
+    *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     `int i = 0;`
+    *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     `i < 10;`
+    *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     `i++;`
+    *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     `{  }`
+*   `foreach`: A **foreach** loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable);
+
+#### Recap:
+
+1. Use a `while` loop if you need to execute some code until something happens.
+2. Use a `do-while` loop if you need to execute some code at least once, then continue execution until something happens.
+3. Use a `for` loop if you need to execute some code a specific number of times. 
+4. Use a `foreach` loop if you need to execute some code on each element in a collection of elements.
 
 <br>
 
