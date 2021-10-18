@@ -297,11 +297,28 @@ switch (day)
 ```
 
 ```cs
-public interface ICallable {}
+public interface ICallable 
+{
+    public ICallable GetPhone();
+}
+
 public class PhoneFactory : ICallable
 {
-    public void ICallable 
-
+    public static ICallable GetPhone(string phoneType)
+    {
+        switch (phoneType.ToLower())
+        {
+            case "android":
+                return new AndroidPhone();                    
+            case "apple":                    
+            case "iphone":
+                return new ApplePhone();
+            case "google":
+                return new GooglePhone();
+            default:
+                return new AndroidPhone();                    
+        }
+    }
 }
 ```
 
@@ -310,15 +327,25 @@ public class PhoneFactory : ICallable
 ## C# Syntax Sugar
 
 *   **CCR**: Clear, Concise, and Readable
-*   **Syntax**: **Syntax** is the grammar for programming
+*   **Syntax**: the grammar for programming
 *   **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
-    *   Example : Point p = new Point(); // Explicit 
-    *   Example : var p = new Point(); // Inferred (best practice)
+    *   Example:
+    ```cs
+    Point p = new Point(); // Explicit 
+    var p = new Point(); // Inferred (best practice)
+    ```
 *   **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
-    *   Example : var isGreater = num1 > num2 ? num1 : num2;
+    *   Example:
+    ```cs
+     var isGreater = num1 > num2 ? num1 : num2;
+    ```
 *    **Code Smell**:  Any indicator in a program that a potentially deep-seated issue is present.  (usually subjective and depends on factors including the particular language and experience)
 *   **Explicit Typing**: When you specifically say what each variable’s type is.
-    *   Example : DateTime day1 = new DateTime
+    *   Example:
+    ```cs
+    DateTime d = new DateTime();
+    Console.WriteLine(d.ToLongDateString());
+    ```
 *   **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
 
 <br>
