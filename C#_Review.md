@@ -355,6 +355,7 @@ var z = new List<int>(); // var -> List<int>
 
 ## Iteration Statements & Loops
 
+<<<<<<< HEAD
 *   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
 ```cs
 int counter = 5;
