@@ -329,44 +329,91 @@ public class PhoneFactory : ICallable
 *   **CCR**: Clear, Concise, and Readable
 *   **Syntax**: the grammar for programming
 *   **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
-    *   Example:
-    ```cs
-    Point p = new Point(); // Explicit 
-    var p = new Point(); // Inferred (best practice)
-    ```
+```cs
+Point p = new Point(); // Explicit 
+var p = new Point(); // Inferred (best practice)
+```
+
 *   **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
-    *   Example:
-    ```cs
-     var isGreater = num1 > num2 ? num1 : num2;
-    ```
+```cs
+    var isGreater = num1 > num2 ? num1 : num2;
+```
 *    **Code Smell**:  Any indicator in a program that a potentially deep-seated issue is present.  (usually subjective and depends on factors including the particular language and experience)
 *   **Explicit Typing**: When you specifically say what each variable’s type is.
     *   Example:
-    ```cs
-    DateTime d = new DateTime();
-    Console.WriteLine(d.ToLongDateString());
-    ```
+```cs
+DateTime d = new DateTime();
+Console.WriteLine(d.ToLongDateString());
+```
 *   **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
-
+```cs
+var x = 10; // var -> int
+var y = true; // var -> bool
+var z = new List<int>(); // var -> List<int>
+```
 <br>
 
 ## Iteration Statements & Loops
 
 *   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
+```cs
+int counter = 5;
+
+while (counter != 0)
+{
+    Console.Write($"{counter} "); // outputs => 5 4 3 2 1
+    counter--;
+}
+```
+
+<br>
+
 *   **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+```cs
+int counter = 5;
+do
+{
+    Console.Write($"{counter} "); // outputs => 5 4 3 2 1
+    counter--;
+} 
+while(counter != 0);
+```
+
+<br>
+
 *   **for**: The “**for**” loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
     *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     **int i = 0;**
     *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     **i &lt; 10;**
     *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     **i++;**
     *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     **{  }**
+```cs
+for(int i = 5; i > 0; i--)
+{
+    Console.Write($"{i} "); // outputs => 5 4 3 2 1     
+}
+```
+
+<br>
+
 *   **foreach**: A “**foreach**” loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable).IEnumerable;
 
-Recap:
+```cs
+var myList = new List<int>() {5, 4, 3, 2, 1 };
+foreach (var num in myList)
+{
+    Console.Write($"{num} "); // outputs => 5 4 3 2 1
+}
+```
+> Note: A foreach loop must be used on an already existing collection
 
-1. Use a while loop if you need to execute some code until something happens.
-2. Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
-3. Use a for loop if you need to execute some code a specific number of times. 
-4. Use a foreach loop if you need to execute some code on each element in a collection of elements.
+<br>
+
+### Recap:
+
+- Use a while loop if you need to execute some code until something happens.
+- Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
+- Use a for loop if you need to execute some code a specific number of times. 
+- Use a foreach loop if you need to execute some code on each element in a collection of elements.
 
 <br>
 
