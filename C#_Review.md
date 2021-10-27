@@ -529,6 +529,27 @@ var people = new List<Person>()
 }
 ```
 
+## Looping through Arrays and Lists:
+```cs
+// Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
+var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
+
+for (int i = 0; i < evenNumbers.Length; i++)
+{
+    Console.WriteLine(evenNumbers[i]);
+}
+```
+```cs
+// Declaring/Initializing a list of ints called oddNumbers then looping through it 1 by 1 and printing out each element to the console
+var oddNumbers = new List<int>() { 1, 3, 5, 7, 9 };
+
+foreach (var num in oddNumbers)
+{
+    Console.WriteLine(num);
+}
+
+```
+
 <br>
 
 ## Classes
