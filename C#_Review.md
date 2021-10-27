@@ -460,7 +460,7 @@ foreach (var num in myList)
 
 *   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
 
-## Declaring and Initializing Arrays:
+### Declaring and Initializing Arrays:
 ```cs
 // Example 1 => Declaring an int array of size 3 (explicitly)
 int[] myArray1 = new int[3];
@@ -480,9 +480,54 @@ var myArray3 = new int[] { 10, 11, 12 };
 int[] myArray4 = { 100, 200, 300 };
 ```
 
+### Accessing Elemets of Arrays:
+```cs
+string[] cars = { "Tesla", "Ford", "Honda", "Toyota" };
+
+// To access an element inside an array, use the name of the array with bracket [] notation
+
+Console.WriteLine(cars[0]); // 0 is the first index so the output is: Tesla
+Console.WriteLine(cars[2]); // output: Honda
+
+// You can run expressions inside of the brackets as long as that expression evaluates to an INTEGER
+Console.WriteLine(cars[cars.Length - 1]); // output: Toyota
+// cars.Length = 4 so we subtract 1 to get the 3rd index or the last element in the array
+
+Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeException)
+```
+
+----
 
 *   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
+### Declaring and Initializing Lists:
+```cs
+public class Person
+{
+    public string FirstName {get; set;}
+    public string LastName {get; set;}
+
+    public Person(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
+}
+
+// Declaring an empty List of type int called numbers
+var numbers = new List<int>();
+
+// Declaring and Initializing a list of string called myList with 3 string values
+var myList = new List<string>() { "The 1st string","The 2nd string", "The 3rd string" };
+
+// Declaring and Initializing a list of Person Objects called people (object initializer syntax)
+var people = new List<Person>() 
+{ 
+    new Person("John", "Ward"),
+    new Person("John", "Doe"),
+    new Person("Jane", "Smith")
+}
+```
 
 <br>
 
