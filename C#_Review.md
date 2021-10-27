@@ -524,8 +524,8 @@ var myList = new List<string>() { "The 1st string","The 2nd string", "The 3rd st
 var people = new List<Person>() 
 { 
     new Person("John", "Ward"),
-    new Person("John", "Doe"),
-    new Person("Jane", "Smith")
+    new Person("Jon", "Doe"),
+    new Person("Jane", "Doe")
 }
 ```
 
