@@ -459,7 +459,29 @@ foreach (var num in myList)
 ## Arrays & Lists
 
 *   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
-*   **Collections**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+## Declaring and Initializing Arrays:
+```cs
+// Example 1 => Declaing an int array of size 3 (explicitly)
+int[] myArray1 = new int[3];
+
+// Example 1 => Initializing each of the array's indices 
+myArray1[0] = 10;
+myArray1[1] = 20;
+myArray1[2] = 30;
+
+// Example 2 => Declaring and initializing an int array (at the same time)
+int[] myArray2 = new int[] { 3, 2, 1 };
+
+// Example 3 => Declaing and initializing an int array (implicitly)
+var myArray3 = new int[] { 10, 11, 12 };
+
+// Example 4 => Shorthad Syntax
+int[] myArray4 = { 100, 200, 300 };
+```
+
+
+*   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
 
 <br>
