@@ -439,11 +439,20 @@ foreach (var num in myList)
     *   2. The order of the parameters
     *   3. The data types of the parameters
 *   **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
+
+![Method Overloading](img/MethodOverloading.png)
+
 *   **Rules for overloading a method**
     *   Where a parameter represents the same value as that in another method, the parameters should have the same name.
     *   Parameters with the same name should appear in the same position in each method’s parameter list.
     *   You should not use ref or out modifiers to overload methods.
     *   You cannot overload method declarations that differ only by return type.
+
+
+
+### Method Overloading Examples `Console.WriteLine();`
+
+![Console.WriteLine()](img/cw-Overload.png)
 
 <br>
 
@@ -451,6 +460,7 @@ foreach (var num in myList)
 
 *   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
 *   **Collections**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
 
 <br>
 
