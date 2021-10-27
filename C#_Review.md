@@ -462,7 +462,7 @@ foreach (var num in myList)
 
 ## Declaring and Initializing Arrays:
 ```cs
-// Example 1 => Declaing an int array of size 3 (explicitly)
+// Example 1 => Declaring an int array of size 3 (explicitly)
 int[] myArray1 = new int[3];
 
 // Example 1 => Initializing each of the array's indices 
@@ -473,7 +473,7 @@ myArray1[2] = 30;
 // Example 2 => Declaring and initializing an int array (at the same time)
 int[] myArray2 = new int[] { 3, 2, 1 };
 
-// Example 3 => Declaing and initializing an int array (implicitly)
+// Example 3 => Declaring and initializing an int array (implicitly)
 var myArray3 = new int[] { 10, 11, 12 };
 
 // Example 4 => Shorthad Syntax
