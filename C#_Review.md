@@ -86,8 +86,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 *   **Value Type**: A variable of a value type contains an instance of the type.
 *   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
 
-
-![alt_text](CSharp_Data-Types.png)
+![alt_text](img/CSharp_Data-Types.png)
 
 <br>
 
@@ -355,7 +354,6 @@ var z = new List<int>(); // var -> List<int>
 
 ## Iteration Statements & Loops
 
-<<<<<<< HEAD
 *   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
 ```cs
 int counter = 5;
@@ -407,7 +405,6 @@ foreach (var num in myList)
 ```
 > Note: A foreach loop must be used on an already existing collection
 
-<br>
 
 ### Recap:
 
@@ -430,6 +427,8 @@ foreach (var num in myList)
 *   **Parameters**: an optional list of variables to be passed to the method
 *   **Scope/Body**: the block of code to be executed when the method is called
 *   **Argument**: the value you pass into the function when it is being called
+
+![alt_text](img/5PartsOfMethods.png)
 
 <br>
 
