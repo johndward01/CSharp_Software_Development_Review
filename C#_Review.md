@@ -212,16 +212,18 @@ bool condition = true;
 
 if (condition)
 {
-    Console.WriteLine("Because the condition was true this code is executed");
+    Console.WriteLine("Because the condition was true this code IS executed");
 }
 ```
+___
+
 ```cs
 int x = 10; 
 int y = 11;
 
 if (x == y)
 {
-    Console.WriteLine("This code is not run because the condition evaluated to false");
+    Console.WriteLine("This code IS NOT run because the condition evaluated to false");
 }
 
 ```
@@ -234,7 +236,7 @@ int num2 = 30;
 
 if(num1 == num2)
 {
-    Console.WriteLine("The condition is false therefore this code is NOT executed");
+    Console.WriteLine("The condition is false therefore this code IS NOT executed");
 }
 else
 {
@@ -251,11 +253,11 @@ int z = 3;
 
 if (x > y || y > x)
 {
-    Console.WriteLine("The condition is false therefore this code is NOT executed");
+    Console.WriteLine("The condition is false therefore this code IS NOT executed");
 }
 else if (z < y || z < x)
 {
-    Console.WriteLine("The condition here is also false therefore this code is NOT executed");
+    Console.WriteLine("The condition here is also false therefore this code IS NOT executed");
 }
 else
 {
@@ -295,6 +297,7 @@ switch (day)
         break;
 } // outputs Thursday
 ```
+___
 
 ```cs
 public interface ICallable 
@@ -374,12 +377,34 @@ while (x > 0)
 // Loop #: 1
 
 ```
+
+
 *   `do-while`: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+```cs
+int n = 0;
+do
+{
+    Console.Write(n);
+    n++;
+} while (n < 5);
+// Output:
+// 01234
+```
 *   `for`: The **for** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
     *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     `int i = 0;`
     *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     `i < 10;`
     *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     `i++;`
     *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     `{  }`
+```cs
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine(i);
+}
+// Output:
+// 0
+// 1
+// 2
+```
 *   `foreach`: A **foreach** loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable);
 
 #### Recap:
