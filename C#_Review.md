@@ -86,8 +86,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 *   **Value Type**: A variable of a value type contains an instance of the type.
 *   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
 
-
-![alt_text](CSharp_Data-Types.png)
+![alt_text](img/CSharp_Data-Types.png)
 
 <br>
 
@@ -332,51 +331,82 @@ public class PhoneFactory : ICallable
 *   **CCR**: Clear, Concise, and Readable
 *   **Syntax**: the grammar for programming
 *   **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
-    *   Example:
-    ```cs
-    Point p = new Point(); // Explicit 
-    var p = new Point(); // Inferred (best practice)
-    ```
+```cs
+Point p = new Point(); // Explicit 
+var p = new Point(); // Inferred (best practice)
+```
+
 *   **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
-    *   Example:
-    ```cs
-     var isGreater = num1 > num2 ? num1 : num2;
-    ```
+```cs
+    var isGreater = num1 > num2 ? num1 : num2;
+```
 *    **Code Smell**:  Any indicator in a program that a potentially deep-seated issue is present.  (usually subjective and depends on factors including the particular language and experience)
 *   **Explicit Typing**: When you specifically say what each variable’s type is.
     *   Example:
-    ```cs
-    DateTime d = new DateTime();
-    Console.WriteLine(d.ToLongDateString());
-    ```
+```cs
+DateTime d = new DateTime();
+Console.WriteLine(d.ToLongDateString());
+```
 *   **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
-
+```cs
+var x = 10; // var -> int
+var y = true; // var -> bool
+var z = new List<int>(); // var -> List<int>
+```
 <br>
 
 ## Iteration Statements & Loops
 
-*   `while`: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
+*   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
 ```cs
-int x = 10;
-while (x > 0)
+int counter = 5;
+
+while (counter != 0)
 {
-    Console.WriteLine($"Loop #: {x}");
-    x--;
+    Console.Write($"{counter} "); // outputs => 5 4 3 2 1
+    counter--;
 }
-
-// output
-// Loop #: 10
-// Loop #: 9
-// Loop #: 8
-// Loop #: 7
-// Loop #: 6
-// Loop #: 5
-// Loop #: 4
-// Loop #: 3
-// Loop #: 2
-// Loop #: 1
-
 ```
+
+<br>
+
+*   **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+```cs
+int counter = 5;
+do
+{
+    Console.Write($"{counter} "); // outputs => 5 4 3 2 1
+    counter--;
+} 
+while(counter != 0);
+```
+
+<br>
+
+*   **for**: The “**for**” loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
+    *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     **int i = 0;**
+    *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     **i &lt; 10;**
+    *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     **i++;**
+    *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     **{  }**
+```cs
+for(int i = 5; i > 0; i--)
+{
+    Console.Write($"{i} "); // outputs => 5 4 3 2 1     
+}
+```
+
+<br>
+
+*   **foreach**: A “**foreach**” loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable).IEnumerable;
+
+```cs
+var myList = new List<int>() {5, 4, 3, 2, 1 };
+foreach (var num in myList)
+{
+    Console.Write($"{num} "); // outputs => 5 4 3 2 1
+}
+```
+<<<<<<< HEAD
 
 
 *   `do-while`: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
@@ -406,13 +436,17 @@ for (int i = 0; i < 3; i++)
 // 2
 ```
 *   `foreach`: A **foreach** loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable);
+=======
+> Note: A foreach loop must be used on an already existing collection
 
-#### Recap:
+>>>>>>> d47cd05c0d5693fda8d04bd53970dbd0d0fff9cf
 
-1. Use a `while` loop if you need to execute some code until something happens.
-2. Use a `do-while` loop if you need to execute some code at least once, then continue execution until something happens.
-3. Use a `for` loop if you need to execute some code a specific number of times. 
-4. Use a `foreach` loop if you need to execute some code on each element in a collection of elements.
+### Recap:
+
+- Use a while loop if you need to execute some code until something happens.
+- Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
+- Use a for loop if you need to execute some code a specific number of times. 
+- Use a foreach loop if you need to execute some code on each element in a collection of elements.
 
 <br>
 
@@ -429,6 +463,8 @@ for (int i = 0; i < 3; i++)
 *   **Scope/Body**: the block of code to be executed when the method is called
 *   **Argument**: the value you pass into the function when it is being called
 
+![alt_text](img/5PartsOfMethods.png)
+
 <br>
 
 ## Method Overloading
@@ -438,18 +474,116 @@ for (int i = 0; i < 3; i++)
     *   2. The order of the parameters
     *   3. The data types of the parameters
 *   **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
+
+![Method Overloading](img/MethodOverloading.png)
+
 *   **Rules for overloading a method**
     *   Where a parameter represents the same value as that in another method, the parameters should have the same name.
     *   Parameters with the same name should appear in the same position in each method’s parameter list.
     *   You should not use ref or out modifiers to overload methods.
     *   You cannot overload method declarations that differ only by return type.
 
+
+
+### Method Overloading Examples `Console.WriteLine();`
+
+![Console.WriteLine()](img/cw-Overload.png)
+
 <br>
 
 ## Arrays & Lists
 
 *   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
-*   **Collections**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+### Declaring and Initializing Arrays:
+```cs
+// Example 1 => Declaring an int array of size 3 (explicitly)
+int[] myArray1 = new int[3];
+
+// Example 1 => Initializing each of the array's indices 
+myArray1[0] = 10;
+myArray1[1] = 20;
+myArray1[2] = 30;
+
+// Example 2 => Declaring and initializing an int array (at the same time)
+int[] myArray2 = new int[] { 3, 2, 1 };
+
+// Example 3 => Declaring and initializing an int array (implicitly)
+var myArray3 = new int[] { 10, 11, 12 };
+
+// Example 4 => Shorthad Syntax
+int[] myArray4 = { 100, 200, 300 };
+```
+
+### Accessing Elemets of Arrays:
+```cs
+string[] cars = { "Tesla", "Ford", "Honda", "Toyota" };
+
+// To access an element inside an array, use the name of the array with bracket [] notation
+
+Console.WriteLine(cars[0]); // 0 is the first index so the output is: Tesla
+Console.WriteLine(cars[2]); // output: Honda
+
+// You can run expressions inside of the brackets as long as that expression evaluates to an INTEGER
+Console.WriteLine(cars[cars.Length - 1]); // output: Toyota
+// cars.Length = 4 so we subtract 1 to get the 3rd index or the last element in the array
+
+Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeException)
+```
+
+----
+
+*   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+### Declaring and Initializing Lists:
+```cs
+public class Person
+{
+    public string FirstName {get; set;}
+    public string LastName {get; set;}
+
+    public Person(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
+}
+
+// Declaring an empty List of type int called numbers
+var numbers = new List<int>();
+
+// Declaring and Initializing a list of string called myList with 3 string values
+var myList = new List<string>() { "The 1st string","The 2nd string", "The 3rd string" };
+
+// Declaring and Initializing a list of Person Objects called people (object initializer syntax)
+var people = new List<Person>() 
+{ 
+    new Person("John", "Ward"),
+    new Person("Jon", "Doe"),
+    new Person("Jane", "Doe")
+}
+```
+
+## Looping through Arrays and Lists:
+```cs
+// Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
+var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
+
+for (int i = 0; i < evenNumbers.Length; i++)
+{
+    Console.WriteLine(evenNumbers[i]);
+}
+```
+```cs
+// Declaring/Initializing a list of ints called oddNumbers then looping through it 1 by 1 and printing out each element to the console
+var oddNumbers = new List<int>() { 1, 3, 5, 7, 9 };
+
+foreach (var num in oddNumbers)
+{
+    Console.WriteLine(num);
+}
+
+```
 
 <br>
 
