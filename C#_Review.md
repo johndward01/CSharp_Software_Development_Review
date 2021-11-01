@@ -406,7 +406,6 @@ foreach (var num in myList)
     Console.Write($"{num} "); // outputs => 5 4 3 2 1
 }
 ```
-<<<<<<< HEAD
 
 
 *   `do-while`: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
@@ -436,10 +435,6 @@ for (int i = 0; i < 3; i++)
 // 2
 ```
 *   `foreach`: A **foreach** loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable);
-=======
-> Note: A foreach loop must be used on an already existing collection
-
->>>>>>> d47cd05c0d5693fda8d04bd53970dbd0d0fff9cf
 
 ### Recap:
 
