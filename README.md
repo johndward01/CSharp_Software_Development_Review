@@ -433,6 +433,16 @@ foreach (var num in myList)
 
 ![alt_text](img/5PartsOfMethods.png)
 
+```cs
+// Declaring a public Add Method that accepts 2 whole numbers 
+
+public int Add(int x, int y)
+{
+    return x + y;
+}
+
+```
+
 <br>
 
 ## Method Overloading
@@ -539,17 +549,18 @@ var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
 
 for (int i = 0; i < evenNumbers.Length; i++)
 {
-    Console.WriteLine(evenNumbers[i]);
+    Console.Write(evenNumbers[i]); // outputs => 0246810
 }
 ```
 ```cs
 // Declaring/Initializing a list of ints called oddNumbers then looping through it 1 by 1 and printing out each element to the console
-var oddNumbers = new List<int>() { 1, 3, 5, 7, 9 };
+var oddNumbers = new List<int>() { 1, 3, 5, 7, 9, 11 };
 
 foreach (var num in oddNumbers)
 {
-    Console.WriteLine(num);
+    Console.Write(num); // outputs => 1357911
 }
+
 
 ```
 
@@ -583,4 +594,6 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
 <br>
 
 ## Encapsulation
+
+
 
