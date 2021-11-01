@@ -461,8 +461,6 @@ public int Add(int x, int y)
     *   You should not use ref or out modifiers to overload methods.
     *   You cannot overload method declarations that differ only by return type.
 
-
-
 ### Method Overloading Examples `Console.WriteLine();`
 
 ![Console.WriteLine()](img/cw-Overload.png)
@@ -573,16 +571,17 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
 *   **Functional Programming**: Functional programming allows building a program using mathematical functions. In other words, it binds the program into a purely mathematical function. Using functional programming, the developer can build a program as a combination of separate mathematical functions.
 *   **Object-Oriented Programming**: Object-oriented programming (OOP) is a [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) based on the concept of "[objects](https://en.wikipedia.org/wiki/Object_(computer_science))", which can contain [data](https://en.wikipedia.org/wiki/Data) and code: data in the form of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) (often known as attributes or properties), and code, in the form of procedures (often known as [methods](https://en.wikipedia.org/wiki/Method_(computer_science))).
 *   **Class**: Classes are the cornerstone of Object-Oriented Programming. They help you take all the properties and behaviors of an object in your program, and combine them into a single object, then re-use that object wherever you need it in your program. Using classes in your code enables you to implement **Encapsulation, Abstraction, Inheritance, and Polymorphism**.
-*   **Object**: An object is defined as a singular instance of a class or type. A class can be thought of as a blueprint or a cookie cutter. A class describes an object, but it is not that object.
+*   **Object**: An object is defined as a singular instance of a class or type. A class can be thought of as a **blueprint**, a **template** or a **cookie cutter**. A class describes an object, but it is not that object.
 
 *   **Class Members**: Classes have members sort of like how methods have variables; however, classes are not only limited to variables. Examples:
     *   **Fields** - a variable of any type that is declared directly in a class or struct.
     *   **Properties** - a member that provides a mechanism to read, write, or compute the value of a private field.
     *   **Methods** - a code block that contains a series of statements to execute.
     *   **Constructors** - Whenever a class or struct is created, its constructor is called.
+
 *   **Dot Notation**: The way we access the methods and properties of a class is with the ( . ) **Dot** operator, Dot Notation, or Class Member Access Operator.
 
-    **Parts of a class**
+### Parts of a class
 
 1. **Access Modifier** Keywords - **OPTIONAL**
 2. **class** keyword - **REQUIRED**
@@ -590,10 +589,127 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
 4. **Scope** or “curly brackets” - **REQUIRED**
     1. **Fields/Properties** - **OPTIONAL**
     2. **Methods** - **OPTIONAL**
+    
+```cs
+class Cat /*access modifier optional (will default to internal)*/
+{ // opening curly brace
+
+    // optional methods, properties, and fields (they will default to private if no access modifier is present)
+
+} // closing curly brace
+```
+- Dog Class Example
+```cs
+using System;
+
+namespace Class_Demo
+{
+    public class Dog
+    {
+        // Constructors
+        public Dog()
+        {
+
+        } 
+
+        // Fields
+        private int _id;
+        private string _name;
+        private readonly IDbConnection _conn;
+
+        // Properties
+        public int Age {get; set;}
+        public DateTime BirthDay {get; set;}
+
+        // Methods
+        public void Bark()
+        {
+            Console.WriteLine("Woof woof");
+        }
+    }
+
+    public class Program 
+    {
+        static void Main(string[] args)
+        {
+            // (Creating an instance of type Dog), (Instantiating a dog object), etc...
+            Dog dog1 = new Dog();
+
+            // We access the class members of the object using dot notation ( . )
+            dog1.Birthday = DateTime.Now;
+            dog1.Bark();
+        }
+    }
+}
+```
 
 <br>
 
 ## Encapsulation
 
+Encapsulation means that a group of related properties, methods, and other members are treated as a single unit or object.
+The key advantage of using an Object Oriented Programming language like C# is that it provides your code security, flexibility, and easy maintainability through encapsulation. Encapsulation is also useful in hiding the data (instance variables) of a class from illegal direct access. 
 
+> Note: Encapsulation is also called information hiding.
 
+<br>
+
+Encapsulation is one of the 4 pillars of Object Oriented Programming.
+
+- An easy way to remember the 4 pillars is this acronymn: **OOPs A PIE**
+
+    - **O**bject
+    - **O**riented 
+    - **P**rogramming
+    - **A**bstraction
+    - **P**olymorphism
+    - **I**nheritance
+    - **E**ncapsulation
+
+___
+
+### We can implement Encapsulation by using Access Modifiers.
+
+C# supports the following access modifiers:
+public - access modifier makes the member accessible from outside of the class
+
+`private` - makes members accessible only from within the class it was created in and hides the member from the outside
+
+`protected` - the member can only be accessed by code in the same class or in a derived class
+
+`internal` - the member can be accessed by any code in the same assembly, but not from another assembly
+
+`protected internal` - the member can be accessed by any code in the same assembly, or by any derived class in another assembly
+
+___ 
+
+- Encapsulation is used to restrict access to members of a
+class so as to prevent the user of a given class from
+manipulating objects in ways that are not intended by the
+Designer.
+
+- Encapsulation hides the internal implementation of
+functionalities of a class without affecting the overall
+functioning of the system.
+
+- It allows the class to service a request for functionality and
+add or modify its internal structure (data or methods) to
+suit changing requirement.
+
+```cs
+public class PersonalyInfo
+{
+    private static readonly int _socialSecurityNumber;
+
+    public Personal_Info(int socialSecurityNumber)
+    {
+        _socialSecurityNumber = socialSecurityNumber;
+    }
+
+    public void Show_SSN(int socialSecurityNumber)
+    {
+        Console.WriteLine($"SSN: {socialSecurityNumber}");
+    }
+}
+
+```
