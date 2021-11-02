@@ -647,14 +647,11 @@ namespace Class_Demo
 
 ## Encapsulation
 
-Encapsulation means that a group of related properties, methods, and other members are treated as a single unit or object.
-The key advantage of using an Object Oriented Programming language like C# is that it provides your code security, flexibility, and easy maintainability through encapsulation. Encapsulation is also useful in hiding the data (instance variables) of a class from illegal direct access. 
+#### Encapsulation means, that a group of related properties, methods, and other members are treated as a single unit or object.
+#### The key advantage of using an Object Oriented Programming language like C# is that it provides your code security, flexibility, and easy maintainability through encapsulation. Encapsulation is also useful in hiding the data (instance variables) of a class from illegal direct access. 
+#### Encapsulation is one of the 4 pillars of Object Oriented Programming.
 
 > Note: Encapsulation is also called information hiding.
-
-<br>
-
-Encapsulation is one of the 4 pillars of Object Oriented Programming.
 
 - An easy way to remember the 4 pillars is this acronymn: **OOPs A PIE**
 
@@ -671,7 +668,8 @@ ___
 ### We can implement Encapsulation by using Access Modifiers.
 
 C# supports the following access modifiers:
-public - access modifier makes the member accessible from outside of the class
+
+`public` - access modifier makes the member accessible from outside of the class
 
 `private` - makes members accessible only from within the class it was created in and hides the member from the outside
 
@@ -681,7 +679,9 @@ public - access modifier makes the member accessible from outside of the class
 
 `protected internal` - the member can be accessed by any code in the same assembly, or by any derived class in another assembly
 
-___ 
+<br>
+
+## Encapsulation Example Below
 
 - Encapsulation is used to restrict access to members of a
 class so as to prevent the user of a given class from
@@ -697,18 +697,18 @@ add or modify its internal structure (data or methods) to
 suit changing requirement.
 
 ```cs
-public class PersonalyInfo
+public class PersonalInfo
 {
-    private static readonly int _socialSecurityNumber;
+    private readonly int _ssn; // this Field is 'private' (only accessible inside this class) AND 'readonly' (you can't modify after it's been set {after initialization})
 
-    public Personal_Info(int socialSecurityNumber)
+    public Personal_Info(int ssn) // this constructor sets the private Field _ssn upon instantiation
     {
-        _socialSecurityNumber = socialSecurityNumber;
+        _ssn = ssn;
     }
 
-    public void Show_SSN(int socialSecurityNumber)
+    public void Show_SSN(int ssn) // this is the 'public' facing method used to display the ENCAPSULATED Field
     {
-        Console.WriteLine($"SSN: {socialSecurityNumber}");
+        Console.WriteLine($"SSN: {ssn}");
     }
 }
 
