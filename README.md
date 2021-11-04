@@ -1028,7 +1028,7 @@ namespace InterfacesDemo
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
