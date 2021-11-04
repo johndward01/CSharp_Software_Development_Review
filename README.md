@@ -91,7 +91,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 *   **Value Type**: A variable of a value type contains an instance of the type.
 *   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
 
-![alt_text](img/CSharp_Data-Types.png)
+![alt_text](img/Value%20and%20Reference%20Types/CSharp_Data-Types.png)
 
 <br>
 <br>
@@ -449,7 +449,7 @@ foreach (var num in myList)
 *   **Scope/Body**: the block of code to be executed when the method is called
 *   **Argument**: the value you pass into the function when it is being called
 
-![alt_text](img/5PartsOfMethods.png)
+![alt_text](img/Methods/5PartsOfMethods.png)
 
 ```cs
 // Declaring a public Add Method that accepts 2 whole numbers 
@@ -473,7 +473,7 @@ public int Add(int x, int y)
     *   3. The data types of the parameters
 *   **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
 
-![Method Overloading](img/MethodOverloading.png)
+![Method Overloading](img/Method%20Overloading/MethodOverloading.png)
 
 *   **Rules for overloading a method**
     *   Where a parameter represents the same value as that in another method, the parameters should have the same name.
@@ -483,7 +483,7 @@ public int Add(int x, int y)
 
 ### Method Overloading Examples `Console.WriteLine();`
 
-![Console.WriteLine()](img/cw-Overload.png)
+![Console.WriteLine()](img/Method%20Overloading/cw-Overload.png)
 
 <br>
 <br>
@@ -564,7 +564,7 @@ var people = new List<Person>()
 }
 ```
 
-## Looping through Arrays and Lists:
+### Looping through Arrays and Lists:
 ```cs
 // Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
 var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
@@ -751,7 +751,7 @@ public class PersonalInfo
 
 ### Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
 
-![base/derived](img/Inheritance.png)
+![base/derived](img/Inheritance/Inheritance.png)
 
 ```cs
 public class BankAccount
@@ -791,7 +791,7 @@ public class Program
 
 <br>
 
-![MicrosoftDocs](img/Inheritance1.png)
+![MicrosoftDocs](img/Inheritance/Inheritance1.png)
 
 ```cs
 // WorkItem implicitly inherits from the Object class.
@@ -913,9 +913,9 @@ public class Program
 
 Another example of using a static class and static class methods, one we all should be pretty familiar with by now, is `System.Console` i.e. `Console.WriteLine()` and `Console.ReadLine()`. We do not need to create a console object to just print something to the console, we just call the static method **WriteLine()** to do that for us.
 
-![Console.](img/StaticKeyword1.png)
+![Console.](img/Static%20Keyword/StaticKeyword.png)
 
-![WriteLine()](img/StaticKeyword.png)
+![WriteLine()](img/Static%20Keyword/StaticKeyword1.png)
 
 <br>
 <br>
