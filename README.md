@@ -737,9 +737,3 @@ public class PersonalInfo
 <br>
 <br>
 
-## Inheritance 
-
-Inheritance, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars or primary characteristics of object-oriented programming. Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
-
-![base/derived](/img/Inheritance.png)
-
