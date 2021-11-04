@@ -3,13 +3,16 @@
 <br>
 <br>
 
-# Git
+## Git
 
 *   **Version Control**: a means for managing your source code
 *   **Git:** A **[distributed version-control](https://en.wikipedia.org/wiki/Distributed_version_control) system (DVCS)** for tracking changes in [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development).  It is designed for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer), but it can be used to track changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file).
 *   **Github:** GitHub is where our **Remote repository** will live.  Our computer is where our **Local repository** will live. 
 *   **A Commit:** A commit is the Git equivalent of a "save".
 
+<br>
+<br>
+<br>
 
 ## Git Commands:
 
@@ -88,7 +91,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 *   **Value Type**: A variable of a value type contains an instance of the type.
 *   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
 
-![alt_text](img/CSharp_Data-Types.png)
+![alt_text](img/Value%20and%20Reference%20Types/CSharp_Data-Types.png)
 
 <br>
 <br>
@@ -304,7 +307,9 @@ switch (day)
         break;
 } // outputs Thursday
 ```
+
 ___
+
 
 ```cs
 public interface ICallable 
@@ -418,6 +423,8 @@ foreach (var num in myList)
 }
 ```
 
+
+
 ### Recap:
 
 - Use a while loop if you need to execute some code until something happens.
@@ -442,7 +449,7 @@ foreach (var num in myList)
 *   **Scope/Body**: the block of code to be executed when the method is called
 *   **Argument**: the value you pass into the function when it is being called
 
-![alt_text](img/5PartsOfMethods.png)
+![alt_text](img/Methods/5PartsOfMethods.png)
 
 ```cs
 // Declaring a public Add Method that accepts 2 whole numbers 
@@ -466,7 +473,7 @@ public int Add(int x, int y)
     *   3. The data types of the parameters
 *   **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
 
-![Method Overloading](img/MethodOverloading.png)
+![Method Overloading](img/Method%20Overloading/MethodOverloading.png)
 
 *   **Rules for overloading a method**
     *   Where a parameter represents the same value as that in another method, the parameters should have the same name.
@@ -476,7 +483,7 @@ public int Add(int x, int y)
 
 ### Method Overloading Examples `Console.WriteLine();`
 
-![Console.WriteLine()](img/cw-Overload.png)
+![Console.WriteLine()](img/Method%20Overloading/cw-Overload.png)
 
 <br>
 <br>
@@ -522,7 +529,9 @@ Console.WriteLine(cars[cars.Length - 1]); // output: Toyota
 Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeException)
 ```
 
+<br>
 ----
+<br>
 
 *   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
@@ -576,7 +585,6 @@ foreach (var num in oddNumbers)
 
 
 ```
-
 <br>
 <br>
 <br>
@@ -736,4 +744,296 @@ public class PersonalInfo
 <br>
 <br>
 <br>
+
+## Inheritance
+
+**Inheritance**, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars of **object-oriented programming**. 
+
+### Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
+
+![base/derived](img/Inheritance/Inheritance.png)
+
+```cs
+public class BankAccount
+{
+    public long AccountNumber {get; set;}
+    public decimal Balance {get; set;}
+    public DateTime DateOpened {get; set;}
+    public string AccountType {get; set;}
+}
+
+public class CheckingAccount : BankAccount
+{
+    public int ChecksOrdered {get; set;}
+    public bool IssuedDebitCard {get; set;}
+}
+
+public class Program 
+{
+    static void Main(string[] args)
+    {
+        var bankAccount1 = new BankAccount(); // Base Class
+        Console.WriteLine(bankAccount1.AccountNumber);
+        Console.WriteLine(bankAccount1.Balance);
+        Console.WriteLine(bankAccount1.DateOpened);
+        Console.WriteLine(bankAccount1.AccountType);
+
+        var checkingAccount1 = new CheckingAccount(); // Derived Class
+        Console.WriteLine(checkingAccount1.AccountNumber);
+        Console.WriteLine(checkingAccount1.Balance);
+        Console.WriteLine(checkingAccount1.DateOpened);
+        Console.WriteLine(checkingAccount1.AccountType);
+        Console.WriteLine(checkingAccount1.ChecksOrdered);
+        Console.WriteLine(checkingAccount1.IssuedDebitCard);
+    }    
+}
+```
+
+<br>
+
+![MicrosoftDocs](img/Inheritance/Inheritance1.png)
+
+```cs
+// WorkItem implicitly inherits from the Object class.
+public class WorkItem
+{
+    // Static field currentID stores the job ID of the last WorkItem that
+    // has been created.
+    private static int currentID;
+
+    //Properties.
+    protected int ID { get; set; }
+    protected string Title { get; set; }
+    protected string Description { get; set; }
+    protected TimeSpan jobLength { get; set; }
+
+    // Default constructor. If a derived class does not invoke a base-
+    // class constructor explicitly, the default constructor is called
+    // implicitly.
+    public WorkItem()
+    {
+        ID = 0;
+        Title = "Default title";
+        Description = "Default description.";
+        jobLength = new TimeSpan();
+    }
+
+    // Instance constructor that has three parameters.
+    public WorkItem(string title, string desc, TimeSpan joblen)
+    {
+        this.ID = GetNextID();
+        this.Title = title;
+        this.Description = desc;
+        this.jobLength = joblen;
+    }
+
+    // Static constructor to initialize the static member, currentID. This
+    // constructor is called one time, automatically, before any instance
+    // of WorkItem or ChangeRequest is created, or currentID is referenced.
+    static WorkItem() => currentID = 0;
+
+    // currentID is a static field. It is incremented each time a new
+    // instance of WorkItem is created.
+    protected int GetNextID() => ++currentID;
+
+    // Method Update enables you to update the title and job length of an
+    // existing WorkItem object.
+    public void Update(string title, TimeSpan joblen)
+    {
+        this.Title = title;
+        this.jobLength = joblen;
+    }
+
+    // Virtual method override of the ToString method that is inherited
+    // from System.Object.
+    public override string ToString() =>
+        $"{this.ID} - {this.Title}";
+}
+
+// ChangeRequest derives from WorkItem and adds a property (originalItemID)
+// and two constructors.
+public class ChangeRequest : WorkItem
+{
+    protected int originalItemID { get; set; }
+
+    // Constructors. Because neither constructor calls a base-class
+    // constructor explicitly, the default constructor in the base class
+    // is called implicitly. The base class must contain a default
+    // constructor.
+
+    // Default constructor for the derived class.
+    public ChangeRequest() { }
+
+    // Instance constructor that has four parameters.
+    public ChangeRequest(string title, string desc, TimeSpan jobLen,
+                         int originalID)
+    {
+        // The following properties and the GetNexID method are inherited
+        // from WorkItem.
+        this.ID = GetNextID();
+        this.Title = title;
+        this.Description = desc;
+        this.jobLength = jobLen;
+
+        // Property originalItemId is a member of ChangeRequest, but not
+        // of WorkItem.
+        this.originalItemID = originalID;
+    }
+}
+```
+
+<br>
+<br>
+<br>
+
+## Static Keyword 
+
+In code when we create an instance of a class we are allocating a certain amount of memory for that object to reference. We may have a class that performs a particular function or method in multiple parts of our code. As a programmer, you should always strive to have the most efficient and readable code possible. Instead of instantiating the object and allocating the memory every time in our code just to invoke a couple of methods; we can use the static keyword.
+
+### So what is static? Static simply means that when applied to a class member, it belongs to the type/class itself and not to the object instance.
+
+```cs
+public class Teacher
+{
+    public string Name {get; set;}
+    public static string Subject {get; set;}
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        var t = new Teacher(); // Teacher instance
+        t.Name = "Some Teacher's Name"; // instance property
+
+        Teacher.Subject = "C#"; // static property
+    }
+}
+```
+
+Another example of using a static class and static class methods, one we all should be pretty familiar with by now, is `System.Console` i.e. `Console.WriteLine()` and `Console.ReadLine()`. We do not need to create a console object to just print something to the console, we just call the static method **WriteLine()** to do that for us.
+
+![Console.](img/Static%20Keyword/StaticKeyword.png)
+
+![WriteLine()](img/Static%20Keyword/StaticKeyword1.png)
+
+<br>
+<br>
+<br>
+
+## Abstract Classes
+
+Abstract classes have the following features: 
+- An abstract class cannot be instantiated. 
+- An abstract class may contain abstract methods and accessors.
+- A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
+
+![abstract1](img/Abstract%20Classes/Abstract1.png)
+
+So in essence, an abstract class acts as a stubbed-out template class that other classes will derive from and use as an incomplete base. The derived class will define its own way to complete the stubbed-out template provided by the abstract class. 
+
+> **The purpose of an abstract class is to define some common behavior that can be inherited by multiple subclasses, without implementing the entire class.**
+
+```cs
+// Abstract Class
+public abstract class Vehicle
+{
+    // Instance Properties
+    public int NumberOfTies {get; set;}
+    public string Make {get; set;}
+    public string Model {get; set;}
+    public DateTime Year {get; set;}
+
+    // Abstract Method
+    public abstract void Drive(Vehicle vehicle);
+
+    // Virtual Method
+    public virtual void ShowInfo(Vehicle vehicle)
+    {
+        Console.WriteLine($"{vehicle.Year}");
+        Console.WriteLine($"{vehicle.Make}");
+        Console.WriteLine($"{vehicle.Model}");
+        Console.WriteLine($"{vehicle.NumberOfTires}");       
+    }    
+
+    /*
+    The virtual modifier keyword - use this to mark a property or method virtual.
+    This will tell the compiler that the base class will provide an implementation of the property or method. 
+    If the derived class wishes to override the implementation it can. 
+    */
+}
+
+// Concrete Class
+public class Car : Vehicle
+{
+    public override void Drive(Vehicle vehicle)
+    {
+        // This will keep the base implementation
+        // Plus anything you add to this method
+        base.ShowInfo(vehicle);
+    }
+
+    /*
+    The override modifier keyword - You MUST override an abstract member.
+    If you want to modify any virtual methods, properties, etc... you will also use the override keyword
+    */
+}
+```
+<br>
+
+> Method Overloading gives us **static polymorphism**
+
+> Abstract Classes give us **dynamic polymorphism**
+
+<br>
+<br>
+<br>
+
+## Interfaces
+
+Using interfaces we can invoke functions from different classes through the same Interface reference, whereas using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference.
+
+```cs
+using System;
+
+namespace InterfacesDemo
+{
+    public interface ISecurity
+    {
+        public int ID {get; set;}
+        public string Role {get; set;}
+        public bool IsAuthorized {get; set;}
+
+        void AssessSecurityStatus();
+    }
+
+    public class Account : ISecurity
+    {
+        private string _accountName;
+
+        public int ID {get; set;}
+        public string Role {get; set;}
+        public bool IsAuthorized {get; set;}
+
+        public override void AssessSecurityStatus()
+        {
+            Console.WriteLine($"User: {_accountName}")
+            Console.WriteLine($"ID: {ID}");
+            Console.WriteLine($"Role: {Role}");
+            Console.WriteLine($"IsAuthorized={IsAuthorized}");
+        }
+
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+
+
+```
 
