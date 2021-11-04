@@ -234,7 +234,6 @@ if (x == y)
 {
     Console.WriteLine("This code IS NOT run because the condition evaluated to false");
 }
-
 ```
 
 ### `if / else`
@@ -274,10 +273,10 @@ else
 }
 ```
 
-*   **switch/case**: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
-*   **default**: Specifies the code block to run if all else fails.
-*   **break**: Terminates the **switch/case** statement.
-*   **case**: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
+*   `switch/case`: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
+*   `default`: Specifies the code block to run if all else fails.
+*   `break`: Terminates the **switch/case** statement.
+*   `case`: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
 
 ```cs
 int day = 4;
@@ -451,6 +450,8 @@ foreach (var num in myList)
 
 ![alt_text](img/Methods/5PartsOfMethods.png)
 
+<br>
+
 ```cs
 // Declaring a public Add Method that accepts 2 whole numbers 
 
@@ -458,7 +459,6 @@ public int Add(int x, int y)
 {
     return x + y;
 }
-
 ```
 
 <br>
@@ -582,8 +582,6 @@ foreach (var num in oddNumbers)
 {
     Console.Write(num); // outputs => 1357911
 }
-
-
 ```
 <br>
 <br>
@@ -616,10 +614,15 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
     2. **Methods** - **OPTIONAL**
     
 ```cs
-class Cat /*access modifier optional (will default to internal)*/
+class Cat // the access modifier is optional (will default to internal)
 { // opening curly brace
 
-    // optional methods, properties, and fields (they will default to private if no access modifier is present)
+    // class members (will default to private)
+    // Methods
+    // Properties
+    // Fields 
+    // Constructors
+    // Etc...
 
 } // closing curly brace
 ```
@@ -738,7 +741,6 @@ public class PersonalInfo
         Console.WriteLine($"SSN: {ssn}");
     }
 }
-
 ```
 
 <br>
@@ -893,20 +895,25 @@ In code when we create an instance of a class we are allocating a certain amount
 ### So what is static? Static simply means that when applied to a class member, it belongs to the type/class itself and not to the object instance.
 
 ```cs
-public class Teacher
-{
-    public string Name {get; set;}
-    public static string Subject {get; set;}
-}
+using System;
 
-public class Program
+namespace InheritanceDemo
 {
-    static void Main(string[] args)
+    public class Teacher
     {
-        var t = new Teacher(); // Teacher instance
-        t.Name = "Some Teacher's Name"; // instance property
+        public string Name {get; set;}
+        public static string Subject {get; set;}
+    }
 
-        Teacher.Subject = "C#"; // static property
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Teacher t = new Teacher(); // Teacher instance
+            t.Name = "Some Teacher's Name"; // instance property
+
+            Teacher.Subject = "C#"; // static property
+        }
     }
 }
 ```
