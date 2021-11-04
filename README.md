@@ -994,6 +994,7 @@ public class Car : Vehicle
 Using interfaces we can invoke functions from different classes through the same Interface reference, whereas using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference.
 
 ```cs
+using System;
 
 namespace InterfacesDemo
 {
