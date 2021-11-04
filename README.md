@@ -3,13 +3,16 @@
 <br>
 <br>
 
-# Git
+## Git
 
 *   **Version Control**: a means for managing your source code
 *   **Git:** A **[distributed version-control](https://en.wikipedia.org/wiki/Distributed_version_control) system (DVCS)** for tracking changes in [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development).  It is designed for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer), but it can be used to track changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file).
 *   **Github:** GitHub is where our **Remote repository** will live.  Our computer is where our **Local repository** will live. 
 *   **A Commit:** A commit is the Git equivalent of a "save".
 
+<br>
+<br>
+<br>
 
 ## Git Commands:
 
@@ -304,7 +307,9 @@ switch (day)
         break;
 } // outputs Thursday
 ```
+
 ___
+
 
 ```cs
 public interface ICallable 
@@ -418,6 +423,8 @@ foreach (var num in myList)
 }
 ```
 
+
+
 ### Recap:
 
 - Use a while loop if you need to execute some code until something happens.
@@ -522,7 +529,9 @@ Console.WriteLine(cars[cars.Length - 1]); // output: Toyota
 Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeException)
 ```
 
+<br>
 ----
+<br>
 
 *   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
@@ -555,7 +564,7 @@ var people = new List<Person>()
 }
 ```
 
-### Looping through Arrays and Lists:
+## Looping through Arrays and Lists:
 ```cs
 // Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
 var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
@@ -576,7 +585,6 @@ foreach (var num in oddNumbers)
 
 
 ```
-
 <br>
 <br>
 <br>
@@ -737,9 +745,140 @@ public class PersonalInfo
 <br>
 <br>
 
-## Inheritance 
+## Inheritance
 
-Inheritance, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars or primary characteristics of object-oriented programming. Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
+**Inheritance**, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars of **object-oriented programming**. 
 
-![base/derived](/img/Inheritance.png)
+### Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
+
+![base/derived](img/Inheritance.png)
+
+```cs
+public class BankAccount
+{
+    public long AccountNumber {get; set;}
+    public decimal Balance {get; set;}
+    public DateTime DateOpened {get; set;}
+    public string AccountType {get; set;}
+}
+
+public class CheckingAccount : BankAccount
+{
+    public int ChecksOrdered {get; set;}
+    public bool IssuedDebitCard {get; set;}
+}
+
+public class Program 
+{
+    static void Main(string[] args)
+    {
+        var bankAccount1 = new BankAccount(); // Base Class
+        Console.WriteLine(bankAccount1.AccountNumber);
+        Console.WriteLine(bankAccount1.Balance);
+        Console.WriteLine(bankAccount1.DateOpened);
+        Console.WriteLine(bankAccount1.AccountType);
+
+        var checkingAccount1 = new CheckingAccount(); // Derived Class
+        Console.WriteLine(checkingAccount1.AccountNumber);
+        Console.WriteLine(checkingAccount1.Balance);
+        Console.WriteLine(checkingAccount1.DateOpened);
+        Console.WriteLine(checkingAccount1.AccountType);
+        Console.WriteLine(checkingAccount1.ChecksOrdered);
+        Console.WriteLine(checkingAccount1.IssuedDebitCard);
+    }    
+}
+```
+
+<br>
+
+![MicrosoftDocs](img/Inheritance1.png)
+
+```cs
+// WorkItem implicitly inherits from the Object class.
+public class WorkItem
+{
+    // Static field currentID stores the job ID of the last WorkItem that
+    // has been created.
+    private static int currentID;
+
+    //Properties.
+    protected int ID { get; set; }
+    protected string Title { get; set; }
+    protected string Description { get; set; }
+    protected TimeSpan jobLength { get; set; }
+
+    // Default constructor. If a derived class does not invoke a base-
+    // class constructor explicitly, the default constructor is called
+    // implicitly.
+    public WorkItem()
+    {
+        ID = 0;
+        Title = "Default title";
+        Description = "Default description.";
+        jobLength = new TimeSpan();
+    }
+
+    // Instance constructor that has three parameters.
+    public WorkItem(string title, string desc, TimeSpan joblen)
+    {
+        this.ID = GetNextID();
+        this.Title = title;
+        this.Description = desc;
+        this.jobLength = joblen;
+    }
+
+    // Static constructor to initialize the static member, currentID. This
+    // constructor is called one time, automatically, before any instance
+    // of WorkItem or ChangeRequest is created, or currentID is referenced.
+    static WorkItem() => currentID = 0;
+
+    // currentID is a static field. It is incremented each time a new
+    // instance of WorkItem is created.
+    protected int GetNextID() => ++currentID;
+
+    // Method Update enables you to update the title and job length of an
+    // existing WorkItem object.
+    public void Update(string title, TimeSpan joblen)
+    {
+        this.Title = title;
+        this.jobLength = joblen;
+    }
+
+    // Virtual method override of the ToString method that is inherited
+    // from System.Object.
+    public override string ToString() =>
+        $"{this.ID} - {this.Title}";
+}
+
+// ChangeRequest derives from WorkItem and adds a property (originalItemID)
+// and two constructors.
+public class ChangeRequest : WorkItem
+{
+    protected int originalItemID { get; set; }
+
+    // Constructors. Because neither constructor calls a base-class
+    // constructor explicitly, the default constructor in the base class
+    // is called implicitly. The base class must contain a default
+    // constructor.
+
+    // Default constructor for the derived class.
+    public ChangeRequest() { }
+
+    // Instance constructor that has four parameters.
+    public ChangeRequest(string title, string desc, TimeSpan jobLen,
+                         int originalID)
+    {
+        // The following properties and the GetNexID method are inherited
+        // from WorkItem.
+        this.ID = GetNextID();
+        this.Title = title;
+        this.Description = desc;
+        this.jobLength = jobLen;
+
+        // Property originalItemId is a member of ChangeRequest, but not
+        // of WorkItem.
+        this.originalItemID = originalID;
+    }
+}
+```
 
