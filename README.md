@@ -1,6 +1,7 @@
 # C# Review
 
 <br>
+<br>
 
 # Git
 
@@ -9,7 +10,6 @@
 *   **Github:** GitHub is where our **Remote repository** will live.  Our computer is where our **Local repository** will live. 
 *   **A Commit:** A commit is the Git equivalent of a "save".
 
-<br>
 
 ## Git Commands:
 
@@ -34,9 +34,8 @@
 *   `git config --global user.name "Your Name"`: sets the user name
 
 <br>
-
-# C#
-
+<br>
+<br>
 
 ## C# Command-line
 
@@ -70,6 +69,8 @@
 **<span style="text-decoration:underline;">Type the following commands into the terminal</span>**
 
 <br>
+<br>
+<br>
 
 ## Value and Reference Types
 
@@ -89,6 +90,8 @@ C# is a strongly AND statically typed object-oriented programming language.
 
 ![alt_text](img/CSharp_Data-Types.png)
 
+<br>
+<br>
 <br>
 
 ## C# Variables
@@ -119,6 +122,8 @@ A variable is a memory location. It has a name that is associated with that loca
     int age = 11; // Declaring and Initializing a variable
     ```
 
+<br>
+<br>
 <br>
 
 ## C# Operators
@@ -201,6 +206,8 @@ x /= y; // same as long form x = x / y;
 x %= y; // same as long form x = x % y;
 ```
 
+<br>
+<br>
 <br>
 
 ## Selection Statements
@@ -326,6 +333,8 @@ public class PhoneFactory : ICallable
 ```
 
 <br>
+<br>
+<br>
 
 ## C# Syntax Sugar
 
@@ -353,6 +362,8 @@ var x = 10; // var -> int
 var y = true; // var -> bool
 var z = new List<int>(); // var -> List<int>
 ```
+<br>
+<br>
 <br>
 
 ## Iteration Statements & Loops
@@ -407,8 +418,6 @@ foreach (var num in myList)
 }
 ```
 
-
-
 ### Recap:
 
 - Use a while loop if you need to execute some code until something happens.
@@ -416,6 +425,8 @@ foreach (var num in myList)
 - Use a for loop if you need to execute some code a specific number of times. 
 - Use a foreach loop if you need to execute some code on each element in a collection of elements.
 
+<br>
+<br>
 <br>
 
 ## Methods/Functions
@@ -444,6 +455,8 @@ public int Add(int x, int y)
 ```
 
 <br>
+<br>
+<br>
 
 ## Method Overloading
 
@@ -465,6 +478,8 @@ public int Add(int x, int y)
 
 ![Console.WriteLine()](img/cw-Overload.png)
 
+<br>
+<br>
 <br>
 
 ## Arrays & Lists
@@ -540,7 +555,7 @@ var people = new List<Person>()
 }
 ```
 
-## Looping through Arrays and Lists:
+### Looping through Arrays and Lists:
 ```cs
 // Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
 var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
@@ -562,6 +577,8 @@ foreach (var num in oddNumbers)
 
 ```
 
+<br>
+<br>
 <br>
 
 ## Classes
@@ -644,6 +661,8 @@ namespace Class_Demo
 ```
 
 <br>
+<br>
+<br>
 
 ## Encapsulation
 
@@ -713,3 +732,14 @@ public class PersonalInfo
 }
 
 ```
+
+<br>
+<br>
+<br>
+
+## Inheritance 
+
+Inheritance, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars or primary characteristics of object-oriented programming. Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
+
+![base/derived](/img/Inheritance.png)
+
