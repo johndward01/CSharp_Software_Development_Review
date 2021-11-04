@@ -882,3 +882,44 @@ public class ChangeRequest : WorkItem
 }
 ```
 
+<br>
+<br>
+<br>
+
+## Static Keyword 
+
+In code when we create an instance of a class we are allocating a certain amount of memory for that object to reference. We may have a class that performs a particular function or method in multiple parts of our code. As a programmer, you should always strive to have the most efficient and readable code possible. Instead of instantiating the object and allocating the memory every time in our code just to invoke a couple of methods; we can use the static keyword.
+
+### So what is static? Static simply means that when applied to a class member, it belongs to the type/class itself and not to the object instance.
+
+```cs
+public class Teacher
+{
+    public string Name {get; set;}
+    public static string Subject {get; set;}
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        var t = new Teacher(); // Teacher instance
+        t.Name = "Some Teacher's Name"; // instance property
+
+        Teacher.Subject = "C#"; // static property
+    }
+}
+```
+
+Another example of using a static class and static class methods, one we all should be pretty familiar with by now, is `System.Console` i.e. `Console.WriteLine()` and `Console.ReadLine()`. We do not need to create a console object to just print something to the console, we just call the static method **WriteLine()** to do that for us.
+
+![Console.](img/StaticKeyword1.png)
+
+![WriteLine()](img/StaticKeyword.png)
+
+<br>
+<br>
+<br>
+
+## Abstract Classes
+
