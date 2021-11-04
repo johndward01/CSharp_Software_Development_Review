@@ -991,3 +991,48 @@ public class Car : Vehicle
 
 ## Interfaces
 
+Using interfaces we can invoke functions from different classes through the same Interface reference, whereas using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference.
+
+```cs
+
+namespace InterfacesDemo
+{
+    public interface ISecurity
+    {
+        public int ID {get; set;}
+        public string Role {get; set;}
+        public bool IsAuthorized {get; set;}
+
+        void AssessSecurityStatus();
+    }
+
+    public class Account : ISecurity
+    {
+        private string _accountName;
+
+        public int ID {get; set;}
+        public string Role {get; set;}
+        public bool IsAuthorized {get; set;}
+
+        public override void AssessSecurityStatus()
+        {
+            Console.WriteLine($"User: {_accountName}")
+            Console.WriteLine($"ID: {ID}");
+            Console.WriteLine($"Role: {Role}");
+            Console.WriteLine($"IsAuthorized={IsAuthorized}");
+        }
+
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+
+
+```
+
