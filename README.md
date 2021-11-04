@@ -923,3 +923,71 @@ Another example of using a static class and static class methods, one we all sho
 
 ## Abstract Classes
 
+Abstract classes have the following features: 
+- An abstract class cannot be instantiated. 
+- An abstract class may contain abstract methods and accessors.
+- A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
+
+![abstract1](img/Abstract%20Classes/Abstract1.png)
+
+So in essence, an abstract class acts as a stubbed-out template class that other classes will derive from and use as an incomplete base. The derived class will define its own way to complete the stubbed-out template provided by the abstract class. 
+
+> **The purpose of an abstract class is to define some common behavior that can be inherited by multiple subclasses, without implementing the entire class.**
+
+```cs
+// Abstract Class
+public abstract class Vehicle
+{
+    // Instance Properties
+    public int NumberOfTies {get; set;}
+    public string Make {get; set;}
+    public string Model {get; set;}
+    public DateTime Year {get; set;}
+
+    // Abstract Method
+    public abstract void Drive(Vehicle vehicle);
+
+    // Virtual Method
+    public virtual void ShowInfo(Vehicle vehicle)
+    {
+        Console.WriteLine($"{vehicle.Year}");
+        Console.WriteLine($"{vehicle.Make}");
+        Console.WriteLine($"{vehicle.Model}");
+        Console.WriteLine($"{vehicle.NumberOfTires}");       
+    }    
+
+    /*
+    The virtual modifier keyword - use this to mark a property or method virtual.
+    This will tell the compiler that the base class will provide an implementation of the property or method. 
+    If the derived class wishes to override the implementation it can. 
+    */
+}
+
+// Concrete Class
+public class Car : Vehicle
+{
+    public override void Drive(Vehicle vehicle)
+    {
+        // This will keep the base implementation
+        // Plus anything you add to this method
+        base.ShowInfo(vehicle);
+    }
+
+    /*
+    The override modifier keyword - You MUST override an abstract member.
+    If you want to modify any virtual methods, properties, etc... you will also use the override keyword
+    */
+}
+```
+<br>
+
+> Method Overloading gives us **static polymorphism**
+
+> Abstract Classes give us **dynamic polymorphism**
+
+<br>
+<br>
+<br>
+
+## Interfaces
+
