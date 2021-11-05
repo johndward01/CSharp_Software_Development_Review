@@ -1206,3 +1206,155 @@ namespace ConsoleApp1
 
 ## Factory Pattern
 
+The Factory Design Pattern is a programming concept that allows one class, separate to the main program or “client”, to create new objects. By using the factory pattern to encapsulate object creation, you have one location to make changes to the way objects are instantiated. The way this is accomplished is by programming to an interface or an abstract class. When we program to an interface or ABS class, the program doesn’t care what type of object we wish to create as long as it implements the interface or inherits from the ABS class.
+
+```cs
+using System;
+using System.Collections.Generic;
+
+namespace Factory_Pattern_Exercise
+{
+    // Concrete Class
+    public class Car : IVehicle
+    {
+        public void Drive()
+        {
+            Console.WriteLine("Driving a new Car!");
+        }
+    }
+
+    // Concrete Class
+    public class BigRig : IVehicle
+    {
+        public void Drive()
+        {
+            Console.WriteLine("Driving a new BigRig!");
+        }
+    }
+
+    // Concrete Class
+    public class Motorcycle : IVehicle
+    {
+        public void Drive()
+        {
+            Console.WriteLine("Driving a new Motorcycle!");
+        }
+    }
+
+    // We are using an interface as our polymorphic type (abstract class could also be used)
+    public interface IVehicle
+    {
+        public void Drive();
+    }
+
+    // Factory Class - 1 place where the objects are created
+    public static class VehicleFactory
+    {        
+        public static IVehicle GetVehicle(int numberOfTires)
+        {
+            if (numberOfTires > 4)
+            {
+                return new BigRig();
+            }
+            else if (numberOfTires == 4)
+            {
+                return new Car();
+            }
+            else
+            {
+                return new Motorcycle();
+            }
+        }
+    }
+
+    // User Interface Class - holds helper methods to clean up the Main() method
+    public static class UI 
+    {
+        public static int GetVehicleType()
+        {
+            Console.WriteLine("What type of vehicle would you like to create?");
+            Console.WriteLine();
+            Console.WriteLine($"Type 1 for: Car\n" +
+                              $"Type 2 for: Motorcycle\n" +
+                              $"Type 3 for: BigRig\n");
+            Console.WriteLine();
+            var vehicleType = int.Parse(Console.ReadLine());
+            return vehicleType;
+        }
+
+
+        public static List<IVehicle> GetAndAddToVehicleList(List<IVehicle> vehicles, int vehicleType) 
+        {          
+            if (vehicleType == 1)
+            {
+                vehicles.Add(VehicleFactory.GetVehicle(4));
+            }
+            else if (vehicleType == 2)
+            {
+                vehicles.Add(VehicleFactory.GetVehicle(2));
+            }
+            else
+            {
+                vehicles.Add(VehicleFactory.GetVehicle(18));
+            }
+
+            return vehicles;
+        }
+
+
+        public static void TraverseVehicleList(List<IVehicle> vehicles)
+        {
+            foreach (var vehicle in vehicles)
+            {
+                Console.WriteLine();
+                vehicle.Drive();
+                Console.WriteLine();
+            }
+        }
+
+        public static bool QuitOrContinue()
+        {
+            bool continuing = false;
+            Console.WriteLine("Would you like to create another vehicle? Type 'yes' or 'no'");
+            var additionalVehicle = Console.ReadLine().ToLower();
+
+            if (additionalVehicle == "yes")
+            {
+                continuing = true;
+            }
+            else
+            {
+                Console.WriteLine("Thank you for choosing the vehicle factory!");                
+            }
+
+            return continuing;
+        }
+    }
+
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            bool finished = true;
+            List<IVehicle> vehicles = new List<IVehicle>();
+
+            while (finished == true)
+            {
+                int vehicleType = UI.GetVehicleType();
+                var vehicleList = UI.GetAndAddToVehicleList(vehicles, vehicleType);
+                UI.TraverseVehicleList(vehicleList);
+                finished = UI.QuitOrContinue(); 
+            }
+
+        }
+    }
+}
+```
+
+<br>
+<br>
+<br>
+
+## LINQ 
+
