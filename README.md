@@ -1330,7 +1330,7 @@ namespace Factory_Pattern_Exercise
         }
     }
 
-
+    // Client 
     public class Program
     {
         static void Main(string[] args)
@@ -1341,7 +1341,7 @@ namespace Factory_Pattern_Exercise
             while (finished == true)
             {
                 int vehicleType = UI.GetVehicleType();
-                var vehicleList = UI.GetAndAddToVehicleList(vehicles, vehicleType);
+                List<IVehicle> vehicleList = UI.GetAndAddToVehicleList(vehicles, vehicleType);
                 UI.TraverseVehicleList(vehicleList);
                 finished = UI.QuitOrContinue(); 
             }
