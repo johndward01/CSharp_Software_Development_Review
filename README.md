@@ -998,6 +998,12 @@ public class Car : Vehicle
 
 ## Interfaces
 
+Interfaces in C# provide another way to achieve runtime polymorphism. 
+
+What is runtime polymorphism? 
+
+By runtime polymorphism, we can point to any derived class from the object of the base class at runtime that shows the ability of runtime binding. 
+
 Using interfaces we can invoke functions from different classes through the same Interface reference, whereas using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference.
 
 ```cs
@@ -1009,38 +1015,193 @@ namespace InterfacesDemo
     {
         public int ID {get; set;}
         public string Role {get; set;}
-        public bool IsAuthorized {get; set;}
-
-        void AssessSecurityStatus();
+        
+        public void Status();
     }
 
     public class Account : ISecurity
     {
-        private string _accountName;
+        // Fields
+        private string _accountType;
+
+        // Constructors
+        public Account(string accountType)
+        {
+            _accountType = accountType
+        }
+
+        // Properties
+        public int ID {get; set;}
+        public string Role {get; set;}
+
+        // Methods
+        public override void Status()
+        {
+            Console.WriteLine($"Account Type: {_accountType}")
+            Console.WriteLine($"ID: {ID}");
+            Console.WriteLine($"Role: {Role}");
+        }
+    }
+
+    public class User : ISecurity
+    {        
+        // Fields
+        private string _userType;
+        
+        // Constructors
+        public User(string user)
+        {
+            _userType = user;
+        }
+
+        // Properties
+        public string FirstName {get; set;}   
+        public string LastName {get; set;}
+        public char MiddleInitial {get; set;}
+        public string Suffix {get; set;} = "";
 
         public int ID {get; set;}
         public string Role {get; set;}
-        public bool IsAuthorized {get; set;}
 
-        public override void AssessSecurityStatus()
+        // Methods
+        public override void Status()
         {
-            Console.WriteLine($"User: {_accountName}")
+            Console.WriteLine($"Full Name: {FirstName} {MiddleInitial} {LastName} {Suffix}");
+            Console.WriteLine($"Account Type: {_accountType}")
             Console.WriteLine($"ID: {ID}");
             Console.WriteLine($"Role: {Role}");
-            Console.WriteLine($"IsAuthorized={IsAuthorized}");
         }
-
     }
 
     public class Program
     {
         static void Main(string[] args)
         {
+            ISecurity account1 = new Account("Tier 1")
+            {
+                ID = 1,
+            };
 
+            ISecurity user1 = new User("Gold")
+            {
+                FirstName = "John",
+                MiddleInitial = 'X',
+                LastName = "Doe",
+                ID = 1,
+                Role = "customer",
+            }
+
+            account1.Status();
+            // outputs => 
+            // Account Type: Tier 1
+            // ID: 1
+            // Role: 
+
+            user1.Status();         
+            // outputs => 
+            //  FirstName: John
+            //  MiddleInitial: X
+            //  LastName: Doe
+            //  ID: 1
+            //  Role: customer
+
+            /* Using interfaces we can invoke functions from different classes through the same Interface reference */
+            // Runtime polymorphism Achieved (Interface reference = ISecurity)
         }
     }
 }
-
-
 ```
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ConsoleApp1
+{
+    public abstract class Shape
+    {
+        public string ShapeName { get; set; } = "Polygon";
+        public abstract double[] Sides { get; set; }
+        public abstract double Radius { get; set; }
+
+        public abstract double Area(double radius, double[] sides);
+
+        public virtual double Perimeter(double radius, double[] sides)
+        {
+            // Default Implementation
+            return 0.0;
+        }
+    }
+
+    public class Circle : Shape
+    {
+        public override double[] Sides { get; set; } // 0
+        public override double Radius { get; set; }
+
+        public override double Area(double radius, double[] sides)
+        {
+            return Math.PI * Math.Pow(radius, 2);
+        }
+
+        public override double Perimeter(double radius, double[] sides)
+        {
+            if (sides.Length == 0)
+            {
+                return Math.PI * radius * 2;
+            }
+
+            return sides.Sum();
+        }
+    }
+
+    public class Triangle : Shape
+    {
+        #region Herons Formula
+        //   a = side a
+        //   b = side b
+        //   c = side c
+        //  s = (a + b + c)/2
+        #endregion
+        public override double[] Sides { get; set; } // Herons Formula:  Area = √[s(s-a)(s-b)(s-c)]       
+        public override double Radius { get; set; }
+
+        public override double Area(double radius, double[] sides)
+        {
+            double semiperimeter = sides.Sum() / 2;
+            double area = Math.Sqrt(semiperimeter * (semiperimeter - sides[0]) * (semiperimeter - sides[1]) * (semiperimeter - sides[2]));
+            return area;
+        }
+
+        public override double Perimeter(double radius, double[] sides)
+        {
+            return sides.Sum();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Shape shape1 = new Circle();
+            shape1.ShapeName = "Circle";
+            shape1.Radius = 10;
+            shape1.Area(shape1.Radius, new double[] { });
+
+            Shape shape2 = new Triangle();
+            shape2.ShapeName = "Triangle";
+            shape2.Sides = new double[] { 4, 13, 15}; // https://www.triangle-calculator.com/?what=sss&a=4&b=13&c=15&submit=Solve
+            Console.WriteLine(shape2.Area(0, shape2.Sides)); 
+
+            //  using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference
+            // Runtime Polymorphism Achieved (Inheritance Hierarchy Reference = Shape)
+        }
+    }
+}
+```
+<br>
+<br>
+<br>
+
+## Factory Pattern
 
