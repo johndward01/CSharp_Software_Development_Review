@@ -1079,7 +1079,6 @@ namespace InterfacesDemo
         static void Main(string[] args)
         {
             ISecurity account1 = new Account("Tier 1") { ID = 1 };
-
             ISecurity user1 = new User("Gold")
             {
                 FirstName = "John",
