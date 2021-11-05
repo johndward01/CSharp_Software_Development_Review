@@ -1357,3 +1357,56 @@ namespace Factory_Pattern_Exercise
 
 ## LINQ 
 
+Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support. Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on. With LINQ, a query is a first-class language construct, just like classes, methods, events. You write queries against strongly typed collections of objects by using language keywords and familiar operators. The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).
+
+- LINQ is a programming language syntax that is used to query data.
+
+- LINQ is a more simple, well-ordered, and high-level language than SQL.
+
+- LINQ extends the IEnumerable<T> interface so it can be used with collections like arrays and lists. 
+
+- With the help of LINQ, you can easily work with any type of data source like XML, SQL, Entities, objects, etc. A single query can work with any type of database, there is no need to learn different types of languages.
+
+- LINQ supports query expression, Implicitly typed variables, Object and collection initializers, Anonymous types, Extension Methods, and Lambda expressions.
+
+> Note: You need to add the using directive `using System.Linq;` in order to access the LINQ Extension methods
+
+<br>
+
+### Query Syntax
+
+![query-syntax](img/LINQ/query-syntax.png)
+
+Query syntax has a very distinctive syntactical style. Due to its unique format, query syntax is very memorable and somewhat iconic as it's often what people envision when thinking of LINQ. You might find similarities with this and SQL.
+
+<br>
+<br>
+<br>
+
+![method-syntax](img/LINQ/method-syntax.png)
+
+LINQ method syntax can do everything that query syntax can do, and more. It's just a different way to format the instructions.
+ 
+### Advantages of Method Syntax:
+- **Not all LINQ methods can be utilized with query syntax**
+- Query syntax is automatically converted to method syntax at compile-time
+- Method syntax is stylistically more similar to other C# code
+
+<br>
+
+### Here is a brief list of the most common methods that are used in Linq:
+- `Where()`- Filters a sequence of values based on a predicate.
+- `Select()`
+- `OrderBy()`- Sorts the elements of a sequence in ascending order.
+- `Sum()`
+- `Average()`
+- `Count()`- Returns the number of elements in a sequence.
+- `Min()`
+- `Max()`
+- `Take()`- Returns a specified number of contiguous elements from the start of a sequence.
+- `Append()`- Appends a value to the end of the sequence.
+- `ThenBy()`- Performs a subsequent ordering of the elements in a sequence in ascending order.
+
+```cs
+
+```
