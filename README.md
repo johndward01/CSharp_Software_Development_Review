@@ -45,29 +45,30 @@
 *   **CLI**: The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications. The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest. 
 *   **Solution file (.sln)** - a solution is a container used by Visual Studio to organize one or more related projects.  When you open a solution in Visual Studio, it automatically loads all the projects the solution contains
 *   **Project file (.csproj)** – contains all the source code that is compiled.  It also contains compiler settings and other configuration files
-*   **cd**: Command-line command to change directory
-*   **mkdir**: Command-line command to create a new folder (directory)
+*   `cd`: Command-line command to change directory
+*   `mkdir`: Command-line command to create a new folder (directory)
 
 
 ### Dotnet Commands:
 
-*   **dotne**t **&lt;command>**: dotnet is a tool for managing .NET source code and binaries. It exposes commands that perform specific tasks, such as dotnet build and dotnet run.
-*   **dotnet new**: Creates a new project, configuration file, or solution based on the specified template.
-    *   Example: **dotnet new console ←- creates a new console application for us**
-*   **dotnet build**: Builds a project and all of its dependencies.
-*   **dotnet run**: Runs source code without any explicit compile or launch commands.
-*   **dotnet sln**: The dotnet sln command provides a convenient way to add, remove, and list projects in a solution file.
-*   **dotnet test**: The dotnet test command is used to execute unit tests in a given project. The dotnet test command launches the test runner console application specified for a project. The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test. If all tests are successful, the test runner returns 0 as an exit code; otherwise, if any test fails, it returns 1. _If the project path is not specified, it defaults to the current directory._
-    *   Example: **dotnet test ~/projects/test1/test1.csproj**
-*   **dotnet clean**: The dotnet clean command cleans the output of the previous build. It's implemented as an MSBuild target, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate (_obj_) and final output (_bin_) folders are cleaned.
+*   `dotnet <command>`: dotnet is a tool for managing .NET source code and binaries. It exposes commands that perform specific tasks, such as dotnet build and dotnet run.
+*   `dotnet new`: Creates a new project, configuration file, or solution based on the specified template.
+    *   Example: `dotnet new console` ←- creates a new console application for us
+*   `dotnet build`: Builds a project and all of its dependencies.
+*   `dotnet run`: Runs source code without any explicit compile or launch commands.
+*   `dotnet sln`: The dotnet sln command provides a convenient way to add, remove, and list projects in a solution file.
+*   `dotnet test`: The dotnet test command is used to execute unit tests in a given project. The dotnet test command launches the test runner console application specified for a project. The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test. If all tests are successful, the test runner returns 0 as an exit code; otherwise, if any test fails, it returns 1. _If the project path is not specified, it defaults to the current directory._
+    *   Example: `dotnet test ~/projects/test1/test1.csproj`
+*   `dotnet clean`: The dotnet clean command cleans the output of the previous build. It's implemented as an MSBuild target, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate (_obj_) and final output (_bin_) folders are cleaned.
 
 
 #### 	Bonus (ASP.NET MVC dotnet command): 
-
-*   **mkdir** VS_Code-MVC
-*   **cd** VS_Code-MVC
-*   **dotnet new mvc**
-*   **code .**
+```bash
+mkdir VS_Code-MVC
+cd VS_Code-MVC
+dotnet new mvc
+code .
+```
 
 **<span style="text-decoration:underline;">Type the following commands into the terminal</span>**
 
