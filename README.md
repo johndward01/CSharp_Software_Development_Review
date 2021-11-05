@@ -1165,8 +1165,11 @@ namespace ConsoleApp1
 
         public override double Area(double radius, double[] sides)
         {
-            double semiperimeter = sides.Sum() / 2;
-            double area = Math.Sqrt(semiperimeter * (semiperimeter - sides[0]) * (semiperimeter - sides[1]) * (semiperimeter - sides[2]));
+            double a = sides[0];
+            double b = sides[1];
+            double c = sides[2];
+            double s = sides.Sum() / 2;
+            double area = Math.Sqrt(s * (s - a]) * (s - b) * (s - c));
             return area;
         }
 
