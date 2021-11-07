@@ -1396,17 +1396,45 @@ LINQ method syntax can do everything that query syntax can do, and more. It's ju
 
 ### Here is a brief list of the most common methods that are used in Linq:
 - `Where()`- Filters a sequence of values based on a predicate.
-- `Select()`
+- `Select()`- Projects each element of a sequence into a new form.
 - `OrderBy()`- Sorts the elements of a sequence in ascending order.
-- `Sum()`
-- `Average()`
+- `Sum()`- Computes the sum of a sequence of numeric values.
+- `Average()`- Computes the average of a sequence of numeric values.
 - `Count()`- Returns the number of elements in a sequence.
-- `Min()`
-- `Max()`
+- `Min()`- Returns the minimum value in a sequence of values.
+- `Max()`- Returns the maximum value in a sequence of values.
 - `Take()`- Returns a specified number of contiguous elements from the start of a sequence.
 - `Append()`- Appends a value to the end of the sequence.
+- `GroupBy()`- Groups the elements of a sequence according to a specified key selector function and creates a result value from each group and its key.
 - `ThenBy()`- Performs a subsequent ordering of the elements in a sequence in ascending order.
 
 ```cs
+// Where() - Filters based upon a predicate
+var numbers = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+var evens = numbers.Where(x => x % 2 == 0).ToList(); // Filters out the odds
+var odds = numbers.Where(x => x % 2 != 0).ToList(); // Filters out the evens
 
+evens.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
+odds.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
+```
+
+```cs
+// Select() - Projects each element into a new form (For example: the number squared)
+var squares = Enumerable.Range(1, 10).Select(x => x * x).ToList();
+
+squares.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
+````
+
+```cs
+// OrderBy() - Sorts in Ascending Order
+var unOrdered = new List<string>() {"ccc", "fff", "ddd", "aaa", "bbb", "eee", "ggg"}
+var ordered = unOrdered.OrderBy(x => x).ToList(); // ordering by the string's char values
+
+ordered.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
+```
+
+```cs
+// Sum() - Adds them all up 
+var sum = Enumerable.Range(1, 100).Sum();
+Console.WriteLine(sum); // prints the sum to the console
 ```
