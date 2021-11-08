@@ -1975,3 +1975,71 @@ ON s.ProductID = p.ProductID
 
 ## C# ORM and Dapper
 
+Programmers would prefer to exercise their creative muscles rather than type and retype data 
+access and parameterized queries over and over. Enter **Object Relational Mappers (ORM)**.
+
+**ORM**s are the plumbers of the programming world. They help get data out of and back into databases from our data models. Additionally, ORM's like Dapper will handle parameterizing your SQL statements for you and make it very easy to fire a SQL query against a database and get the result mapped to C# domain class.
+
+### SQL Parameterized Queries
+
+SQL Injection is the "injection" of unexpected or malicious code into SQL statements.
+- Best Case: this will cause unexpected or broken behavior
+- Worst Case: this can be exploited to copy or destroy your database
+- Every Case: it's bad. Anytime you hear SQL Injection, just know that it's something to avoid.
+
+Here's an example of C# code that is vulnerable to SQL Injection:
+```cs
+public void InsertProduct(string name)
+{
+    var sql = $"INSERT INTO Product (Name) VALUES ('{name}');";
+    // Execute SQL here
+}
+```
+
+If I call my method like so:
+```cs
+InsertProduct("Test'); Drop Table Product; --")S
+```
+
+the resulting SQL statement will be:
+```sql
+INSERT INTO Product (Name) VALUES ('Test'); DROP TABLE Product; --');
+```
+
+This is a valid SQL statement that will add a product and then delete the Product table.
+
+<br>
+
+So to protect ourselves from these vulnerabilities, we will be using **Parameterized Statements**.
+
+### Parameterized Statements 
+
+Every language supports some version of parameterized statements, sometimes called prepared statements. Parameterized statements allow you to abstract your statement from your parameters.
+Parameterized statements will sanitize your data by escaping any dangerous characters and performing any parsing or optimization necessary.
+
+![ORM](img/ORM%20and%20Dapper/ORM.png)
+
+<br>
+
+### Dapper
+
+Dapper is a .NET compatible, NuGet library ORM that you can add to your project that will extend your IDbConnection interface.
+- Dapper has no DB specific implementation details; it works across SQLite, Oracle, MySQL, PostgreSQL, and SQL Server, to name a few.
+- Dapper adds a variety of things to the IDbConnection interface, but mostly you'll interact with Query and Execute:
+- Here is a side by side comparison of just using MySqlConnection vs using Dapper:
+You might notice how much code is reduced by using the Dapper implementation
+
+<br>
+<br>
+
+### Without Dapper
+
+![dapper1](img/ORM%20and%20Dapper/Dapper1.png)
+
+<br>
+
+### With Dapper
+
+![dapper2](img/ORM%20and%20Dapper/Dapper2.png)
+
+<br>
