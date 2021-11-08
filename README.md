@@ -492,7 +492,12 @@ public int Add(int x, int y)
 
 ## Arrays & Lists
 
-*   **Arrays**: Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
+<br>
+<br>
+
+## Arrays:
+
+ Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
 
 ### Declaring and Initializing Arrays:
 ```cs
@@ -533,10 +538,14 @@ Console.WriteLine(cars[cars.Length - 1]); // output: Toyota
 Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeException)
 ```
 
+> Note: An array is a type of collection
+
 <br>
 <br>
 
-*   **Lists**: Collections provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+## Lists
+
+Lists (Collections) provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
 ### Declaring and Initializing Lists:
 ```cs
@@ -586,6 +595,9 @@ foreach (var num in oddNumbers)
     Console.Write(num); // outputs => 1357911
 }
 ```
+
+> Note: A List is another type of collection
+
 <br>
 <br>
 <br>
@@ -1393,5 +1405,57 @@ groupBy.ToList().ForEach(x => Console.WriteLine(x.Key)); // prints out the Group
 
 ```cs
 // ThenBy() - Allows you to continue Grouping/Ordering/etc... by chaining this method to the end
-var firstNameOrdered = 
+
+public class Employee
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int ID { get; set; }
+    public int Age { get; set; }
+    public double YearsOfExperience { get; set; }
+
+    public Employee(string first, string last, int id, int age, double yearsOfExperience)
+    {
+        FirstName = first;
+        LastName = last;
+        ID = id;
+        Age = age;
+        YearsOfExperience = yearsOfExperience;
+    }
+
+    public void PrintInfo()
+    {
+        Console.WriteLine($"FirstName: {FirstName}");
+        Console.WriteLine($"LastName: {LastName}");
+        Console.WriteLine($"ID: {ID}");
+        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine($"YearsOfExperience: {YearsOfExperience}");
+        Console.WriteLine();
+        Console.WriteLine();
+    }
+}
+
+var emp1 = new Employee("John", "Ward", 101, 43, 10);
+var emp2 = new Employee("Jon", "Brown", 102, 30, 9);
+var emp3 = new Employee("Jon", "Jon", 103, 28, 4);
+var emp4 = new Employee("Jack", "Smith", 201, 22, 11);
+var emp5 = new Employee("Allen", "Doe", 303, 42, 20);
+
+var employeeList = new List<Employee>
+{
+    emp1,
+    emp2,
+    emp3,
+    emp4
+};
+
+var thenBy = employeeList.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToList();
+
+thenBy.ForEach(x => Console.WriteLine($"FirstName: {x.FirstName}\nLastName: {x.LastName}\n\n")); // prints the employees out to the console (oredered by firstname then by lastname)
 ```
+
+<br>
+<br>
+<br>
+
+## Debugging:
