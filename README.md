@@ -1446,12 +1446,13 @@ var employeeList = new List<Employee>
     emp1,
     emp2,
     emp3,
-    emp4
+    emp4,
+    emp5
 };
 
-var thenBy = employeeList.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToList();
+var employees = employeeList.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToList();
 
-thenBy.ForEach(x => Console.WriteLine($"FirstName: {x.FirstName}\nLastName: {x.LastName}\n\n")); // prints the employees out to the console (oredered by firstname then by lastname)
+employees.ForEach(x => x.PrintInfo()); // prints the employees out to the console (oredered by firstname then by lastname)
 ```
 
 <br>
