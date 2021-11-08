@@ -1496,19 +1496,19 @@ A logical error is an error that while you can still run your program and it wil
 
 Breakpoints are one of the most important debugging techniques in your developer's toolbox. You set breakpoints wherever you want to pause debugger execution. For example, you may want to see the state of code variables or look at the call stack at a certain breakpoint.
 
-![breakpoints](img/Debugging/Breakpoints.png)
+![breakpoints](img/Debugging/BreakPoints.png)
 
 <br>
 
 Run your app and the execution will stop at this breakpoint:
 
-![breakpoints](img/Debugging/Breakpoints1.png)
+![breakpoints](img/Debugging/BreakPoints1.png)
 
 <br>
 
 Use **Step Into**, **Step Out**, and **Step Over** to navigate through your code:
 
-![breakpoints](img/Debugging/Breakpoints2.png)
+![breakpoints](img/Debugging/BreakPoints2.png)
 
 <br>
 <br>
