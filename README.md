@@ -505,13 +505,16 @@ myArray1[1] = 20;
 myArray1[2] = 30;
 
 // Example 2 => Declaring and initializing an int array (at the same time)
-int[] myArray2 = new int[] { 3, 2, 1 };
+int[] myArray2 = new int[3] { 3, 2, 1 };
 
-// Example 3 => Declaring and initializing an int array (implicitly)
-var myArray3 = new int[] { 10, 11, 12 };
+// Example 3 => Declaring and initialzing an int array (no size specification)
+int[] myArray3 = new int[] {4, 5, 6, 7, 8, 9};
 
-// Example 4 => Shorthand Syntax
-int[] myArray4 = { 100, 200, 300 };
+// Example 4 => Declaring and initializing an int array (implicitly)
+var myArray4 = new int[] { 10, 11, 12 };
+
+// Example 5 => Shorthand Syntax
+int[] myArray5 = { 100, 200, 300 };
 ```
 
 ### Accessing Elemets of Arrays:
@@ -1390,5 +1393,6 @@ groupBy.ToList().ForEach(x => Console.WriteLine(x.Key)); // prints out the Group
 ```
 
 ```cs
-// ThenBy() - 
+// ThenBy() - Allows you to continue Grouping/Ordering/etc... by chaining this method to the end
+var firstNameOrdered = 
 ```
