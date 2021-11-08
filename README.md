@@ -1516,3 +1516,124 @@ Use **Step Into**, **Step Out**, and **Step Over** to navigate through your code
 
 ## Exception Handling
 
+Use `Try/Catch` blocks to "catch" exceptions instead of letting the program crash. There is some overhead with throwing and catching exceptions, so just like the name implies it should be reserved for exceptional conditions that are not the norm.  If a test can be run to prevent the exception then that’s usually the best practice.  Typically, reserved for exceptional conditions like AccessDenied, ConnectionNotAvailable, etc that are not the norm for the application, the exception can be a very useful tool in your arsenal if used wisely.
+
+### Try
+
+- A try block is used by C# programmers to partition code that might be affected by an exception. 
+- Associated catch blocks are used to handle any resulting exceptions. 
+- A finally block contains code that is run regardless of whether or not an exception is thrown in the try block, such as releasing resources that are allocated in the try block. 
+- A try block requires one or more associated catch blocks, or a finally block, or both.
+
+> Note: A try block without a catch or finally block will throw a compiler error
+
+
+
+### Catch
+
+- A catch block can specify the type of exception to catch. The type specification is called an exception filter. The exception type should be derived from Exception. 
+- In general, do not specify Exception as the exception filter unless either you know how to handle all exceptions that might be thrown in the try block, or you have included a throw statement at the end of your catch block.
+ 
+- Multiple catch blocks with different exception filters can be chained together. The catch blocks are evaluated from top to bottom in your code, but only one catch block is executed for each exception that is thrown. The first catch block that specifies the exact type or a base class of the thrown exception is executed. If no catch block specifies a matching exception filter, a catch block that does not have a filter is selected, if one is present in the statement. It is important to position catch blocks with the most specific (that is, the most derived) exception types first.
+
+You should catch exceptions when the following conditions are true:
+- You have a good understanding of why the exception might be thrown, and you can implement a specific recovery, such as prompting the user to enter a new file name when you catch a FileNotFoundException object.
+- You can create and throw a new, more specific exception.
+- You want to partially handle an exception before passing it on for additional handling.
+
+```cs
+public class Program
+{
+    static void Main()
+    {
+        Console.Write("Please enter your age: ");
+        // var age = int.Parse(Console.ReadLine());
+
+        try
+        {
+            var age = int.Parse(Console.ReadLine());
+        }
+        catch (FormatException e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("An empty or improperly formatted response is not allowed!");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
+```
+
+### Finally 
+
+- A finally block enables you to clean up actions that are performed in a try block. If present, the finally block executes last, after the try block and any matched catch block. 
+- A finally block always runs, regardless of whether an exception is thrown or a catch block matching the exception type is found.
+
+
+```cs
+public class Program
+{
+    static void Main()
+    {
+        Console.Write("Please enter your age: ");
+        // var age = int.Parse(Console.ReadLine());
+
+        try
+        {
+            var age = int.Parse(Console.ReadLine());
+        }
+        catch (FormatException e)
+        {
+            Console.WriteLine(e.Message);
+            Console.WriteLine("An empty or improperly formatted response is not allowed!");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            Console.WriteLine("This will always run no matter what.");
+        }
+    }
+}
+
+```
+
+<br>
+<br>
+<br>
+
+## Test Driven Development
+
+We cover Test Driven Development because of the many advantages it gives to programmers.  It drives the design process of our code and helps with reducing bugs in the code we write.  It also makes the functionality of our code clear and simple while being easier to maintain and understand.
+
+TDD is a process in which we write our tests first and those tests are used to drive the design of our code or application.
+
+- Bugs in your code can be avoided sooner rather than later
+- The intentions of your functionality are made clear
+- It encourages decoupling - which allows changes to be made to one thing without affecting another thing
+- You accumulate tests over time that can be quickly run without the time consuming manual tests
+
+> Note:  A unit is the smallest testable part of any software.
+
+<br>
+
+### Red, Green, Refactor Process:
+Here is the process we follow when writing Unit Tests:
+ 
+**Red** - We write the test and then watch it fail (it fails because the code needed in order for the test to pass hasn’t been written yet!).  We create a test that will fail on purpose so that we know with a degree of confidence that our tests will fail when expected to - making it red
+ 
+**Green** - Now we write code in our software or application so that our test will pass - making it green
+ 
+**Refactor** - Here we change the passing code we wrote (the code that made our test pass) without changing the behavior of the code itself. We want our code to still behave as we expect.  This allows us to improve code readability and possibly reduce complexity.  
+
+<br>
+
+In the picture below, we have our Tests on the right and our methods on the left. The tests that are associated with their methods are in the same color boxes.
+
+![TDD](img/Test%20Driven%20Development/TDD.png)
+
+> Note: Even though the names of the test methods are not the same as the methods they are testing, they are still calling the `Exponent()` and `PrintGreeting()` methods respectively.
