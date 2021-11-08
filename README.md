@@ -1345,3 +1345,50 @@ ordered.ForEach(x => Console.WriteLine(x)); // prints the collection to the cons
 var sum = Enumerable.Range(1, 100).Sum();
 Console.WriteLine(sum); // prints the sum to the console
 ```
+
+```cs
+// Average() - Computes the average
+var average = Enumerable.Range(1, 100).Average();
+Console.WriteLine(average); // prints the average to the console
+```
+
+```cs
+// Count() - Gets the total number of elements in the sequence
+var count = Enumerable.Range(1, 100).Count();
+Console.WriteLine(count); // prints the count to the console
+```
+
+```cs
+// Min() and Max() - gets the min or max element in the sequence
+var myList = new List<int>() {123, 3833, 12, 0, 12234};
+var min = myList.Min();
+var max = myList.Max();
+Console.WriteLine($"Min: {min} \t Max: {max}"); // prints out the min and max using string interpolation (\t is a tab character)
+```
+
+```cs
+// Take() - Takes from the beginning as many as specified
+var list = new List<string>() {"The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"};
+
+var take4 = list.Take(4);
+take4.ToList().ForEach(x => Console.WriteLine(x)); // prints only the first 4 elements
+```
+
+```cs
+// Append() - attaches something to the end of the sequence
+var list = new List<double>() {.001, .002};
+list.Append(.003);
+list.ForEach(x => Console.WriteLine(x)); // prints out the 3 elements
+```
+
+```cs
+// GroupBy() - Groups them together by a key (x is an IGroup<> so we use the . operator to access the Group's Key Value)
+var myList = new List<int>() { 1, 1, 3, 2, 1, 2, 3, 3, 1 };
+var groupBy = myList.GroupBy(x => x);
+
+groupBy.ToList().ForEach(x => Console.WriteLine(x.Key)); // prints out the Group's Key Values to the console
+```
+
+```cs
+// ThenBy() - 
+```
