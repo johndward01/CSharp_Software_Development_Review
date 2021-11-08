@@ -1637,3 +1637,14 @@ In the picture below, we have our Tests on the right and our methods on the left
 ![TDD](img/Test%20Driven%20Development/TDD.png)
 
 > Note: Even though the names of the test methods are not the same as the methods they are testing, they are still calling the `Exponent()` and `PrintGreeting()` methods respectively.
+
+### TestExplorer:
+
+![TDD1](img/Test%20Driven%20Development/TDD1.png)
+
+<br>
+<br>
+<br>
+
+## SQL Intro
+
