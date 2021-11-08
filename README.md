@@ -1459,4 +1459,60 @@ employees.ForEach(x => x.PrintInfo()); // prints the employees out to the consol
 <br>
 <br>
 
-## Debugging:
+## Debugging
+
+Generally speaking, there are 3 types of errors:
+
+- Compile Time
+- Runtime
+- Logical
+
+<br>
+
+**Compile-Time**:
+
+A compile-time error is an error that shows up when you’re writing code, it will be accompanied by a red squiggly and show up in the error window. In languages that are compiled, like C#, the compiler will validate the program in many ways. It will only accept programs that have the correct syntax. Programs must use the object model correctly. Every object must exist.
+These are the easiest to fix since VS will give you indications of your error as well as try to give solutions to the problem. 
+
+![compile](img/Debugging/CompileTimeError.png)
+
+**Run-Time**:
+
+A Runtime error is an error that occurs while your application is running. While in debug mode this will show up as an exception: 
+
+![runtime](img/Debugging/RunTimeError.jpg)
+
+An exception is an error that occurs during runtime of a program, or when you are using the app. This means that while using YOUR app it crashed and what they were doing is lost. Now you will need to create a hotfix and then push the fixes to the repo. Then it will be tested to ensure your hotfix didn’t break something else in the app. This must be avoided at all costs as it can be quite a long process.
+
+<br>
+
+**Logical errors**: 
+
+A logical error is an error that while you can still run your program and it will not crash, you won’t be getting the results you might expect. One example of this may be like asking for the user’s name and age to print it in the console and the program saying “Hello 24, you are John Smith years old!”. No, the app didn’t crash but we got funky results.
+
+<br>
+
+### Breakpoints
+
+Breakpoints are one of the most important debugging techniques in your developer's toolbox. You set breakpoints wherever you want to pause debugger execution. For example, you may want to see the state of code variables or look at the call stack at a certain breakpoint.
+
+![breakpoints](img/Debugging/Breakpoints.png)
+
+<br>
+
+Run your app and the execution will stop at this breakpoint:
+
+![breakpoints](img/Debugging/Breakpoints1.png)
+
+<br>
+
+Use **Step Into**, **Step Out**, and **Step Over** to navigate through your code:
+
+![breakpoints](img/Debugging/Breakpoints2.png)
+
+<br>
+<br>
+<br>
+
+## Exception Handling
+
