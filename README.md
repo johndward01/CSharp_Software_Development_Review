@@ -1945,7 +1945,7 @@ INNER JOIN employees AS e
 ON e.EmployeeID = s.EmployeeID
 INNER JOIN products AS p 
 ON p.productid = s.productid
-GROUP BY e.employeeid, e.FirstName, e.LastName, p.productID, p.name, s.Date;
+GROUP BY e.EmployeeID, e.FirstName, e.LastName, p.productID, p.name, s.Date;
 
 SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProductID, 
 	   p.Name, SUM(s.Quantity) AS 'Total Sold' 
