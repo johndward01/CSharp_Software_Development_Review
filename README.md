@@ -1114,7 +1114,7 @@ namespace ConsoleApp1
             shape2.Sides = new double[] { 4, 13, 15}; // https://www.triangle-calculator.com/?what=sss&a=4&b=13&c=15&submit=Solve
             Console.WriteLine(shape2.Area(0, shape2.Sides)); 
 
-            //  using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference
+            // Using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference
             // Runtime Polymorphism Achieved (Inheritance Hierarchy Reference = Shape)
         }
     }
@@ -2256,4 +2256,12 @@ public class Program
 <br>
 
 ## IDE Parts: Google Chrome Inspector
+
+To open the Chrome Inspector right click on the page and click "Inspect"
+
+![chrome1](img/Chrome%20Inspector/Chrome1.png)
+
+![chrome1](img/Chrome%20Inspector/Chrome2.png)
+
+> Note: You can adjust the Google Chrome Developer Tools Windows to whatever size or orientation is easier for you to read!
 
