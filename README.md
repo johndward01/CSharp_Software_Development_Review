@@ -2174,3 +2174,45 @@ JSON is built on two structures:
     }
   ]
 ```
+
+### Representational State Transfer 
+
+**REST** is a language-independent architecture that provides interoperability between computer systems on the Internet.  It utilizes a stateless protocol aiming for fast performance and reliability.
+
+A REST (REpresentational State Transfer) API allows the server to transfer to the client a representation of the state of the requested resource. It follows six constraints:
+- **Uniform Interface** — this tells the RESTful service what to send to the client, in form of a document, image or other. Before a client can interact with a RESTful service, it needs to do two things: identify every resource the server has to offer and define a set of operations that can be performed in any resource with a predicable outcome.
+- **Client-Server** — client and server should be separate, allowing each other to evolve individually. The server is called when the client sends a request, which the server reacts to by sending a response. But, if there is no call of the server by the client, no interaction happens.
+- **Stateless** — every interaction between client and server is stateless, there are no sessions and no history. Stateless means each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client.
+- **Cacheable** — since a stateless API can be forced to handle a large number of requests, it should allow the storage of cacheable data. If a message is cacheable, the client doesn’t need to repeat the same request, which contributes to a better performance of the system.
+- **Layered System** — this constraint builds in the client-server separation mentioned above and allows the overall architecture of the service to be separated by individual layers that work independently and only interact with the layers immediately adjacent to them. This also benefits the security of the system.
+- **Code on demand** — this is the least known of the constraints and, in fact, it is optional when defining a REST API. Basically, instead of returning an XML or JSON object, it allows for the server to return executable code.
+
+<br>
+
+### REST Verbs:
+
+RESTful web services allow us to perform CRUD operations.  A RESTful API is an application program interface (API) that uses HTTP requests to **GET**, **PUT**, **POST** and **DELETE** data.
+
+It translates like this:
+
+Create|Read|Update|Delete|
+---   |--- |---   |---   |
+POST  |GET |PUT   |DELETE|
+
+<br>
+
+### HTTP Status Codes:
+
+- 1xx – Informational
+- 2xx – Success
+This class of status code indicates that the client's request was successfully received, understood, and accepted.
+- 3xx – Redirection
+The client must take additional action to complete the request.
+- 4xx – Client Error (404)
+    - The 4xx class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition.
+    - These status codes are applicable to any request method. User agents should display any included entity to the user.
+- 5xx – Server Error
+The server failed to fulfill an apparently valid request
+
+> https://www.restapitutorial.com/httpstatuscodes.html
+
