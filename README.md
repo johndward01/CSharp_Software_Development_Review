@@ -2139,3 +2139,34 @@ namespace ASP.NET_Core_Identity_Demo
 
 ## APIs and JSON
 
+**API** stands for application programming interface. It defines how two pieces of software will communicate with each other. 
+
+> Note: In our examples, we will call web APIs and receive a response containing JSON.
+
+<br>
+
+### JSON
+
+JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+
+JSON is built on two structures:
+- A collection of **name : value** pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+
+```json
+{"quote": "A slightly humurous quote by Kanye West"} // a json object
+````
+
+- An ordered list of values - like an array.  In the below example we have an array of cars contained in brackets [ ].  We even have nested arrays inside of the cars array:
+
+```json
+myObj = {    // a more complex json object
+  "name":"John",
+  "age":30,
+  "cars": [ 
+    { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] },
+    { "name":"BMW", "models":[ "320", "X3", "X5" ] },
+    { "name":"Fiat", "models":[ "500", "Panda" ] }
+  ]
+ }
+
+```
