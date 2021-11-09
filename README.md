@@ -2150,23 +2150,27 @@ namespace ASP.NET_Core_Identity_Demo
 JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
 
 JSON is built on two structures:
-- A collection of **name : value** pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+- Object - an unordered set of name/value pairs. An object begins with { and ends with }. Each name is followed by a colon and the name/value pairs are separated by a comma.
 
 ```json
 {"quote": "A slightly humurous quote by Kanye West"} // a json object
 ````
 
-- An ordered list of values - like an array.  In the below example we have an array of cars contained in brackets [ ].  We even have nested arrays inside of the cars array:
+-  An array is an ordered collection of values. An array begins with `[` and ends with a `]`. Values are separated by a comma.  Here we have an array phone numbers:
 
 ```json
-myObj = {    // a more complex json object
-  "name":"John",
-  "age":30,
-  "cars": [ 
-    { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] },
-    { "name":"BMW", "models":[ "320", "X3", "X5" ] },
-    { "name":"Fiat", "models":[ "500", "Panda" ] }
+"phoneNumbers": [ // a json array
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
   ]
- }
-
 ```
