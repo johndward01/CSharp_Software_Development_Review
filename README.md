@@ -2153,13 +2153,13 @@ JSON is built on two structures:
 - Object - an unordered set of name/value pairs. An object begins with { and ends with }. Each name is followed by a colon and the name/value pairs are separated by a comma.
 
 ```json
-{"quote": "A slightly humurous quote by Kanye West"} // a json object
+{"quote": "A slightly humurous quote by Kanye West"} 
 ````
 
 -  An array is an ordered collection of values. An array begins with `[` and ends with a `]`. Values are separated by a comma.  Here we have an array phone numbers:
 
 ```json
-"phoneNumbers": [ // a json array
+"phoneNumbers": [ 
     {
       "type": "home",
       "number": "212 555-1234"
