@@ -2286,3 +2286,9 @@ Important Actions:
 
 ![chrome1](img/Chrome%20Inspector/Chrome2.gif)
 
+<br>
+<br>
+<br>
+
+## HTML Intro
+
