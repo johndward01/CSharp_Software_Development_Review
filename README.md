@@ -2282,3 +2282,7 @@ Important Actions:
 
 ![chrome1](img/Chrome%20Inspector/Chrome1.gif)
 
+- You can see all of the code, pictures, fonts, etc.. in the **Sources Tab**
+
+![chrome1](img/Chrome%20Inspector/Chrome2.gif)
+
