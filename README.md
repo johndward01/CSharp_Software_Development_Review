@@ -2216,3 +2216,28 @@ The server failed to fulfill an apparently valid request
 
 > https://www.restapitutorial.com/httpstatuscodes.html
 
+```cs
+using Newtonsoft.Json.Linq;
+using System;
+using System.Net.Http;
+
+// Install the NewtonSoft.Json Nuget Package before beginning
+public class Program
+{
+    static void Main(string[] args)
+    {
+        var client = new HttpClient(); // instantiating an instance of the HttpClient
+        var kanyeURL = "https://api.kanye.rest"; // declaring a string variable to represent the URL/endpoint
+        var kanyeResponse = client.GetStringAsync(kanyeURL).Result; // making a GET request (asynchronously) to the URL/endpoint
+        // Console.WriteLine(kanyeResponse);  // writing out the raw JSON response
+        var kanyeQuote = JObject.Parse(kanyeResponse).GetValue("quote").ToString(); // parsing the JSON response for only the value associated with the name "quote"
+        Console.WriteLine(kanyeQuote); // writing out the parsed JSON response
+    }
+}
+```
+<br>
+<br>
+<br>
+
+## IDE Parts: Google Chrome Inspector
+
