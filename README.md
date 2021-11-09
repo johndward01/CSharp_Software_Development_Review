@@ -2265,3 +2265,9 @@ To open the Chrome Inspector right click on the page and click "Inspect"
 
 > Note: You can adjust the Google Chrome Developer Tools Windows to whatever size or orientation is easier for you to read!
 
+Important Actions:
+- You can click the "Selction Tool" and then hover over elements you want to isolate more closely
+
+![chrome1](img/Chrome%20Inspector/Chrome3.png)
+
+![chrome1](img/Chrome%20Inspector/Chrome4.png)
