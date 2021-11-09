@@ -1469,14 +1469,14 @@ Generally speaking, there are 3 types of errors:
 
 <br>
 
-**Compile-Time**:
+### Compile-Time:
 
 A compile-time error is an error that shows up when you’re writing code, it will be accompanied by a red squiggly and show up in the error window. In languages that are compiled, like C#, the compiler will validate the program in many ways. It will only accept programs that have the correct syntax. Programs must use the object model correctly. Every object must exist.
 These are the easiest to fix since VS will give you indications of your error as well as try to give solutions to the problem. 
 
 ![compile](img/Debugging/CompileTimeError.png)
 
-**Run-Time**:
+### Run-Time:
 
 A Runtime error is an error that occurs while your application is running. While in debug mode this will show up as an exception: 
 
@@ -1486,7 +1486,7 @@ An exception is an error that occurs during runtime of a program, or when you ar
 
 <br>
 
-**Logical errors**: 
+### Logical errors: 
 
 A logical error is an error that while you can still run your program and it will not crash, you won’t be getting the results you might expect. One example of this may be like asking for the user’s name and age to print it in the console and the program saying “Hello 24, you are John Smith years old!”. No, the app didn’t crash but we got funky results.
 
