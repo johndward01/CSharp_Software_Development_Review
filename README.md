@@ -2277,3 +2277,8 @@ Important Actions:
 > Note: DOM: Stands for Document Object Model
 
 ![chrome1](img/Chrome%20Inspector/Chrome5.png)
+
+- You can live edit the box model. Examine and edit the current element's box model parameters using the Computed pane. All values in the box model are editable, just click on them.
+
+![chrome1](img/Chrome%20Inspector/Chrome1.gif)
+
