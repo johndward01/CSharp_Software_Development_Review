@@ -1632,11 +1632,27 @@ Here is the process we follow when writing Unit Tests:
 
 <br>
 
+### xUnit syntax:
+`[Fact]` 
+
+xUnit uses the `[Fact]` attribute to denote a parameterless unit test, which tests invariants in your code 
+
+<br>
+ 
+`[Theory]` 
+
+`[InlineData() ]` 
+
+In contrast, the `[Theory]` attribute denotes a parameterized test that is true for a subset of data. That data can be supplied in a number of ways, but the most common is with an `[InlineData]` attribute.
+
+
 In the picture below, we have our Tests on the right and our methods on the left. The tests that are associated with their methods are in the same color boxes.
 
 ![TDD](img/Test%20Driven%20Development/TDD.png)
 
 > Note: Even though the names of the test methods are not the same as the methods they are testing, they are still calling the `Exponent()` and `PrintGreeting()` methods respectively.
+
+<br>
 
 ### TestExplorer:
 
