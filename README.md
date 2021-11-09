@@ -2271,3 +2271,9 @@ Important Actions:
 ![chrome1](img/Chrome%20Inspector/Chrome3.png)
 
 ![chrome1](img/Chrome%20Inspector/Chrome4.png)
+
+
+- You can live edit a DOM node
+> Note: DOM: Stands for Document Object Model
+
+![chrome1](img/Chrome%20Inspector/Chrome5.png)
