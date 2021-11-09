@@ -1469,14 +1469,14 @@ Generally speaking, there are 3 types of errors:
 
 <br>
 
-### Compile-Time:
+### Compile-Time Errors:
 
 A compile-time error is an error that shows up when you’re writing code, it will be accompanied by a red squiggly and show up in the error window. In languages that are compiled, like C#, the compiler will validate the program in many ways. It will only accept programs that have the correct syntax. Programs must use the object model correctly. Every object must exist.
 These are the easiest to fix since VS will give you indications of your error as well as try to give solutions to the problem. 
 
 ![compile](img/Debugging/CompileTimeError.png)
 
-### Run-Time:
+### Run-Time Errors:
 
 A Runtime error is an error that occurs while your application is running. While in debug mode this will show up as an exception: 
 
