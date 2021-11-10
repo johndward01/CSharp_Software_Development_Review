@@ -2393,3 +2393,34 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```
 
 ![html1](img/HTML%20Intro/HTML2.png)
+
+- HTML Table: A table in HTML consists of table cells inside rows and columns
+
+```html
+<h2>Table defines a table element</h2>
+<h3>TR elements define table rows</h3>
+<h4>TH elements define table headers</h4>
+<h5>TD elements define table data</h5>
+
+<table style="width:100%">
+  <tr>
+    <th>Person 1</th>
+    <th>Person 2</th>
+    <th>Person 3</th>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+
+<p>Borders are added for better clarity</p>
+```
+
+![html1](img/HTML%20Intro/HTML3.png)
