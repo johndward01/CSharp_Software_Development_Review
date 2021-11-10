@@ -2438,3 +2438,20 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
+- The `div` Element: The `div` element is often used as a container for other HTML elements.
+
+The `div` element has no required attributes, but style, class and id are common.
+
+When used together with CSS, the `div` element can be used to style blocks of content:
+
+```html
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+```
+
+![html1](img/HTML%20Intro/HTML4.png)
+
+<br>
+<br>
