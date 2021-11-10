@@ -2521,6 +2521,10 @@ HTML has several semantic elements that define the different parts of a web page
 > - `details` - Defines additional details that the user can open and close on demand
 > - `summary` - Defines a heading for the `details` element
 
+```html
+
+```
+
 <br>
 <br>
 <br>
