@@ -2506,6 +2506,23 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 
 <br>
 <br>
+
+### HTML Layout Elements
+HTML has several semantic elements that define the different parts of a web page:
+
+![html1](img/HTML%20Intro/HTML2.gif)
+
+> - `header` - Defines a header for a document or a section
+> - `nav` - Defines a set of navigation links
+> - `section` - Defines a section in a document
+> - `article` - Defines an independent, self-contained content
+> - `aside` - Defines content aside from the content (like a sidebar)
+> - `footer` - Defines a footer for a document or a section
+> - `details` - Defines additional details that the user can open and close on demand
+> - `summary` - Defines a heading for the `details` element
+
+<br>
+<br>
 <br>
 
 ## CSS Intro
