@@ -2384,3 +2384,10 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 
 ![html1](img/HTML%20Intro/HTML1.gif)
 
+- HTML Images: HTML images are defined with the `img` tag.
+```html
+<img src="img/HTML Intro/forest-trail.jpg"
+     alt="forest-trail"
+     width="300px"
+     height="200px"> <!-- You don't have to add the height and width properties if you just want to style them in the stylesheet -->
+```
