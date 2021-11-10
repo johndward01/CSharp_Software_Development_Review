@@ -12,7 +12,7 @@
 **[Selection Statements](#selection-statements)**<br>
 **[C# Syntax Sugar](#csharp-syntax-sugar)**<br>
 **[Iteration Statements & Loops](#iteration-statements-and-loops)**<br>
-**[Methods/Functions](#methods)**<br>
+**[Methods](#methods)**<br>
 **[Method Overloading](#method-overloading)**<br>
 **[Arrays & Lists](#arrays-and-lists)**<br>
 **[Classes](#classes)**<br>
