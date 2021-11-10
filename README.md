@@ -2355,7 +2355,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 
 ### Common HTML Tags:
 
-- HTML Headings: HTML headings are defined with the `h1` to `h6` tags.
+- ### HTML Headings:
+> HTML headings are defined with the `h1` to `h6` tags.
 
 ```html
 <h1>This is heading 1</h1>
@@ -2370,7 +2371,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- HTML Paragraphs: HTML paragraphs are defined with the `p` tag:
+- ### HTML Paragraphs:
+> HTML paragraphs are defined with the `p` tag:
 
 ```html
 <p>Some content</p>
@@ -2380,7 +2382,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- HTML Links: HTML links are defined with the `a` tag:
+- ### HTML Links:
+> HTML links are defined with the `a` tag:
 
 ```html
 <a href="https://truecoders.io">TrueCoders</a>
@@ -2391,7 +2394,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- HTML Images: HTML images are defined with the `img` tag.
+- ### HTML Images:
+> HTML images are defined with the `img` tag.
 ```html
 <img src="img/HTML Intro/forest-trail.jpg"
      alt="forest-trail"
@@ -2404,7 +2408,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- HTML Table: A table in HTML consists of table cells inside rows and columns
+- ### HTML Table:
+> A table in HTML consists of table cells inside rows and columns
 
 ```html
 <h2>Table defines a table element</h2>
@@ -2438,11 +2443,10 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- The `div` Element: The `div` element is often used as a container for other HTML elements.
-
-The `div` element has no required attributes, but style, class and id are common.
-
-When used together with CSS, the `div` element can be used to style blocks of content:
+- ### The `div` Element:
+> - The `div` element is often used as a container for other HTML elements. 
+> - The `div` element has no required attributes, but style, class and id are common.
+> - When used together with CSS, the `div` element can be used to style blocks of content:
 
 ```html
 <div style="background-color:black;color:white;padding:20px;">
@@ -2456,9 +2460,10 @@ When used together with CSS, the `div` element can be used to style blocks of co
 <br>
 <br>
 
-- The `span` Element: The `span` element is an inline container used to mark up a part of a text, or a part of a document.
-    - The `span` element has no required attributes, but style, class and id are common.
-    - When used together with CSS, the `span` element can be used to style parts of the text:
+- ### The `span` Element:
+> - The `span` element is an inline container used to mark up a part of a text, or a part of a document.
+> - The `span` element has no required attributes, but style, class and id are common.
+> - When used together with CSS, the `span` element can be used to style parts of the text:
 
 ```html
 <p>I have <span style="color:blue;font-weight:bold">blue</span> eyes.</p>
