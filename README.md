@@ -2,12 +2,37 @@
 
 <br>
 
-#### Table of Contents:
+### Table of Contents:
 **[Git Commands](#git-commands)**<br>
 **[C# Command-line](#c#-command-line)**<br>
 **[Dotnet Commands](#dotnet-commands)**<br>
 **[Value and Reference Types](#value-and-reference-types)**<br>
 **[C# Variables](#c#-variables)**<br>
+**[C# Operators](#c#-operators)**<br>
+**[Selection Statements](#selection-statements)**<br>
+**[C# Syntax Sugar](#c#-syntax-sugar)**<br>
+**[Iteration Statements & Loops](#iteration-statements-&-loops)**<br>
+**[Methods/Functions](#methods/functions)**<br>
+**[Method Overloading](#method-overloading)**<br>
+**[Arrays & Lists](#arrays-&-lists)**<br>
+**[Classes](#classes)**<br>
+**[Encapsulation](#encapsulation)**<br>
+**[Inheritance](#inheritance)**<br>
+**[Static Keyword](#static-keyword)**<br>
+**[Abstract Classes](#abstract-classes)**<br>
+**[Interfaces](#interfaces)**<br>
+**[Factory Pattern](#factory-pattern)**<br>
+**[LINQ](#linq)**<br>
+**[Debugging](#debugging)**<br>
+**[Exception Handling](#exception-handling)**<br>
+**[Test Driven Development](#test-driven-development)**<br>
+**[SQL Intro](#sql-intro)**<br>
+**[SQL Joins](#sql-joins)**<br>
+**[C# ORM and Dapper](#c#-orm-and-dapper)**<br>
+**[APIs and JSON](#apis-and-json)**<br>
+**[IDE Parts: Google Chrome Inspector](#ide-parts:-google-chrome-inspector)**<br>
+**[HTML Intro](#html-intro)**<br>
+**[CSS Intro](#css-intro)**<br>
 
 <br>
 
