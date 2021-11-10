@@ -2356,6 +2356,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ### Common HTML Tags:
 
 - HTML Headings: HTML headings are defined with the h1 to h6 tags.
+
 ```html
 <h1>This is heading 1</h1>
 <h2>This is heading 2</h2>
@@ -2364,3 +2365,6 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <h3>This is heading 5</h3>
 <h3>This is heading 6</h3>
 ```
+![html1](img/HTML%20Intro/HTML1.png)
+
+
