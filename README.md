@@ -2353,9 +2353,9 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 
 <br>
 
-### Common HTML Tags:
+## Common HTML Tags:
 
-- ### HTML Headings:
+### HTML Headings:
 > HTML headings are defined with the `h1` to `h6` tags.
 
 ```html
@@ -2371,7 +2371,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### HTML Paragraphs:
+### HTML Paragraphs:
 > HTML paragraphs are defined with the `p` tag:
 
 ```html
@@ -2382,7 +2382,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### HTML Links:
+### HTML Links:
 > HTML links are defined with the `a` tag:
 
 ```html
@@ -2394,7 +2394,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### HTML Images:
+### HTML Images:
 > HTML images are defined with the `img` tag.
 ```html
 <img src="img/HTML Intro/forest-trail.jpg"
@@ -2408,7 +2408,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### HTML Table:
+### HTML Table:
 > A table in HTML consists of table cells inside rows and columns
 
 ```html
@@ -2443,7 +2443,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### The `div` Element:
+### The `div` Element:
 > - The `div` element is often used as a container for other HTML elements. 
 > - The `div` element has no required attributes, but style, class and id are common.
 > - When used together with CSS, the `div` element can be used to style blocks of content:
@@ -2460,7 +2460,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 <br>
 
-- ### The `span` Element:
+### The `span` Element:
 > - The `span` element is an inline container used to mark up a part of a text, or a part of a document.
 > - The `span` element has no required attributes, but style, class and id are common.
 > - When used together with CSS, the `span` element can be used to style parts of the text:
