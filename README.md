@@ -2456,8 +2456,7 @@ When used together with CSS, the `div` element can be used to style blocks of co
 <br>
 <br>
 
-- The `span` Element
-The `span` element is an inline container used to mark up a part of a text, or a part of a document.
+- The `span` Element: The `span` element is an inline container used to mark up a part of a text, or a part of a document.
     - The `span` element has no required attributes, but style, class and id are common.
     - When used together with CSS, the `span` element can be used to style parts of the text:
 
