@@ -374,7 +374,7 @@ public class PhoneFactory : ICallable
 <br>
 <br>
 
-## C# Syntax Sugar
+## Csharp Syntax Sugar
 
 *   **CCR**: Clear, Concise, and Readable
 *   **Syntax**: the grammar for programming
