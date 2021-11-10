@@ -2360,4 +2360,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <h1>This is heading 1</h1>
 <h2>This is heading 2</h2>
 <h3>This is heading 3</h3>
+<h3>This is heading 4</h3>
+<h3>This is heading 5</h3>
+<h3>This is heading 6</h3>
 ```
