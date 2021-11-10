@@ -4,13 +4,13 @@
 
 ### Table of Contents:
 **[Git Commands](#git-commands)**<br>
-**[C# Command-line](#c#-command-line)**<br>
+**[C# Command-line](#csharp-command-line)**<br>
 **[Dotnet Commands](#dotnet-commands)**<br>
 **[Value and Reference Types](#value-and-reference-types)**<br>
-**[C# Variables](#c#-variables)**<br>
-**[C# Operators](#c#-operators)**<br>
+**[C# Variables](#csharp-variables)**<br>
+**[C# Operators](#csharp-operators)**<br>
 **[Selection Statements](#selection-statements)**<br>
-**[C# Syntax Sugar](#c#-syntax-sugar)**<br>
+**[C# Syntax Sugar](#csharp-syntax-sugar)**<br>
 **[Iteration Statements & Loops](#iteration-statements-&-loops)**<br>
 **[Methods/Functions](#methods/functions)**<br>
 **[Method Overloading](#method-overloading)**<br>
@@ -28,7 +28,7 @@
 **[Test Driven Development](#test-driven-development)**<br>
 **[SQL Intro](#sql-intro)**<br>
 **[SQL Joins](#sql-joins)**<br>
-**[C# ORM and Dapper](#c#-orm-and-dapper)**<br>
+**[C# ORM and Dapper](#csharp-orm-and-dapper)**<br>
 **[APIs and JSON](#apis-and-json)**<br>
 **[IDE Parts: Google Chrome Inspector](#google-chrome-inspector)**<br>
 **[HTML Intro](#html-intro)**<br>
@@ -73,7 +73,7 @@
 <br>
 <br>
 
-## C# Command-line
+## Csharp Command-line
 
 *   **CLI**: The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications. The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest. 
 *   **Solution file (.sln)** - a solution is a container used by Visual Studio to organize one or more related projects.  When you open a solution in Visual Studio, it automatically loads all the projects the solution contains
@@ -131,7 +131,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 <br>
 <br>
 
-## C# Variables
+## Csharp Variables
 
 A variable is a memory location. It has a name that is associated with that location. The memory location is used to hold data. The key difference when comparing a constant to a variable is that the value associated with a variable name may change during the execution of the program.
 
@@ -163,7 +163,7 @@ A variable is a memory location. It has a name that is associated with that loca
 <br>
 <br>
 
-## C# Operators
+## Csharp Operators
 
 *   **Operator**: Operators are special symbols that perform actions on operands
     *   Example : `2 + 2` ( **2** is the operand and **+** is the operator)
@@ -2022,7 +2022,7 @@ ON s.ProductID = p.ProductID
 <br>
 <br>
 
-## C# ORM and Dapper
+## Csharp ORM and Dapper
 
 Programmers would prefer to exercise their creative muscles rather than type and retype data 
 access and parameterized queries over and over. Enter **Object Relational Mappers (ORM)**.
@@ -2506,3 +2506,6 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 
 <br>
 <br>
+<br>
+
+## CSS Intro
