@@ -2265,7 +2265,10 @@ To open the Chrome Inspector right click on the page and click "Inspect"
 
 > Note: You can adjust the Google Chrome Developer Tools Windows to whatever size or orientation is easier for you to read!
 
-Important Actions:
+<br>
+
+### Important Actions:
+
 - You can click the "Selction Tool" and then hover over elements you want to isolate more closely
 
 ![chrome1](img/Chrome%20Inspector/Chrome3.png)
@@ -2292,3 +2295,29 @@ Important Actions:
 
 ## HTML Intro
 
+### HTML is the standard markup language for creating Web pages.
+
+What is HTML?
+
+- HTML stands for Hyper Text Markup Language
+- HTML is the standard markup language for creating Web pages
+- HTML describes the structure of a Web page
+- HTML consists of a series of elements
+- HTML elements tell the browser how to display the content
+
+Here is a VS Code Generated HTML Template with an H1 header that says "Hello Wolrd!"
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
+```
