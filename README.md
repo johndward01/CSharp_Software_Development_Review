@@ -1,6 +1,14 @@
 # C# Software Development Review
 
 <br>
+
+#### Table of Contents:
+**[Git Commands](#git-commands)**<br>
+**[C# Command-line](#c#-command-line)**<br>
+**[Dotnet Commands](#dotnet-commands)**<br>
+**[Value and Reference Types](#value-and-reference-types)**<br>
+**[C# Variables](#c#-variables)**<br>
+
 <br>
 
 ## Git
