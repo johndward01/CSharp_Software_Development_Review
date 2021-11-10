@@ -11,10 +11,10 @@
 **[C# Operators](#csharp-operators)**<br>
 **[Selection Statements](#selection-statements)**<br>
 **[C# Syntax Sugar](#csharp-syntax-sugar)**<br>
-**[Iteration Statements & Loops](#iteration-statements-&-loops)**<br>
+**[Iteration Statements & Loops](#iteration-statements-and-loops)**<br>
 **[Methods/Functions](#methods/functions)**<br>
 **[Method Overloading](#method-overloading)**<br>
-**[Arrays & Lists](#arrays-&-lists)**<br>
+**[Arrays & Lists](#arrays-and-lists)**<br>
 **[Classes](#classes)**<br>
 **[Encapsulation](#encapsulation)**<br>
 **[Inheritance](#inheritance)**<br>
@@ -404,7 +404,7 @@ var z = new List<int>(); // var -> List<int>
 <br>
 <br>
 
-## Iteration Statements & Loops
+## Iteration Statements and Loops
 
 *   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
 ```cs
@@ -523,7 +523,7 @@ public int Add(int x, int y)
 <br>
 <br>
 
-## Arrays & Lists
+## Arrays and Lists
 
 <br>
 <br>
