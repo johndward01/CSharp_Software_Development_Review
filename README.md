@@ -2343,7 +2343,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 </body>
 ```
 
-> Note: The content in the Head tags are NOT visible
+> Note: The content in the Head tags are NOT visible (except the title tag which is shown in the browser as a tab)
 > ```html
 > <head>
 >
