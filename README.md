@@ -12,7 +12,7 @@
 **[Selection Statements](#selection-statements)**<br>
 **[C# Syntax Sugar](#csharp-syntax-sugar)**<br>
 **[Iteration Statements & Loops](#iteration-statements-and-loops)**<br>
-**[Methods/Functions](#methods/functions)**<br>
+**[Methods/Functions](#methods)**<br>
 **[Method Overloading](#method-overloading)**<br>
 **[Arrays & Lists](#arrays-and-lists)**<br>
 **[Classes](#classes)**<br>
@@ -469,7 +469,7 @@ foreach (var num in myList)
 <br>
 <br>
 
-## Methods/Functions
+## Methods
 
 **Method**: A method, or function, helps you separate your code into modules that perform a given task... You execute this code by calling the Method. In C# a method consists of a few things:
 
