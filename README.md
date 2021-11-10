@@ -2305,7 +2305,7 @@ What is HTML?
 - HTML consists of a series of elements
 - HTML elements tell the browser how to display the content
 
-Here is a VS Code Generated HTML Template with an H1 header that says "Hello Wolrd!"
+Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wolrd!"
 
 ```html
 <!DOCTYPE html>
