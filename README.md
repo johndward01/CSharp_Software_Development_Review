@@ -30,7 +30,7 @@
 **[SQL Joins](#sql-joins)**<br>
 **[C# ORM and Dapper](#c#-orm-and-dapper)**<br>
 **[APIs and JSON](#apis-and-json)**<br>
-**[IDE Parts: Google Chrome Inspector](#ide-parts:-google-chrome-inspector)**<br>
+**[IDE Parts: Google Chrome Inspector](#google-chrome-inspector)**<br>
 **[HTML Intro](#html-intro)**<br>
 **[CSS Intro](#css-intro)**<br>
 
@@ -2288,7 +2288,7 @@ public class Program
 <br>
 <br>
 
-## IDE Parts: Google Chrome Inspector
+## Google Chrome Inspector
 
 To open the Chrome Inspector right click on the page and click "Inspect"
 
