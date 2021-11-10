@@ -2367,6 +2367,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```
 ![html1](img/HTML%20Intro/HTML1.png)
 
+<br>
+<br>
 
 - HTML Paragraphs: HTML paragraphs are defined with the `p` tag:
 
@@ -2375,6 +2377,8 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <p>lorem</p> <!--lorem + tab to generate some dummy text-->
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero laboriosam deserunt minima quidem. Sit officiis harum dolorem, cumque ratione nulla, reiciendis, laudantium quis natus itaque pariatur magni saepe voluptatum quaerat!</p>
 ```
+<br>
+<br>
 
 - HTML Links: HTML links are defined with the `a` tag:
 
@@ -2383,6 +2387,9 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```
 
 ![html1](img/HTML%20Intro/HTML1.gif)
+
+<br>
+<br>
 
 - HTML Images: HTML images are defined with the `img` tag.
 ```html
@@ -2393,6 +2400,9 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```
 
 ![html1](img/HTML%20Intro/HTML2.png)
+
+<br>
+<br>
 
 - HTML Table: A table in HTML consists of table cells inside rows and columns
 
@@ -2424,3 +2434,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```
 
 ![html1](img/HTML%20Intro/HTML3.png)
+
+<br>
+<br>
+
