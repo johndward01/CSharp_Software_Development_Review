@@ -2391,3 +2391,5 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
      width="300px"
      height="200px"> <!-- You don't have to add the height and width properties if you just want to style them in the stylesheet -->
 ```
+
+![html1](img/HTML%20Intro/HTML2.png)
