@@ -2321,3 +2321,43 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 </body>
 </html>
 ```
+
+<br>
+
+- All HTML documents must start with a document type declaration: 
+```html
+<!DOCTYPE html>
+```
+- The HTML document itself begins and ends with a:
+```html
+<html>
+
+
+</html>
+```
+
+- The visible part of the HTML document is between the 2 body tags:
+```html
+<body> 
+
+</body>
+```
+
+> Note: The content in the Head tags are NOT visible
+> ```html
+> <head>
+>
+> </head>
+> ```
+
+
+<br>
+
+### Common HTML Tags:
+
+- HTML Headings: HTML headings are defined with the h1 to h6 tags.
+```html
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+```
