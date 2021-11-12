@@ -293,7 +293,7 @@ int x = 1;
 int y = 2;
 int z = 3;
 
-if (x > y || y > x)
+if (x > y || y > z)
 {
     Console.WriteLine("The condition is false therefore this code IS NOT executed");
 }
