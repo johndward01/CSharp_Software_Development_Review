@@ -2609,3 +2609,33 @@ p {
 > - `color` is a property, and red is the property value.
 > - `text-align` is a property, and center is the property value.
 
+<br>
+
+### CSS Selectors
+CSS selectors are used to “find” (or select) the HTML elements you want to style. 
+
+- **CSS Element Selector**:
+The element selector selects HTML elements based on the element name. In the example below all `p` elements on the page will be center-aligned, with a red text color:
+
+```css
+p {
+    text-align: center;
+    color: red;
+}
+```
+
+<br>
+
+- **CSS ID Selector**: The id selector uses the id attribute of an HTML element to select a specific element. The id of an element is unique within a page, so the id selector is used to select one unique element. To select an element with a specific id, write a hash (#) character, followed by the id of the element. The CSS rule below will be applied to the HTML element with id=”para1”:
+
+```css
+#para1 {
+    text-align: right;
+    color: blue;
+}
+```
+
+```html
+<p id="para1">lorem</p>
+```
+
