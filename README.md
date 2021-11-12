@@ -2568,5 +2568,44 @@ For example, the following code styles all paragraphs:
 The HTML:
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="example.css">
+    <title>Title</title>
+</head>
+<body>
+    <p>This is my first paragraph</p>
+    <p>This is my second paragraph</p>
+    <p>This is my third paragraph</p>
+</body>
+</html>
 ```
+
+<br>
+
+### CSS Syntax
+
+To create custom CSS for our HTML we must follow the rules for CSS syntax. 
+
+![css](/img/CSS%20Intro/css1.png)
+
+- The selector points to the HTML element you want to style. 
+- The declaration block contains one or more declarations separated by semicolons. 
+- Each declaration includes a CSS property name and a value, separated by a colon. 
+- Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+
+```css
+p {
+    color: red;
+    text-align: center;
+}
+```
+
+> - `p` is a selector in CSS (it points to the HTML element you want to style: `<p>`
+> - `color` is a property, and red is the property value.
+> - `text-align` is a property, and center is the property value.
+
