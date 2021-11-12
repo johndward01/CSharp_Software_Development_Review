@@ -2657,3 +2657,21 @@ In the example below, all HTML elements with class="myClass" will have an orange
 </div>
 ```
 
+<br>
+
+- **CSS Universal Selector**
+The universal selector (*) selects all HTML elements on the page. The CSS rule below will affect every HTML element on the page:
+
+```css
+* {
+    text-align: center;
+    color: blue;
+}
+```
+
+<br>
+<br>
+<br>
+
+## JavaScript Intro
+
