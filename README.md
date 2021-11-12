@@ -2626,16 +2626,34 @@ p {
 
 <br>
 
-- **CSS ID Selector**: The id selector uses the id attribute of an HTML element to select a specific element. The id of an element is unique within a page, so the id selector is used to select one unique element. To select an element with a specific id, write a hash (#) character, followed by the id of the element. The CSS rule below will be applied to the HTML element with id=”para1”:
+- **CSS ID Selector**: The id selector uses the id attribute of an HTML element to select a specific element. The id of an element is unique within a page, so the id selector is used to select one unique element. To select an element with a specific id, write a hash (#) character, followed by the id of the element. The CSS rule below will be applied to the HTML element with id="myId":
 
 ```css
-#para1 {
+#myId {
     text-align: right;
     color: blue;
 }
 ```
 
 ```html
-<p id="para1">lorem</p>
+<p id="myId">lorem</p>
+```
+
+<br>
+
+- **CSS Class Selector**
+The Class selector selects HTML elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the class name. 
+In the example below, all HTML elements with class="myClass" will have an orange border:
+
+```css
+.myClass {
+    border: 2px solid orange;
+}
+```
+
+```html
+<div class="myClass">
+    <p>lorem</p>
+</div>
 ```
 
