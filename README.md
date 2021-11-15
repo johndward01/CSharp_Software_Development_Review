@@ -244,6 +244,37 @@ x %= y; // same as long form x = x % y;
 ```
 
 <br>
+
+### Null Coalescing Operator:
+
+The null coalescing operator allows you to conditionally evaluate an expression, providing a fallback value in the event that the expression is null.
+
+#### Syntax:
+```cs
+var exampleValue = possiblyNullValue ?? someDefaultValue;
+```
+Explanation
+
+- In the above example, exampleValue is set to possiblyNullValue if it is non-null, otherwise it is set to someDefaultValue.
+- If someDefaultValue is also null, exampleValue will be set to null.
+
+<br>
+
+### Null-Conditional Operator:
+
+The null-conditional operator applies an operations to its operand only if that operand is non-null. Otherwise the result of applying the operator is null.
+
+Example
+```cs
+var exampleList = new List<string>();
+var exampleValue = exampleList?.Add("myString");
+```
+
+Explanation
+In the above example, exampleValue will be a list with one value, myString.
+If exampleList had been null, i.e. if the first line had been `var exampleList = null;`, exampleValue would have been set to null.
+
+<br>
 <br>
 <br>
 
