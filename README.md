@@ -246,6 +246,7 @@ x %= y; // same as long form x = x % y;
 <br>
 
 ### Null Coalescing Operator:
+> Note: Available in C# 8.0 and later
 
 The null coalescing operator allows you to conditionally evaluate an expression, providing a fallback value in the event that the expression is null.
 
@@ -261,8 +262,9 @@ Explanation
 <br>
 
 ### Null-Conditional Operator:
+> Note: Available in C# 8.0 and later
 
-The null-conditional operator applies an operations to its operand only if that operand is non-null. Otherwise the result of applying the operator is null.
+The null-conditional operator applies an operation to its operand only if that operand is non-null. Otherwise the result of applying the operator is null.
 
 Example
 ```cs
