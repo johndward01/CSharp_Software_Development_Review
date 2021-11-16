@@ -3,6 +3,7 @@
 <br>
 
 ### Table of Contents:
+
 **[Git Commands](#git-commands)**<br>
 **[C# Command-line](#csharp-command-line)**<br>
 **[Dotnet Commands](#dotnet-commands)**<br>
@@ -38,10 +39,10 @@
 
 ## Git
 
-*   **Version Control**: a means for managing your source code
-*   **Git:** A **[distributed version-control](https://en.wikipedia.org/wiki/Distributed_version_control) system (DVCS)** for tracking changes in [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development).  It is designed for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer), but it can be used to track changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file).
-*   **Github:** GitHub is where our **Remote repository** will live.  Our computer is where our **Local repository** will live. 
-*   **A Commit:** A commit is the Git equivalent of a "save".
+- **Version Control**: a means for managing your source code
+- **Git:** A **[distributed version-control](https://en.wikipedia.org/wiki/Distributed_version_control) system (DVCS)** for tracking changes in [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development). It is designed for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer), but it can be used to track changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file).
+- **Github:** GitHub is where our **Remote repository** will live. Our computer is where our **Local repository** will live.
+- **A Commit:** A commit is the Git equivalent of a "save".
 
 <br>
 <br>
@@ -49,25 +50,25 @@
 
 ## Git Commands:
 
-*   `git init`: initializes a new repository in the current directory
-*   `git status`: The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git
-*   `git clone <remote url goes here>`: puts a copy of the remote repository on our machine 
-*   `git push`: push those changes to the remote repository 
-    *   You must first use `git push -u origin main` BEFORE you can just use `git push`
-*   `git pull`: pulls the latest version of the remote repository to our machine.
-*   `git add <filename goes here>`: stages only the specified file
-*   `git add .`: stages all files in the directory so they are ready to commit
-*   `git commit -m "message goes here"`: commits the changes in the currently staged files and includes a message
-*   `git branch`: lists the branches in the repository
-*   `git branch <branchName>`: creates a new branch  
-*   `git checkout <branchName>`: switches to a specific branch  
-*   `git checkout –b <branchName>`: creates a new branch, and switches to that branch at the same time  
-*   `git merge <branchName>`: merges a specific branch into the current branch 
-*   `git pull`: downloads content from a remote repository and immediately update the local repository to match that content  
-*   `git log`: display our commit history 
-*   `git diff`: enables you to compare changes in the working directory against a previously committed version
-*   `git config --global user.email "YourEmailAddressGoesHere@gmail.com"`: sets the user email
-*   `git config --global user.name "Your Name"`: sets the user name
+- `git init`: initializes a new repository in the current directory
+- `git status`: The git status command displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git
+- `git clone <remote url goes here>`: puts a copy of the remote repository on our machine
+- `git push`: push those changes to the remote repository
+  - You must first use `git push -u origin main` BEFORE you can just use `git push`
+- `git pull`: pulls the latest version of the remote repository to our machine.
+- `git add <filename goes here>`: stages only the specified file
+- `git add .`: stages all files in the directory so they are ready to commit
+- `git commit -m "message goes here"`: commits the changes in the currently staged files and includes a message
+- `git branch`: lists the branches in the repository
+- `git branch <branchName>`: creates a new branch
+- `git checkout <branchName>`: switches to a specific branch
+- `git checkout –b <branchName>`: creates a new branch, and switches to that branch at the same time
+- `git merge <branchName>`: merges a specific branch into the current branch
+- `git pull`: downloads content from a remote repository and immediately update the local repository to match that content
+- `git log`: display our commit history
+- `git diff`: enables you to compare changes in the working directory against a previously committed version
+- `git config --global user.email "YourEmailAddressGoesHere@gmail.com"`: sets the user email
+- `git config --global user.name "Your Name"`: sets the user name
 
 <br>
 <br>
@@ -75,27 +76,26 @@
 
 ## Csharp Command-line
 
-*   **CLI**: The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications. The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest. 
-*   **Solution file (.sln)** - a solution is a container used by Visual Studio to organize one or more related projects.  When you open a solution in Visual Studio, it automatically loads all the projects the solution contains
-*   **Project file (.csproj)** – contains all the source code that is compiled.  It also contains compiler settings and other configuration files
-*   `cd`: Command-line command to change directory
-*   `mkdir`: Command-line command to create a new folder (directory)
-
+- **CLI**: The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications. The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest.
+- **Solution file (.sln)** - a solution is a container used by Visual Studio to organize one or more related projects. When you open a solution in Visual Studio, it automatically loads all the projects the solution contains
+- **Project file (.csproj)** – contains all the source code that is compiled. It also contains compiler settings and other configuration files
+- `cd`: Command-line command to change directory
+- `mkdir`: Command-line command to create a new folder (directory)
 
 ### Dotnet Commands:
 
-*   `dotnet <command>`: dotnet is a tool for managing .NET source code and binaries. It exposes commands that perform specific tasks, such as dotnet build and dotnet run.
-*   `dotnet new`: Creates a new project, configuration file, or solution based on the specified template.
-    *   Example: `dotnet new console` ←- creates a new console application for us
-*   `dotnet build`: Builds a project and all of its dependencies.
-*   `dotnet run`: Runs source code without any explicit compile or launch commands.
-*   `dotnet sln`: The dotnet sln command provides a convenient way to add, remove, and list projects in a solution file.
-*   `dotnet test`: The dotnet test command is used to execute unit tests in a given project. The dotnet test command launches the test runner console application specified for a project. The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test. If all tests are successful, the test runner returns 0 as an exit code; otherwise, if any test fails, it returns 1. _If the project path is not specified, it defaults to the current directory._
-    *   Example: `dotnet test ~/projects/test1/test1.csproj`
-*   `dotnet clean`: The dotnet clean command cleans the output of the previous build. It's implemented as an MSBuild target, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate (_obj_) and final output (_bin_) folders are cleaned.
+- `dotnet <command>`: dotnet is a tool for managing .NET source code and binaries. It exposes commands that perform specific tasks, such as dotnet build and dotnet run.
+- `dotnet new`: Creates a new project, configuration file, or solution based on the specified template.
+  - Example: `dotnet new console` ←- creates a new console application for us
+- `dotnet build`: Builds a project and all of its dependencies.
+- `dotnet run`: Runs source code without any explicit compile or launch commands.
+- `dotnet sln`: The dotnet sln command provides a convenient way to add, remove, and list projects in a solution file.
+- `dotnet test`: The dotnet test command is used to execute unit tests in a given project. The dotnet test command launches the test runner console application specified for a project. The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test. If all tests are successful, the test runner returns 0 as an exit code; otherwise, if any test fails, it returns 1. _If the project path is not specified, it defaults to the current directory._
+  - Example: `dotnet test ~/projects/test1/test1.csproj`
+- `dotnet clean`: The dotnet clean command cleans the output of the previous build. It's implemented as an MSBuild target, so the project is evaluated when the command is run. Only the outputs created during the build are cleaned. Both intermediate (_obj_) and final output (_bin_) folders are cleaned.
 
+#### Bonus (ASP.NET MVC dotnet command):
 
-#### 	Bonus (ASP.NET MVC dotnet command): 
 ```bash
 mkdir VS_Code-MVC
 cd VS_Code-MVC
@@ -113,17 +113,17 @@ code .
 
 C# is a strongly AND statically typed object-oriented programming language.
 
-*   **Strongly typed**:  once a variable’s type is declared, it cannot change. (Although you can change its value)
-*   **Statically typed**: every variable must have a type at compile time.
-*   **Signed**: A signed integer is one with either a plus or minus sign  
+- **Strongly typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
+- **Statically typed**: every variable must have a type at compile time.
+- **Signed**: A signed integer is one with either a plus or minus sign
 
-    in front. (It can be either positive or negative)
+  in front. (It can be either positive or negative)
 
-*   **Unsigned**: integer is assumed to be positive
-*   **The Stack**: The Stack is used for static memory allocation.  This is where Value Types are stored. It utilizes a LAST IN, FIRST OUT procedure.
-*   **The Heap**: The Heap is used for dynamic memory allocation. This is where Reference types are stored. Elements can be removed in any order from the heap.
-*   **Value Type**: A variable of a value type contains an instance of the type.
-*   **Reference Type**: A reference type contains a reference (*pointer) to an instance of the type.
+- **Unsigned**: integer is assumed to be positive
+- **The Stack**: The Stack is used for static memory allocation. This is where Value Types are stored. It utilizes a LAST IN, FIRST OUT procedure.
+- **The Heap**: The Heap is used for dynamic memory allocation. This is where Reference types are stored. Elements can be removed in any order from the heap.
+- **Value Type**: A variable of a value type contains an instance of the type.
+- **Reference Type**: A reference type contains a reference (\*pointer) to an instance of the type.
 
 ![alt_text](img/Value%20and%20Reference%20Types/CSharp_Data-Types.png)
 
@@ -135,29 +135,32 @@ C# is a strongly AND statically typed object-oriented programming language.
 
 A variable is a memory location. It has a name that is associated with that location. The memory location is used to hold data. The key difference when comparing a constant to a variable is that the value associated with a variable name may change during the execution of the program.
 
-*   **Variable**: A variable is a container for storing value. 
-*   **Constant**: A constant is a container for storing a value that never changes.
-*   **Variable Name**: A variable name is an identifier for the value stored in a particular location of computer memory
-*   **Data Type**: A data type specifies the size and type of variable values.
-*   **Camel Case**: The first letter of the first word will be lowercase, for the first time, but uppercase everytime after
-    *   Example: camelCaseExample
-*   **Pascal Case**: The first letter of every word is uppercase
-    *   Example: PascalCaseExample
+- **Variable**: A variable is a container for storing value.
+- **Constant**: A constant is a container for storing a value that never changes.
+- **Variable Name**: A variable name is an identifier for the value stored in a particular location of computer memory
+- **Data Type**: A data type specifies the size and type of variable values.
+- **Camel Case**: The first letter of the first word will be lowercase, for the first time, but uppercase everytime after
+  - Example: camelCaseExample
+- **Pascal Case**: The first letter of every word is uppercase
 
-*   **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
-    ```cs
-    string firstName;
-    ```
+  - Example: PascalCaseExample
 
-*   **Initializing a Variable**: To initialize a variable, you must assign that variable a value
-    ```cs
-    firstName = "John";
-    ```
+- **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
 
-*   **Declaring and Initializing a variable**: 
-    ```cs
-    int age = 11; // Declaring and Initializing a variable
-    ```
+  ```cs
+  string firstName;
+  ```
+
+- **Initializing a Variable**: To initialize a variable, you must assign that variable a value
+
+  ```cs
+  firstName = "John";
+  ```
+
+- **Declaring and Initializing a variable**:
+  ```cs
+  int age = 11; // Declaring and Initializing a variable
+  ```
 
 <br>
 <br>
@@ -165,20 +168,21 @@ A variable is a memory location. It has a name that is associated with that loca
 
 ## Csharp Operators
 
-*   **Operator**: Operators are special symbols that perform actions on operands
-    *   Example : `2 + 2` ( **2** is the operand and **+** is the operator)
-*   **Operand**: The quantity on which the operation is performed.
-*   **Unary Operator**: An operator with only 1 operand.
-    *   Example: `x++`
-    *   Example: `!isTrue;`
-    *   Example: `--x;`
-*   **Binary Operator**: An operator with 2 operands.
-    *   Example: `1 + 1`; (**+** is the binary operator)
-*   **Ternary Operator**: An operator that requires 3 operands.
-    ```cs
-    var answer = x < y ? true : false;  // ? is the ternary operator
-    ```
-*   **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
+- **Operator**: Operators are special symbols that perform actions on operands
+  - Example : `2 + 2` ( **2** is the operand and **+** is the operator)
+- **Operand**: The quantity on which the operation is performed.
+- **Unary Operator**: An operator with only 1 operand.
+  - Example: `x++`
+  - Example: `!isTrue;`
+  - Example: `--x;`
+- **Binary Operator**: An operator with 2 operands.
+  - Example: `1 + 1`; (**+** is the binary operator)
+- **Ternary Operator**: An operator that requires 3 operands.
+  ```cs
+  var answer = x < y ? true : false;  // ? is the ternary operator
+  ```
+- **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
+
 ```cs
 int num1 = 0;
 int num2 = 10;
@@ -190,7 +194,9 @@ answer = num1 / num2; // Divide
 answer = num1 % num2; // Modulus (gets the remainder after division)
 answer = Math.Pow(num1, num2); // Exponent (the first number raised to the second number)
 ```
-*   **Relational Operators**: Relational operators are used for comparison of two values.
+
+- **Relational Operators**: Relational operators are used for comparison of two values.
+
 ```cs
 int num1 = 0;
 int num2 = 1;
@@ -200,29 +206,35 @@ isGreater = num1 < num2; // less than... true
 isGreater = num1 >= num2; // greater than OR equal to... false
 isGreater = num1 <= num2; // less than OR equal to... true
 ```
-*   **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
 
-### `&&` **Logical AND** 
+- **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
+
+### `&&` **Logical AND**
+
 ```cs
 int x = 10;
 int y = 11;
 // the left expression AND the right expression must evaluate to be TRUE in order for the code to be run
-if (x < y && x == 10) 
+if (x < y && x == 10)
 {
     x++; // both conditions are true so the code runs
 }
 ```
-### `||` **Logical OR** 
+
+### `||` **Logical OR**
+
 ```cs
 int x = 10;
 int y = 20;
 // the left expression OR the right expression must evaluate to be TRUE in order for the code to be run
-if (x > y && x == 10) 
+if (x > y && x == 10)
 {
     x++; // code still runs even though x is not less than y
 }
 ```
-### `!` **Logical NOT** 
+
+### `!` **Logical NOT**
+
 ```cs
 bool isPresent = true;
 // the NOT operator ! flips the value to the opposite one
@@ -230,8 +242,9 @@ bool isPresent = true;
 Console.WriteLine(!isPresent); // outputs false
 ```
 
-*   **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value. 
-> Note: The **value** on the right side must be of the same **data-type** as the variable on the left side, otherwise the compiler will raise an error.
+- **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value.
+  > Note: The **value** on the right side must be of the same **data-type** as the variable on the left side, otherwise the compiler will raise an error.
+
 ```cs
 int x = 100; // = is the simple assignment operator
 int y = 200;
@@ -246,14 +259,17 @@ x %= y; // same as long form x = x % y;
 <br>
 
 ### Null Coalescing Operator:
+
 > Note: Available in C# 8.0 and later
 
 The null coalescing operator allows you to conditionally evaluate an expression, providing a fallback value in the event that the expression is null.
 
 #### Syntax:
+
 ```cs
 var exampleValue = possiblyNullValue ?? someDefaultValue;
 ```
+
 Explanation
 
 - In the above example, exampleValue is set to possiblyNullValue if it is non-null, otherwise it is set to someDefaultValue.
@@ -262,11 +278,13 @@ Explanation
 <br>
 
 ### Null-Conditional Operator:
+
 > Note: Available in C# 8.0 and later
 
 The null-conditional operator applies an operation to its operand only if that operand is non-null. Otherwise the result of applying the operator is null.
 
 Example
+
 ```cs
 var exampleList = new List<string>();
 var exampleValue = exampleList?.Add("myString");
@@ -283,7 +301,9 @@ If exampleList had been null, i.e. if the first line had been `var exampleList =
 ## Selection Statements
 
 **Selection statements** enable you to branch to different sections of code, depending on one or more specified conditions. The components when concerning selection statements are **if**, **else if**, **else**, and **switch/case**.
+
 ### `if`
+
 ```cs
 bool condition = true;
 
@@ -294,7 +314,7 @@ if (condition)
 ```
 
 ```cs
-int x = 10; 
+int x = 10;
 int y = 11;
 
 if (x == y)
@@ -340,10 +360,10 @@ else
 }
 ```
 
-*   `switch/case`: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
-*   `default`: Specifies the code block to run if all else fails.
-*   `break`: Terminates the **switch/case** statement.
-*   `case`: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
+- `switch/case`: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
+- `default`: Specifies the code block to run if all else fails.
+- `break`: Terminates the **switch/case** statement.
+- `case`: Each case label specifies a pattern to compare to the match expression. If they match, control is transferred to the switch section that contains the first matching case label. If no case label pattern matches the match expression, control is transferred to the section with the default case label, if there's one. If there's no default case, no statements in any switch section are executed, and control is transferred outside the switch statement.
 
 ```cs
 int day = 4;
@@ -374,11 +394,10 @@ switch (day)
 } // outputs Thursday
 ```
 
-___
-
+---
 
 ```cs
-public interface ICallable 
+public interface ICallable
 {
     public ICallable GetPhone();
 }
@@ -390,14 +409,14 @@ public class PhoneFactory : ICallable
         switch (phoneType.ToLower())
         {
             case "android":
-                return new AndroidPhone();                    
-            case "apple":                    
+                return new AndroidPhone();
+            case "apple":
             case "iphone":
                 return new ApplePhone();
             case "google":
                 return new GooglePhone();
             default:
-                return new AndroidPhone();                    
+                return new AndroidPhone();
         }
     }
 }
@@ -409,37 +428,45 @@ public class PhoneFactory : ICallable
 
 ## Csharp Syntax Sugar
 
-*   **CCR**: Clear, Concise, and Readable
-*   **Syntax**: the grammar for programming
-*   **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
+- **CCR**: Clear, Concise, and Readable
+- **Syntax**: the grammar for programming
+- **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
+
 ```cs
-Point p = new Point(); // Explicit 
+Point p = new Point(); // Explicit
 var p = new Point(); // Inferred (best practice)
 ```
 
-*   **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
+- **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
+
 ```cs
     var isGreater = num1 > num2 ? num1 : num2;
 ```
-*    **Code Smell**:  Any indicator in a program that a potentially deep-seated issue is present.  (usually subjective and depends on factors including the particular language and experience)
-*   **Explicit Typing**: When you specifically say what each variable’s type is.
+
+- **Code Smell**: Any indicator in a program that a potentially deep-seated issue is present. (usually subjective and depends on factors including the particular language and experience)
+- **Explicit Typing**: When you specifically say what each variable’s type is.
+
 ```cs
 DateTime d = new DateTime();
 Console.WriteLine(d.ToLongDateString());
 ```
-*   **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
+
+- **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
+
 ```cs
 var x = 10; // var -> int
 var y = true; // var -> bool
 var z = new List<int>(); // var -> List<int>
 ```
+
 <br>
 <br>
 <br>
 
 ## Iteration Statements and Loops
 
-*   **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
+- **while**: The **while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated before each execution of the loop, a while loop executes zero or more times.
+
 ```cs
 int counter = 5;
 
@@ -452,34 +479,36 @@ while (counter > 0)
 
 <br>
 
-*   **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+- **do-while**: The **do-while** loop executes a statement or a block of statements while a specified Boolean expression evaluates to true. Because that expression is evaluated after each execution of the loop, a do-while loop is guaranteed to execute at least one or more times.
+
 ```cs
 int counter = 5;
 do
 {
     Console.Write($"{counter} "); // outputs => 5 4 3 2 1
     counter--;
-} 
+}
 while(counter > 0);
 ```
 
 <br>
 
-*   **for**: The “**for**” loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
-    *   the **initializer** - runs once at the beginning and sets an initial value to serve as a counter     **int i = 0;**
-    *   the **conditional** - evaluates before each iteration to determine whether the loop should continue executing     **i &lt; 10;**
-    *   the **increment** - after the body of the loop is executed, the increment updates the value of the counter     **i++;**
-    *   and the **body**  - the is the block of code the loop will execute.  We also call this the **scope** of the loop     **{  }**
+- **for**: The “**for**” loop executes a statement or a block of statements while a specified Boolean expression evaluates to true.
+  - the **initializer** - runs once at the beginning and sets an initial value to serve as a counter **int i = 0;**
+  - the **conditional** - evaluates before each iteration to determine whether the loop should continue executing **i &lt; 10;**
+  - the **increment** - after the body of the loop is executed, the increment updates the value of the counter **i++;**
+  - and the **body** - the is the block of code the loop will execute. We also call this the **scope** of the loop **{ }**
+
 ```cs
 for(int i = 5; i > 0; i--)
 {
-    Console.Write($"{i} "); // outputs => 5 4 3 2 1     
+    Console.Write($"{i} "); // outputs => 5 4 3 2 1
 }
 ```
 
 <br>
 
-*   **foreach**: A “**foreach**” loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable).IEnumerable;
+- **foreach**: A “**foreach**” loop executes a statement or a block of statements for each element in an instance of the type that implements the [System.Collections](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerable).IEnumerable;
 
 ```cs
 var myList = new List<int>() {5, 4, 3, 2, 1 };
@@ -489,13 +518,11 @@ foreach (var num in myList)
 }
 ```
 
-
-
 ### Recap:
 
 - Use a while loop if you need to execute some code until something happens.
 - Use a do-while loop if you need to execute some code at least once, then continue execution until something happens.
-- Use a for loop if you need to execute some code a specific number of times. 
+- Use a for loop if you need to execute some code a specific number of times.
 - Use a foreach loop if you need to execute some code on each element in a collection of elements.
 
 <br>
@@ -506,21 +533,21 @@ foreach (var num in myList)
 
 **Method**: A method, or function, helps you separate your code into modules that perform a given task... You execute this code by calling the Method. In C# a method consists of a few things:
 
-*   **Access Modifiers**: Access modifiers are keywords used to specify the declared accessibility of a member or a type.
-*   **Return Type**: the type returned by the method, or void when not returning anything
-    *   **void**: **void** is the absence of a return type
-*   **Name**: a descriptive method name using PascalCase
-    *   **PascalCase**: every first letter of every word is capitalized
-*   **Parameters**: an optional list of variables to be passed to the method
-*   **Scope/Body**: the block of code to be executed when the method is called
-*   **Argument**: the value you pass into the function when it is being called
+- **Access Modifiers**: Access modifiers are keywords used to specify the declared accessibility of a member or a type.
+- **Return Type**: the type returned by the method, or void when not returning anything
+  - **void**: **void** is the absence of a return type
+- **Name**: a descriptive method name using PascalCase
+  - **PascalCase**: every first letter of every word is capitalized
+- **Parameters**: an optional list of variables to be passed to the method
+- **Scope/Body**: the block of code to be executed when the method is called
+- **Argument**: the value you pass into the function when it is being called
 
 ![alt_text](img/Methods/5PartsOfMethods.png)
 
 <br>
 
 ```cs
-// Declaring a public Add Method that accepts 2 whole numbers 
+// Declaring a public Add Method that accepts 2 whole numbers
 
 public int Add(int x, int y)
 {
@@ -534,19 +561,19 @@ public int Add(int x, int y)
 
 ## Method Overloading
 
-*   **Method Overloading**: When multiple methods share the same name but have a different signature
-    *   1. The number of parameters
-    *   2. The order of the parameters
-    *   3. The data types of the parameters
-*   **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
+- **Method Overloading**: When multiple methods share the same name but have a different signature
+  - 1. The number of parameters
+  - 2. The order of the parameters
+  - 3. The data types of the parameters
+- **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
 
 ![Method Overloading](img/Method%20Overloading/MethodOverloading.png)
 
-*   **Rules for overloading a method**
-    *   Where a parameter represents the same value as that in another method, the parameters should have the same name.
-    *   Parameters with the same name should appear in the same position in each method’s parameter list.
-    *   You should not use ref or out modifiers to overload methods.
-    *   You cannot overload method declarations that differ only by return type.
+- **Rules for overloading a method**
+  - Where a parameter represents the same value as that in another method, the parameters should have the same name.
+  - Parameters with the same name should appear in the same position in each method’s parameter list.
+  - You should not use ref or out modifiers to overload methods.
+  - You cannot overload method declarations that differ only by return type.
 
 ### Method Overloading Examples `Console.WriteLine();`
 
@@ -563,14 +590,15 @@ public int Add(int x, int y)
 
 ## Arrays:
 
- Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
 
 ### Declaring and Initializing Arrays:
+
 ```cs
 // Example 1 => Declaring an int array of size 3 (explicitly)
 int[] myArray1 = new int[3];
 
-// Example 1 => Initializing each of the array's indices 
+// Example 1 => Initializing each of the array's indices
 myArray1[0] = 10;
 myArray1[1] = 20;
 myArray1[2] = 30;
@@ -589,6 +617,7 @@ int[] myArray5 = { 100, 200, 300 };
 ```
 
 ### Accessing Elemets of Arrays:
+
 ```cs
 string[] cars = { "Tesla", "Ford", "Honda", "Toyota" };
 
@@ -614,6 +643,7 @@ Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeExcept
 Lists (Collections) provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
 ### Declaring and Initializing Lists:
+
 ```cs
 public class Person
 {
@@ -634,8 +664,8 @@ var numbers = new List<int>();
 var myList = new List<string>() { "The 1st string","The 2nd string", "The 3rd string" };
 
 // Declaring and Initializing a list of Person Objects called people (object initializer syntax)
-var people = new List<Person>() 
-{ 
+var people = new List<Person>()
+{
     new Person("John", "Ward"),
     new Person("Jon", "Doe"),
     new Person("Jane", "Doe")
@@ -643,6 +673,7 @@ var people = new List<Person>()
 ```
 
 ### Looping through Arrays and Lists:
+
 ```cs
 // Declaring/Initializing an int array called numbers then looping through it 1 by 1 and printing out each element to the console
 var evenNumbers = new int[] { 0, 2, 4, 6, 8, 10 };
@@ -652,6 +683,7 @@ for (int i = 0; i < evenNumbers.Length; i++)
     Console.Write(evenNumbers[i]); // outputs => 0246810
 }
 ```
+
 ```cs
 // Declaring/Initializing a list of ints called oddNumbers then looping through it 1 by 1 and printing out each element to the console
 var oddNumbers = new List<int>() { 1, 3, 5, 7, 9, 11 };
@@ -672,18 +704,19 @@ foreach (var num in oddNumbers)
 
 Before classes and Object-Oriented Programming was a thing, programmers used functional programming as a programming paradigm...
 
-*   **Functional Programming**: Functional programming allows building a program using mathematical functions. In other words, it binds the program into a purely mathematical function. Using functional programming, the developer can build a program as a combination of separate mathematical functions.
-*   **Object-Oriented Programming**: Object-oriented programming (OOP) is a [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) based on the concept of "[objects](https://en.wikipedia.org/wiki/Object_(computer_science))", which can contain [data](https://en.wikipedia.org/wiki/Data) and code: data in the form of [fields](https://en.wikipedia.org/wiki/Field_(computer_science)) (often known as attributes or properties), and code, in the form of procedures (often known as [methods](https://en.wikipedia.org/wiki/Method_(computer_science))).
-*   **Class**: Classes are the cornerstone of Object-Oriented Programming. They help you take all the properties and behaviors of an object in your program, and combine them into a single object, then re-use that object wherever you need it in your program. Using classes in your code enables you to implement **Encapsulation, Abstraction, Inheritance, and Polymorphism**.
-*   **Object**: An object is defined as a singular instance of a class or type. A class can be thought of as a **blueprint**, a **template** or a **cookie cutter**. A class describes an object, but it is not that object.
+- **Functional Programming**: Functional programming allows building a program using mathematical functions. In other words, it binds the program into a purely mathematical function. Using functional programming, the developer can build a program as a combination of separate mathematical functions.
+- **Object-Oriented Programming**: Object-oriented programming (OOP) is a [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) based on the concept of "[objects](<https://en.wikipedia.org/wiki/Object_(computer_science)>)", which can contain [data](https://en.wikipedia.org/wiki/Data) and code: data in the form of [fields](<https://en.wikipedia.org/wiki/Field_(computer_science)>) (often known as attributes or properties), and code, in the form of procedures (often known as [methods](<https://en.wikipedia.org/wiki/Method_(computer_science)>)).
+- **Class**: Classes are the cornerstone of Object-Oriented Programming. They help you take all the properties and behaviors of an object in your program, and combine them into a single object, then re-use that object wherever you need it in your program. Using classes in your code enables you to implement **Encapsulation, Abstraction, Inheritance, and Polymorphism**.
+- **Object**: An object is defined as a singular instance of a class or type. A class can be thought of as a **blueprint**, a **template** or a **cookie cutter**. A class describes an object, but it is not that object.
 
-*   **Class Members**: Classes have members sort of like how methods have variables; however, classes are not only limited to variables. Examples:
-    *   **Fields** - a variable of any type that is declared directly in a class or struct.
-    *   **Properties** - a member that provides a mechanism to read, write, or compute the value of a private field.
-    *   **Methods** - a code block that contains a series of statements to execute.
-    *   **Constructors** - Whenever a class or struct is created, its constructor is called.
+- **Class Members**: Classes have members sort of like how methods have variables; however, classes are not only limited to variables. Examples:
 
-*   **Dot Notation**: The way we access the methods and properties of a class is with the ( . ) **Dot** operator, Dot Notation, or Class Member Access Operator.
+  - **Fields** - a variable of any type that is declared directly in a class or struct.
+  - **Properties** - a member that provides a mechanism to read, write, or compute the value of a private field.
+  - **Methods** - a code block that contains a series of statements to execute.
+  - **Constructors** - Whenever a class or struct is created, its constructor is called.
+
+- **Dot Notation**: The way we access the methods and properties of a class is with the ( . ) **Dot** operator, Dot Notation, or Class Member Access Operator.
 
 ### Parts of a class
 
@@ -691,9 +724,9 @@ Before classes and Object-Oriented Programming was a thing, programmers used fun
 2. **class** keyword - **REQUIRED**
 3. **Name** - **REQUIRED**
 4. **Scope** or “curly brackets” - **REQUIRED**
-    1. **Fields/Properties** - **OPTIONAL**
-    2. **Methods** - **OPTIONAL**
-    
+   1. **Fields/Properties** - **OPTIONAL**
+   2. **Methods** - **OPTIONAL**
+
 ```cs
 class Cat // the access modifier is optional (will default to internal)
 { // opening curly brace
@@ -701,13 +734,15 @@ class Cat // the access modifier is optional (will default to internal)
     // class members (will default to private)
     // Methods
     // Properties
-    // Fields 
+    // Fields
     // Constructors
     // Etc...
 
 } // closing curly brace
 ```
+
 - Dog Class Example
+
 ```cs
 using System;
 
@@ -719,7 +754,7 @@ namespace Class_Demo
         public Dog()
         {
 
-        } 
+        }
 
         // Fields
         private int _id;
@@ -737,7 +772,7 @@ namespace Class_Demo
         }
     }
 
-    public class Program 
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -759,22 +794,24 @@ namespace Class_Demo
 ## Encapsulation
 
 #### Encapsulation means, that a group of related properties, methods, and other members are treated as a single unit or object.
-#### The key advantage of using an Object Oriented Programming language like C# is that it provides your code security, flexibility, and easy maintainability through encapsulation. Encapsulation is also useful in hiding the data (instance variables) of a class from illegal direct access. 
+
+#### The key advantage of using an Object Oriented Programming language like C# is that it provides your code security, flexibility, and easy maintainability through encapsulation. Encapsulation is also useful in hiding the data (instance variables) of a class from illegal direct access.
+
 #### Encapsulation is one of the 4 pillars of Object Oriented Programming.
 
 > Note: Encapsulation is also called information hiding.
 
 - An easy way to remember the 4 pillars is this acronymn: **OOPs A PIE**
 
-    - **O**bject
-    - **O**riented 
-    - **P**rogramming
-    - **A**bstraction
-    - **P**olymorphism
-    - **I**nheritance
-    - **E**ncapsulation
+  - **O**bject
+  - **O**riented
+  - **P**rogramming
+  - **A**bstraction
+  - **P**olymorphism
+  - **I**nheritance
+  - **E**ncapsulation
 
-___
+---
 
 ### We can implement Encapsulation by using Access Modifiers.
 
@@ -795,17 +832,17 @@ C# supports the following access modifiers:
 ## Encapsulation Example Below
 
 - Encapsulation is used to restrict access to members of a
-class so as to prevent the user of a given class from
-manipulating objects in ways that are not intended by the
-Designer.
+  class so as to prevent the user of a given class from
+  manipulating objects in ways that are not intended by the
+  Designer.
 
 - Encapsulation hides the internal implementation of
-functionalities of a class without affecting the overall
-functioning of the system.
+  functionalities of a class without affecting the overall
+  functioning of the system.
 
 - It allows the class to service a request for functionality and
-add or modify its internal structure (data or methods) to
-suit changing requirement.
+  add or modify its internal structure (data or methods) to
+  suit changing requirement.
 
 ```cs
 public class PersonalInfo
@@ -830,7 +867,7 @@ public class PersonalInfo
 
 ## Inheritance
 
-**Inheritance**, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars of **object-oriented programming**. 
+**Inheritance**, together with **encapsulation**, **abstraction**, and **polymorphism**, is one of the four pillars of **object-oriented programming**.
 
 ### Inheritance enables you to create new classes that reuse, extend, and modify the behavior that is defined in other classes.
 
@@ -851,7 +888,7 @@ public class CheckingAccount : BankAccount
     public bool IssuedDebitCard {get; set;}
 }
 
-public class Program 
+public class Program
 {
     static void Main(string[] args)
     {
@@ -868,7 +905,7 @@ public class Program
         Console.WriteLine(checkingAccount1.AccountType);
         Console.WriteLine(checkingAccount1.ChecksOrdered);
         Console.WriteLine(checkingAccount1.IssuedDebitCard);
-    }    
+    }
 }
 ```
 
@@ -876,7 +913,7 @@ public class Program
 <br>
 <br>
 
-## Static Keyword 
+## Static Keyword
 
 In code when we create an instance of a class we are allocating a certain amount of memory for that object to reference. We may have a class that performs a particular function or method in multiple parts of our code. As a programmer, you should always strive to have the most efficient and readable code possible. Instead of instantiating the object and allocating the memory every time in our code just to invoke a couple of methods; we can use the static keyword.
 
@@ -918,14 +955,15 @@ Another example of using a static class and static class methods, one we all sho
 
 ## Abstract Classes
 
-Abstract classes have the following features: 
-- An abstract class cannot be instantiated. 
+Abstract classes have the following features:
+
+- An abstract class cannot be instantiated.
 - An abstract class may contain abstract methods and accessors.
 - A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
 
 ![abstract1](img/Abstract%20Classes/Abstract1.png)
 
-So in essence, an abstract class acts as a stubbed-out template class that other classes will derive from and use as an incomplete base. The derived class will define its own way to complete the stubbed-out template provided by the abstract class. 
+So in essence, an abstract class acts as a stubbed-out template class that other classes will derive from and use as an incomplete base. The derived class will define its own way to complete the stubbed-out template provided by the abstract class.
 
 > **The purpose of an abstract class is to define some common behavior that can be inherited by multiple subclasses, without implementing the entire class.**
 
@@ -948,13 +986,13 @@ public abstract class Vehicle
         Console.WriteLine($"{vehicle.Year}");
         Console.WriteLine($"{vehicle.Make}");
         Console.WriteLine($"{vehicle.Model}");
-        Console.WriteLine($"{vehicle.NumberOfTires}");       
-    }    
+        Console.WriteLine($"{vehicle.NumberOfTires}");
+    }
 
     /*
     The virtual modifier keyword - use this to mark a property or method virtual.
-    This will tell the compiler that the base class will provide an implementation of the property or method. 
-    If the derived class wishes to override the implementation it can. 
+    This will tell the compiler that the base class will provide an implementation of the property or method.
+    If the derived class wishes to override the implementation it can.
     */
 }
 
@@ -974,6 +1012,7 @@ public class Car : Vehicle
     */
 }
 ```
+
 <br>
 
 > Method Overloading gives us **static polymorphism**
@@ -986,11 +1025,11 @@ public class Car : Vehicle
 
 ## Interfaces
 
-Interfaces in C# provide another way to achieve runtime polymorphism. 
+Interfaces in C# provide another way to achieve runtime polymorphism.
 
-What is runtime polymorphism? 
+What is runtime polymorphism?
 
-By runtime polymorphism, we can point to any derived class from the object of the base class at runtime that shows the ability of runtime binding. 
+By runtime polymorphism, we can point to any derived class from the object of the base class at runtime that shows the ability of runtime binding.
 
 Using interfaces we can invoke functions from different classes through the same Interface reference, whereas using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference.
 
@@ -1003,7 +1042,7 @@ namespace InterfacesDemo
     {
         public int ID {get; set;}
         public string Role {get; set;}
-        
+
         public void Status();
     }
 
@@ -1032,10 +1071,10 @@ namespace InterfacesDemo
     }
 
     public class User : ISecurity
-    {        
+    {
         // Fields
         private string _userType;
-        
+
         // Constructors
         public User(string user)
         {
@@ -1043,7 +1082,7 @@ namespace InterfacesDemo
         }
 
         // Properties
-        public string FirstName {get; set;}   
+        public string FirstName {get; set;}
         public string LastName {get; set;}
         public char MiddleInitial {get; set;}
         public string Suffix {get; set;} = "";
@@ -1076,13 +1115,13 @@ namespace InterfacesDemo
             }
 
             account1.Status();
-            // outputs => 
+            // outputs =>
             // Account Type: Tier 1
             // ID: 1
-            // Role: 
+            // Role:
 
-            user1.Status();         
-            // outputs => 
+            user1.Status();
+            // outputs =>
             //  FirstName: John
             //  MiddleInitial: X
             //  LastName: Doe
@@ -1147,7 +1186,7 @@ namespace ConsoleApp1
         //   c = side c
         //  s = (a + b + c)/2
         #endregion
-        public override double[] Sides { get; set; } // Herons Formula:  Area = √[s(s-a)(s-b)(s-c)]       
+        public override double[] Sides { get; set; } // Herons Formula:  Area = √[s(s-a)(s-b)(s-c)]
         public override double Radius { get; set; }
 
         public override double Area(double radius, double[] sides)
@@ -1178,7 +1217,7 @@ namespace ConsoleApp1
             Shape shape2 = new Triangle();
             shape2.ShapeName = "Triangle";
             shape2.Sides = new double[] { 4, 13, 15}; // https://www.triangle-calculator.com/?what=sss&a=4&b=13&c=15&submit=Solve
-            Console.WriteLine(shape2.Area(0, shape2.Sides)); 
+            Console.WriteLine(shape2.Area(0, shape2.Sides));
 
             // Using virtual functions we can invoke functions from different classes in the same inheritance hierarchy through the same reference
             // Runtime Polymorphism Achieved (Inheritance Hierarchy Reference = Shape)
@@ -1186,6 +1225,7 @@ namespace ConsoleApp1
     }
 }
 ```
+
 <br>
 <br>
 <br>
@@ -1235,7 +1275,7 @@ namespace Factory_Pattern_Exercise
 
     // Factory Class - 1 place where the objects are created
     public static class VehicleFactory
-    {        
+    {
         public static IVehicle GetVehicle(int numberOfTires)
         {
             if (numberOfTires > 4)
@@ -1254,7 +1294,7 @@ namespace Factory_Pattern_Exercise
     }
 
     // User Interface Class - holds helper methods to clean up the Main() method
-    public static class UI 
+    public static class UI
     {
         public static int GetVehicleType()
         {
@@ -1269,8 +1309,8 @@ namespace Factory_Pattern_Exercise
         }
 
 
-        public static List<IVehicle> GetAndAddToVehicleList(List<IVehicle> vehicles, int vehicleType) 
-        {          
+        public static List<IVehicle> GetAndAddToVehicleList(List<IVehicle> vehicles, int vehicleType)
+        {
             if (vehicleType == 1)
             {
                 vehicles.Add(VehicleFactory.GetVehicle(4));
@@ -1310,14 +1350,14 @@ namespace Factory_Pattern_Exercise
             }
             else
             {
-                Console.WriteLine("Thank you for choosing the vehicle factory!");                
+                Console.WriteLine("Thank you for choosing the vehicle factory!");
             }
 
             return continuing;
         }
     }
 
-    // Client 
+    // Client
     public class Program
     {
         static void Main(string[] args)
@@ -1330,7 +1370,7 @@ namespace Factory_Pattern_Exercise
                 int vehicleType = UI.GetVehicleType();
                 List<IVehicle> vehicleList = UI.GetAndAddToVehicleList(vehicles, vehicleType);
                 UI.TraverseVehicleList(vehicleList);
-                finished = UI.QuitOrContinue(); 
+                finished = UI.QuitOrContinue();
             }
 
         }
@@ -1342,7 +1382,7 @@ namespace Factory_Pattern_Exercise
 <br>
 <br>
 
-## LINQ 
+## LINQ
 
 Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support. Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on. With LINQ, a query is a first-class language construct, just like classes, methods, events. You write queries against strongly typed collections of objects by using language keywords and familiar operators. The LINQ family of technologies provides a consistent query experience for objects (LINQ to Objects), relational databases (LINQ to SQL), and XML (LINQ to XML).
 
@@ -1350,7 +1390,7 @@ Language-Integrated Query (LINQ) is the name for a set of technologies based on 
 
 - LINQ is a more simple, well-ordered, and high-level language than SQL.
 
-- LINQ extends the IEnumerable<T> interface so it can be used with collections like arrays and lists. 
+- LINQ extends the IEnumerable<T> interface so it can be used with collections like arrays and lists.
 
 - With the help of LINQ, you can easily work with any type of data source like XML, SQL, Entities, objects, etc. A single query can work with any type of database, there is no need to learn different types of languages.
 
@@ -1373,8 +1413,9 @@ Query syntax has a very distinctive syntactical style. Due to its unique format,
 ![method-syntax](img/LINQ/method-syntax.png)
 
 LINQ method syntax can do everything that query syntax can do, and more. It's just a different way to format the instructions.
- 
+
 ### Advantages of Method Syntax:
+
 - **Not all LINQ methods can be utilized with query syntax**
 - Query syntax is automatically converted to method syntax at compile-time
 - Method syntax is stylistically more similar to other C# code
@@ -1382,6 +1423,7 @@ LINQ method syntax can do everything that query syntax can do, and more. It's ju
 <br>
 
 ### Here is a brief list of the most common methods that are used in Linq:
+
 - `Where()`- Filters a sequence of values based on a predicate.
 - `Select()`- Projects each element of a sequence into a new form.
 - `OrderBy()`- Sorts the elements of a sequence in ascending order.
@@ -1410,7 +1452,7 @@ odds.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
 var squares = Enumerable.Range(1, 10).Select(x => x * x).ToList();
 
 squares.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
-````
+```
 
 ```cs
 // OrderBy() - Sorts in Ascending Order
@@ -1421,7 +1463,7 @@ ordered.ForEach(x => Console.WriteLine(x)); // prints the collection to the cons
 ```
 
 ```cs
-// Sum() - Adds them all up 
+// Sum() - Adds them all up
 var sum = Enumerable.Range(1, 100).Sum();
 Console.WriteLine(sum); // prints the sum to the console
 ```
@@ -1538,13 +1580,13 @@ Generally speaking, there are 3 types of errors:
 ### Compile-Time Errors:
 
 A compile-time error is an error that shows up when you’re writing code, it will be accompanied by a red squiggly and show up in the error window. In languages that are compiled, like C#, the compiler will validate the program in many ways. It will only accept programs that have the correct syntax. Programs must use the object model correctly. Every object must exist.
-These are the easiest to fix since VS will give you indications of your error as well as try to give solutions to the problem. 
+These are the easiest to fix since VS will give you indications of your error as well as try to give solutions to the problem.
 
 ![compile](img/Debugging/CompileTimeError.png)
 
 ### Run-Time Errors:
 
-A Runtime error is an error that occurs while your application is running. While in debug mode this will show up as an exception: 
+A Runtime error is an error that occurs while your application is running. While in debug mode this will show up as an exception:
 
 ![runtime](img/Debugging/RunTimeError.jpg)
 
@@ -1552,7 +1594,7 @@ An exception is an error that occurs during runtime of a program, or when you ar
 
 <br>
 
-### Logical errors: 
+### Logical errors:
 
 A logical error is an error that while you can still run your program and it will not crash, you won’t be getting the results you might expect. One example of this may be like asking for the user’s name and age to print it in the console and the program saying “Hello 24, you are John Smith years old!”. No, the app didn’t crash but we got funky results.
 
@@ -1582,27 +1624,26 @@ Use **Step Into**, **Step Out**, and **Step Over** to navigate through your code
 
 ## Exception Handling
 
-Use `Try/Catch` blocks to "catch" exceptions instead of letting the program crash. There is some overhead with throwing and catching exceptions, so just like the name implies it should be reserved for exceptional conditions that are not the norm.  If a test can be run to prevent the exception then that’s usually the best practice.  Typically, reserved for exceptional conditions like AccessDenied, ConnectionNotAvailable, etc that are not the norm for the application, the exception can be a very useful tool in your arsenal if used wisely.
+Use `Try/Catch` blocks to "catch" exceptions instead of letting the program crash. There is some overhead with throwing and catching exceptions, so just like the name implies it should be reserved for exceptional conditions that are not the norm. If a test can be run to prevent the exception then that’s usually the best practice. Typically, reserved for exceptional conditions like AccessDenied, ConnectionNotAvailable, etc that are not the norm for the application, the exception can be a very useful tool in your arsenal if used wisely.
 
 ### Try
 
-- A `try` block is used by C# programmers to partition code that might be affected by an exception. 
-- Associated `catch` blocks are used to handle any resulting exceptions. 
-- A `finally` block contains code that is run regardless of whether or not an exception is thrown in the `try` block, such as releasing resources that are allocated in the try block. 
+- A `try` block is used by C# programmers to partition code that might be affected by an exception.
+- Associated `catch` blocks are used to handle any resulting exceptions.
+- A `finally` block contains code that is run regardless of whether or not an exception is thrown in the `try` block, such as releasing resources that are allocated in the try block.
 - A `try` block requires one or more associated `catch` blocks, or a `finally` block, or both.
 
 > Note: A `try` block without a `catch` or `finally` block will throw a compiler error
 
-
-
 ### Catch
 
-- A `catch` block can specify the type of exception to catch. The type specification is called an exception filter. The exception type should be derived from Exception. 
+- A `catch` block can specify the type of exception to catch. The type specification is called an exception filter. The exception type should be derived from Exception.
 - In general, do not specify Exception as the exception filter unless either you know how to handle all exceptions that might be thrown in the `try` block, or you have included a throw statement at the end of your `catch` block.
- 
+
 - Multiple `catch` blocks with different exception filters can be chained together. The catch blocks are evaluated from top to bottom in your code, but only one catch block is executed for each exception that is thrown. The first catch block that specifies the exact type or a base class of the thrown exception is executed. If no catch block specifies a matching exception filter, a catch block that does not have a filter is selected, if one is present in the statement. It is important to position catch blocks with the most specific (that is, the most derived) exception types first.
 
 You should catch exceptions when the following conditions are true:
+
 - You have a good understanding of why the exception might be thrown, and you can implement a specific recovery, such as prompting the user to enter a new file name when you catch a FileNotFoundException object.
 - You can create and throw a new, more specific exception.
 - You want to partially handle an exception before passing it on for additional handling.
@@ -1632,11 +1673,10 @@ public class Program
 }
 ```
 
-### Finally 
+### Finally
 
-- A `finally` block enables you to clean up actions that are performed in a try block. If present, the finally block executes last, after the try block and any matched catch block. 
+- A `finally` block enables you to clean up actions that are performed in a try block. If present, the finally block executes last, after the try block and any matched catch block.
 - A `finally` block always runs, regardless of whether an exception is thrown or a catch block matching the exception type is found.
-
 
 ```cs
 public class Program
@@ -1674,7 +1714,7 @@ public class Program
 
 ## Test Driven Development
 
-We cover Test Driven Development because of the many advantages it gives to programmers.  It drives the design process of our code and helps with reducing bugs in the code we write.  It also makes the functionality of our code clear and simple while being easier to maintain and understand.
+We cover Test Driven Development because of the many advantages it gives to programmers. It drives the design process of our code and helps with reducing bugs in the code we write. It also makes the functionality of our code clear and simple while being easier to maintain and understand.
 
 TDD is a process in which we write our tests first and those tests are used to drive the design of our code or application.
 
@@ -1683,34 +1723,35 @@ TDD is a process in which we write our tests first and those tests are used to d
 - It encourages decoupling - which allows changes to be made to one thing without affecting another thing
 - You accumulate tests over time that can be quickly run without the time consuming manual tests
 
-> Note:  A unit is the smallest testable part of any software.
+> Note: A unit is the smallest testable part of any software.
 
 <br>
 
 ### Red, Green, Refactor Process:
+
 Here is the process we follow when writing Unit Tests:
- 
-**Red** - We write the test and then watch it fail (it fails because the code needed in order for the test to pass hasn’t been written yet!).  We create a test that will fail on purpose so that we know with a degree of confidence that our tests will fail when expected to - making it red
- 
+
+**Red** - We write the test and then watch it fail (it fails because the code needed in order for the test to pass hasn’t been written yet!). We create a test that will fail on purpose so that we know with a degree of confidence that our tests will fail when expected to - making it red
+
 **Green** - Now we write code in our software or application so that our test will pass - making it green
- 
-**Refactor** - Here we change the passing code we wrote (the code that made our test pass) without changing the behavior of the code itself. We want our code to still behave as we expect.  This allows us to improve code readability and possibly reduce complexity.  
+
+**Refactor** - Here we change the passing code we wrote (the code that made our test pass) without changing the behavior of the code itself. We want our code to still behave as we expect. This allows us to improve code readability and possibly reduce complexity.
 
 <br>
 
 ### xUnit syntax:
-`[Fact]` 
 
-xUnit uses the `[Fact]` attribute to denote a parameterless unit test, which tests invariants in your code 
+`[Fact]`
+
+xUnit uses the `[Fact]` attribute to denote a parameterless unit test, which tests invariants in your code
 
 <br>
  
-`[Theory]` 
+`[Theory]`
 
-`[InlineData() ]` 
+`[InlineData() ]`
 
 In contrast, the `[Theory]` attribute denotes a parameterized test that is true for a subset of data. That data can be supplied in a number of ways, but the most common is with an `[InlineData]` attribute.
-
 
 In the picture below, we have our Tests on the right and our methods on the left. The tests that are associated with their methods are in the same color boxes.
 
@@ -1733,7 +1774,7 @@ In the picture below, we have our Tests on the right and our methods on the left
 ```sql
 -- a double dash ( -- ) is a single line comment
 
-/* 
+/*
 a forward slash star ( / * ),
 plus a closing star slash ( * / )
 is how to do a multi line comment
@@ -1743,7 +1784,7 @@ is how to do a multi line comment
 
 -- SELECT
 /*  Select all columns from the products table.  */
-SELECT *   
+SELECT *
 FROM products;
 
 
@@ -1764,7 +1805,7 @@ FROM products;
 SELECT DISTINCT Price FROM products;
 
 -- --------------------------------------------------------------------------------------------------------------
--- WHERE 
+-- WHERE
 
 /* Select all the products whose price is greater than $100 */
 SELECT *
@@ -1772,40 +1813,40 @@ FROM products
 WHERE Price > 100.00;
 
 /* Select the product with a product ID of  97 */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE ProductID = 97;
 
 -- -------------------------------------------------------------------------------------------------------------
 -- AND, OR, NOT, IS, NULL
 
 /* Select all the employees who are geek squad members and who doesn’t have a middle initial */
-SELECT * 
+SELECT *
 FROM employees
 WHERE Title = 'Geek Squad' AND MiddleInitial IS NULL;
 
 /* Select all the employees who are geek squad members and have a middle initial */
-SELECT * 
+SELECT *
 FROM employees
 WHERE Title = 'Geek Squad' AND MiddleInitial IS NOT NULL;
 
 /* Select all the products who are on sale or whose stock levels are 0 */
-SELECT * 
+SELECT *
 FROM products
 WHERE OnSale IS True OR StockLevel IS NULL;
 
--- --------------------------------------------------------------------------------------------------------------  
+-- --------------------------------------------------------------------------------------------------------------
 -- ORDER BY
 
 /* Select all the products whose price is greater than $200 and is on sale, order by price descending */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE Price > 200 AND OnSale IS True
 ORDER BY Price DESC;
 
 /* Select all the products whose price is less than $200 and category ID is either 1 or 3 order by CategoryID Ascending and Name Ascending */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE Price < 200 AND CategoryID = 1 OR CategoryID = 3
 ORDER BY CategoryID ASC, Name ASC;
 
@@ -1821,7 +1862,7 @@ INSERT INTO employees (FirstName, LastName, MiddleInitial, EmailAddress)
 VALUES(“John”, “Smith”,"D", "123@abc.com");
 
 -- ------------------------------------------------------------------------------------------------------------------
--- UPDATE 
+-- UPDATE
 /* Update the first and last name of the employee John D. Smith => Jack J. Jackson (Don’t forget your WHERE clause) */
 -- The employee ID number may be slightly different for you depending on if you’ve already inserted some rows into the table
 UPDATE employees
@@ -1832,7 +1873,7 @@ WHERE EmployeeID = 34618;
 -- DELETE
 
 /* Delete all the entries you’ve INSERTED INTO in your table (DON’T FORGET WHERE CLAUSE!)*/
-DELETE 
+DELETE
 FROM employees
 WHERE EmployeeID = 34618;
 
@@ -1852,7 +1893,7 @@ From Products;
 SELECT COUNT(ProductID)
 FROM products;
 
-/* Return the average of all the products */ 
+/* Return the average of all the products */
 SELECT AVG(Price)
 FROM Products;
 
@@ -1870,27 +1911,27 @@ _ = The underscore sign means a single character
 */
 
 /* Return all products with “J” as the first letter */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE Name LIKE "J%";
 
 /* Return all products with “y” as the last letter */
-SELECT * 
+SELECT *
 FROM products
 WHERE Name LIKE "%y";
 
 /* Return all the employees with a firstname that has 2 characters */
-SELECT * 
+SELECT *
 FROM employees
 WHERE FirstName LIKE '__';
 
 -- For more information on WILDCARDS go to: https://www.w3schools.com/sql/sql_wildcards.asp
 
 -- --------------------------------------------------------------------------------------------------------------
--- BETWEEN 
+-- BETWEEN
 
-/* Return all the products from $10 - $100 */ 
-SELECT * 
+/* Return all the products from $10 - $100 */
+SELECT *
 FROM products
 WHERE Price BETWEEN 10 AND 20;
 
@@ -1898,14 +1939,14 @@ WHERE Price BETWEEN 10 AND 20;
 -- ORDER BY
 
 /* Order the previous query by Price ascending */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE Price BETWEEN 10 AND 20
 ORDER BY Price;
 
 /* Order the previous query by Price descending */
-SELECT * 
-FROM products 
+SELECT *
+FROM products
 WHERE Price BETWEEN 10 AND 20
 ORDER BY Price DESC;
 
@@ -1919,34 +1960,34 @@ GROUP BY  Title;
 -- -----------------------------------------------------------------------------------------------
 -- JOINS
 -- INNER JOIN
-SELECT * 
-FROM employees e 
-INNER JOIN sales s 
+SELECT *
+FROM employees e
+INNER JOIN sales s
 ON e.EmployeeID = s.EmployeeID;
 
 -- LEFT JOIN
-SELECT * 
-FROM employees e 
-LEFT JOIN sales s 
+SELECT *
+FROM employees e
+LEFT JOIN sales s
 ON e.EmployeeID = s.EmployeeID;
 
 -- RIGHT JOIN
-SELECT * 
-FROM employees e 
-RIGHT JOIN sales s 
+SELECT *
+FROM employees e
+RIGHT JOIN sales s
 ON e.EmployeeID = s.EmployeeID;
 
 -- LEFT EXCLUDING JOIN
-SELECT * 
-FROM employees e 
-LEFT JOIN sales s 
+SELECT *
+FROM employees e
+LEFT JOIN sales s
 ON e.EmployeeID = s.EmployeeID
 WHERE s.EmployeeID IS NULL;
 
 -- RIGHT EXCLUDING JOIN
-SELECT * 
-FROM employees e 
-RIGHT JOIN sales s 
+SELECT *
+FROM employees e
+RIGHT JOIN sales s
 ON e.EmployeeID = s.EmployeeID
 WHERE e.EmployeeID IS NULL;
 
@@ -1966,26 +2007,26 @@ ORDER BY QUANTITY DESC;
 ## SQL Joins
 
 ```sql
--- JOINS SECTION: 
+-- JOINS SECTION:
 -- EXERCISE HOW TO VIDEO: https://youtu.be/G5VzHjX6MLI
 
 -- joins: select all the computers from the products table:
  -- using the products table and the categories table, return the product name and the category name
- SELECT p.Name, c.Name 
+ SELECT p.Name, c.Name
  FROM products AS p
  INNER JOIN categories AS c
  ON p.CategoryID = c.CategoryID
  WHERE p.CategoryID = 1;
- 
+
 -- joins: find all product names, product prices, and products ratings that have a rating of 5
  SELECT p.Name, p.Price, r.Rating
  FROM reviews AS r
  INNER JOIN products AS p
  ON r.ProductID = p.ProductID
- WHERE r.Rating = 5; 
- 
+ WHERE r.Rating = 5;
+
 -- joins: find the employee with the most total quantity sold.  use the sum() function and group by
-SELECT e.FirstName, e.LastName, SUM(s.Quantity) AS 'Total' 
+SELECT e.FirstName, e.LastName, SUM(s.Quantity) AS 'Total'
 FROM sales AS s
 INNER JOIN employees AS e
 ON s.EmployeeID = e.EmployeeID
@@ -1997,7 +2038,7 @@ LIMIT 2;
 -- joins: find the name of the department, and the name of the category for Appliances and Games
 SELECT d.Name AS Department, c.Name AS Category
 FROM departments AS d
-INNER JOIN categories AS c 
+INNER JOIN categories AS c
 ON c.DepartmentID = d.DepartmentID
 WHERE c.Name = 'Games' OR c.Name = 'appliances';
 
@@ -2005,7 +2046,7 @@ WHERE c.Name = 'Games' OR c.Name = 'appliances';
 -- for Eagles: Hotel California --You may need to use SUM()
 SELECT p.Name, SUM(s.Quantity) AS 'Total Sold', SUM(s.Quantity * s.PricePerUnit) AS 'Total'
 FROM products AS p
-INNER JOIN sales AS s 
+INNER JOIN sales AS s
 ON s.ProductID = p.ProductID
 WHERE p.Name = 'Eagles: Hotel California';
 
@@ -2021,20 +2062,20 @@ WHERE p.ProductID = 857 AND r.Rating = 1;
 /* Your goal is to write a query that serves as an employee sales report.
 This query should return the employeeID, the employee's first and last name,
  the name of each product, how many of that product they sold */
-SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProductID, p.Name, Sum(s.Quantity) AS Quantity, s.Date 
+SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProductID, p.Name, Sum(s.Quantity) AS Quantity, s.Date
 FROM sales AS s
-INNER JOIN employees AS e 
+INNER JOIN employees AS e
 ON e.EmployeeID = s.EmployeeID
-INNER JOIN products AS p 
+INNER JOIN products AS p
 ON p.productid = s.productid
 GROUP BY e.EmployeeID, e.FirstName, e.LastName, p.productID, p.name, s.Date;
 
-SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProductID, 
-	   p.Name, SUM(s.Quantity) AS 'Total Sold' 
+SELECT e.EmployeeID, e.FirstName, e.LastName, p.ProductID,
+	   p.Name, SUM(s.Quantity) AS 'Total Sold'
 FROM sales AS s
-INNER JOIN employees AS e 
+INNER JOIN employees AS e
 ON e.EmployeeID = s.EmployeeID
-INNER JOIN products AS p 
+INNER JOIN products AS p
 ON p.productid = s.productid
 GROUP BY e.employeeID, p.productID;
 
@@ -2048,7 +2089,7 @@ FROM employees AS e
 INNER JOIN sales AS s
 ON e.EmployeeID = s.EmployeeID
 INNER JOIN products AS p
-ON s.ProductID = p.ProductID 
+ON s.ProductID = p.ProductID
 ```
 
 <br>
@@ -2057,7 +2098,7 @@ ON s.ProductID = p.ProductID
 
 ## Csharp ORM and Dapper
 
-Programmers would prefer to exercise their creative muscles rather than type and retype data 
+Programmers would prefer to exercise their creative muscles rather than type and retype data
 access and parameterized queries over and over. Enter **Object Relational Mappers (ORM)**.
 
 **ORM**s are the plumbers of the programming world. They help get data out of and back into databases from our data models. Additionally, ORM's like Dapper will handle parameterizing your SQL statements for you and make it very easy to fire a SQL query against a database and get the result mapped to C# domain class.
@@ -2065,11 +2106,13 @@ access and parameterized queries over and over. Enter **Object Relational Mapper
 ### SQL Parameterized Queries
 
 SQL Injection is the "injection" of unexpected or malicious code into SQL statements.
+
 - Best Case: this will cause unexpected or broken behavior
 - Worst Case: this can be exploited to copy or destroy your database
 - Every Case: it's bad. Anytime you hear SQL Injection, just know that it's something to avoid.
 
 Here's an example of C# code that is vulnerable to SQL Injection:
+
 ```cs
 public void InsertProduct(string name)
 {
@@ -2079,11 +2122,13 @@ public void InsertProduct(string name)
 ```
 
 If I call my method like so:
+
 ```cs
 InsertProduct("Test'); Drop Table Product; --")S
 ```
 
 the resulting SQL statement will be:
+
 ```sql
 INSERT INTO Product (Name) VALUES ('Test'); DROP TABLE Product; --');
 ```
@@ -2094,7 +2139,7 @@ This is a valid SQL statement that will add a product and then delete the Produc
 
 So to protect ourselves from these vulnerabilities, we will be using **Parameterized Statements**.
 
-### Parameterized Statements 
+### Parameterized Statements
 
 Every language supports some version of parameterized statements, sometimes called prepared statements. Parameterized statements allow you to abstract your statement from your parameters.
 Parameterized statements will sanitize your data by escaping any dangerous characters and performing any parsing or optimization necessary.
@@ -2106,10 +2151,11 @@ Parameterized statements will sanitize your data by escaping any dangerous chara
 ### Dapper
 
 Dapper is a .NET compatible, NuGet library ORM that you can add to your project that will extend your IDbConnection interface.
+
 - Dapper has no DB specific implementation details; it works across SQLite, Oracle, MySQL, PostgreSQL, and SQL Server, to name a few.
 - Dapper adds a variety of things to the IDbConnection interface, but mostly you'll interact with Query and Execute:
 - Here is a side by side comparison of just using MySqlConnection vs using Dapper:
-You might notice how much code is reduced by using the Dapper implementation
+  You might notice how much code is reduced by using the Dapper implementation
 
 <br>
 <br>
@@ -2132,7 +2178,6 @@ The Dapper framework actually extends the **IDbConnection interface** available 
 
 - The Dapper Query is designed for any database reads, like SELECT.
 - Query returns an IEnumerable<T>, so a select statement will return one T for each record in the database.
-
 
 ### Execute Method:
 
@@ -2221,7 +2266,7 @@ namespace ASP.NET_Core_Identity_Demo
 
 ## APIs and JSON
 
-**API** stands for application programming interface. It defines how two pieces of software will communicate with each other. 
+**API** stands for application programming interface. It defines how two pieces of software will communicate with each other.
 
 > Note: In our examples, we will call web APIs and receive a response containing JSON.
 
@@ -2232,16 +2277,17 @@ namespace ASP.NET_Core_Identity_Demo
 JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
 
 JSON is built on two structures:
+
 - Object - an unordered set of name/value pairs. An object begins with { and ends with }. Each name is followed by a colon and the name/value pairs are separated by a comma.
 
 ```json
-{"quote": "A slightly humurous quote by Kanye West"} 
-````
+{ "quote": "A slightly humurous quote by Kanye West" }
+```
 
--  An array is an ordered collection of values. An array begins with `[` and ends with a `]`. Values are separated by a comma.  Here we have an array phone numbers:
+- An array is an ordered collection of values. An array begins with `[` and ends with a `]`. Values are separated by a comma. Here we have an array phone numbers:
 
 ```json
-"phoneNumbers": [ 
+"phoneNumbers": [
     {
       "type": "home",
       "number": "212 555-1234"
@@ -2257,11 +2303,12 @@ JSON is built on two structures:
   ]
 ```
 
-### Representational State Transfer 
+### Representational State Transfer
 
-**REST** is a language-independent architecture that provides interoperability between computer systems on the Internet.  It utilizes a stateless protocol aiming for fast performance and reliability.
+**REST** is a language-independent architecture that provides interoperability between computer systems on the Internet. It utilizes a stateless protocol aiming for fast performance and reliability.
 
 A REST (REpresentational State Transfer) API allows the server to transfer to the client a representation of the state of the requested resource. It follows six constraints:
+
 - **Uniform Interface** — this tells the RESTful service what to send to the client, in form of a document, image or other. Before a client can interact with a RESTful service, it needs to do two things: identify every resource the server has to offer and define a set of operations that can be performed in any resource with a predicable outcome.
 - **Client-Server** — client and server should be separate, allowing each other to evolve individually. The server is called when the client sends a request, which the server reacts to by sending a response. But, if there is no call of the server by the client, no interaction happens.
 - **Stateless** — every interaction between client and server is stateless, there are no sessions and no history. Stateless means each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is kept entirely on the client.
@@ -2273,13 +2320,13 @@ A REST (REpresentational State Transfer) API allows the server to transfer to th
 
 ### REST Verbs:
 
-RESTful web services allow us to perform CRUD operations.  A RESTful API is an application program interface (API) that uses HTTP requests to **GET**, **PUT**, **POST** and **DELETE** data.
+RESTful web services allow us to perform CRUD operations. A RESTful API is an application program interface (API) that uses HTTP requests to **GET**, **PUT**, **POST** and **DELETE** data.
 
 It translates like this:
 
-Create|Read|Update|Delete|
----   |--- |---   |---   |
-POST  |GET |PUT   |DELETE|
+| Create | Read | Update | Delete |
+| ------ | ---- | ------ | ------ |
+| POST   | GET  | PUT    | DELETE |
 
 <br>
 
@@ -2287,14 +2334,14 @@ POST  |GET |PUT   |DELETE|
 
 - 1xx – Informational
 - 2xx – Success
-This class of status code indicates that the client's request was successfully received, understood, and accepted.
+  This class of status code indicates that the client's request was successfully received, understood, and accepted.
 - 3xx – Redirection
-The client must take additional action to complete the request.
+  The client must take additional action to complete the request.
 - 4xx – Client Error (404)
-    - The 4xx class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition.
-    - These status codes are applicable to any request method. User agents should display any included entity to the user.
+  - The 4xx class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition.
+  - These status codes are applicable to any request method. User agents should display any included entity to the user.
 - 5xx – Server Error
-The server failed to fulfill an apparently valid request
+  The server failed to fulfill an apparently valid request
 
 > https://www.restapitutorial.com/httpstatuscodes.html
 
@@ -2317,6 +2364,7 @@ public class Program
     }
 }
 ```
+
 <br>
 <br>
 <br>
@@ -2341,9 +2389,8 @@ To open the Chrome Inspector right click on the page and click "Inspect"
 
 ![chrome1](img/Chrome%20Inspector/Chrome4.png)
 
-
 - You can live edit a DOM node
-> Note: DOM: Stands for Document Object Model
+  > Note: DOM: Stands for Document Object Model
 
 ![chrome1](img/Chrome%20Inspector/Chrome5.png)
 
@@ -2376,52 +2423,50 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello World!</h1>
-</body>
+  </body>
 </html>
 ```
 
 <br>
 
-- All HTML documents must start with a document type declaration: 
+- All HTML documents must start with a document type declaration:
+
 ```html
 <!DOCTYPE html>
 ```
+
 - The HTML document itself begins and ends with a:
+
 ```html
-<html>
-
-
-</html>
+<html></html>
 ```
 
 - The visible part of the HTML document is between the 2 body tags:
-```html
-<body> 
 
-</body>
+```html
+<body></body>
 ```
 
 > Note: The content in the Head tags are NOT visible (except the title tag which is shown in the browser as a tab)
-> ```html
-> <head>
 >
-> </head>
+> ```html
+> <head> </head>
 > ```
-
 
 <br>
 
 ## Common HTML Tags:
 
 ### HTML Headings:
+
 > HTML headings are defined with the `h1` to `h6` tags.
 
 ```html
@@ -2432,23 +2477,33 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <h3>This is heading 5</h3>
 <h3>This is heading 6</h3>
 ```
+
 ![html1](img/HTML%20Intro/HTML1.png)
 
 <br>
 <br>
 
 ### HTML Paragraphs:
+
 > HTML paragraphs are defined with the `p` tag:
 
 ```html
 <p>Some content</p>
-<p>lorem</p> <!--lorem + tab to generate some dummy text-->
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero laboriosam deserunt minima quidem. Sit officiis harum dolorem, cumque ratione nulla, reiciendis, laudantium quis natus itaque pariatur magni saepe voluptatum quaerat!</p>
+<p>lorem</p>
+<!--lorem + tab to generate some dummy text-->
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero laboriosam
+  deserunt minima quidem. Sit officiis harum dolorem, cumque ratione nulla,
+  reiciendis, laudantium quis natus itaque pariatur magni saepe voluptatum
+  quaerat!
+</p>
 ```
+
 <br>
 <br>
 
 ### HTML Links:
+
 > HTML links are defined with the `a` tag:
 
 ```html
@@ -2461,12 +2516,17 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 
 ### HTML Images:
+
 > HTML images are defined with the `img` tag.
+
 ```html
-<img src="img/HTML Intro/forest-trail.jpg"
-     alt="forest-trail"
-     width="300px"
-     height="200px"> <!-- You don't have to add the height and width properties if you just want to style them in the stylesheet -->
+<img
+  src="img/HTML Intro/forest-trail.jpg"
+  alt="forest-trail"
+  width="300px"
+  height="200px"
+/>
+<!-- You don't have to add the height and width properties if you just want to style them in the stylesheet -->
 ```
 
 ![html1](img/HTML%20Intro/HTML2.png)
@@ -2475,6 +2535,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 
 ### HTML Table:
+
 > A table in HTML consists of table cells inside rows and columns
 
 ```html
@@ -2510,14 +2571,18 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 
 ### The `div` Element:
-> - The `div` element is often used as a container for other HTML elements. 
+
+> - The `div` element is often used as a container for other HTML elements.
 > - The `div` element has no required attributes, but style, class and id are common.
 > - When used together with CSS, the `div` element can be used to style blocks of content:
 
 ```html
 <div style="background-color:black;color:white;padding:20px;">
   <h2>London</h2>
-  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  <p>
+    London is the capital city of England. It is the most populous city in the
+    United Kingdom, with a metropolitan area of over 13 million inhabitants.
+  </p>
 </div>
 ```
 
@@ -2527,6 +2592,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 
 ### The `span` Element:
+
 > - The `span` element is an inline container used to mark up a part of a text, or a part of a document.
 > - The `span` element has no required attributes, but style, class and id are common.
 > - When used together with CSS, the `span` element can be used to style parts of the text:
@@ -2541,6 +2607,7 @@ Here is a VS Code Generated HTML Template with an H1 element that says "Hello Wo
 <br>
 
 ### HTML Layout Elements
+
 HTML has several semantic elements that define the different parts of a web page:
 
 ![html1](img/HTML%20Intro/HTML2.gif)
@@ -2575,46 +2642,46 @@ CSS stands for Cascading Style Sheets. Cascading refers to the way CSS applies o
 <br>
 
 - **Embedded/Internal CSS**: Internal styles are defined within the `style` element, inside the head section of an HTML page.
- 
+
 For example, the following code styles all paragraphs:
 
 ```html
 <html>
-    <head>
-        <style>
-            p {
-                color: white;
-                background-color: gray;
-            }
-        </style>
-    </head>
-    <body>
-        <p>This is my first paragraph.</p>
-        <p>This is my second paragraph.</p>
-    </body>
+  <head>
+    <style>
+      p {
+        color: white;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is my first paragraph.</p>
+    <p>This is my second paragraph.</p>
+  </body>
 </html>
 ```
 
 <br>
 
--  **External CSS**: With this method, all styling rules are contained in a single text file, which is saved with the .css extension. This CSS file is then referenced in the HTML using the <link> tag. The <link> element goes inside the head section. Here is an example:
-The HTML:
+- **External CSS**: With this method, all styling rules are contained in a single text file, which is saved with the .css extension. This CSS file is then referenced in the HTML using the <link> tag. The <link> element goes inside the head section. Here is an example:
+  The HTML:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="example.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="example.css" />
     <title>Title</title>
-</head>
-<body>
+  </head>
+  <body>
     <p>This is my first paragraph</p>
     <p>This is my second paragraph</p>
     <p>This is my third paragraph</p>
-</body>
+  </body>
 </html>
 ```
 
@@ -2622,19 +2689,19 @@ The HTML:
 
 ### CSS Syntax
 
-To create custom CSS for our HTML we must follow the rules for CSS syntax. 
+To create custom CSS for our HTML we must follow the rules for CSS syntax.
 
 ![css](/img/CSS%20Intro/css1.png)
 
-- The selector points to the HTML element you want to style. 
-- The declaration block contains one or more declarations separated by semicolons. 
-- Each declaration includes a CSS property name and a value, separated by a colon. 
+- The selector points to the HTML element you want to style.
+- The declaration block contains one or more declarations separated by semicolons.
+- Each declaration includes a CSS property name and a value, separated by a colon.
 - Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
 
 ```css
 p {
-    color: red;
-    text-align: center;
+  color: red;
+  text-align: center;
 }
 ```
 
@@ -2645,15 +2712,16 @@ p {
 <br>
 
 ### CSS Selectors
-CSS selectors are used to “find” (or select) the HTML elements you want to style. 
+
+CSS selectors are used to “find” (or select) the HTML elements you want to style.
 
 - **CSS Element Selector**:
-The element selector selects HTML elements based on the element name. In the example below all `p` elements on the page will be center-aligned, with a red text color:
+  The element selector selects HTML elements based on the element name. In the example below all `p` elements on the page will be center-aligned, with a red text color:
 
 ```css
 p {
-    text-align: center;
-    color: red;
+  text-align: center;
+  color: red;
 }
 ```
 
@@ -2663,8 +2731,8 @@ p {
 
 ```css
 #myId {
-    text-align: right;
-    color: blue;
+  text-align: right;
+  color: blue;
 }
 ```
 
@@ -2675,30 +2743,30 @@ p {
 <br>
 
 - **CSS Class Selector**
-The Class selector selects HTML elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the class name. 
-In the example below, all HTML elements with class="myClass" will have an orange border:
+  The Class selector selects HTML elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the class name.
+  In the example below, all HTML elements with class="myClass" will have an orange border:
 
 ```css
 .myClass {
-    border: 2px solid orange;
+  border: 2px solid orange;
 }
 ```
 
 ```html
 <div class="myClass">
-    <p>lorem</p>
+  <p>lorem</p>
 </div>
 ```
 
 <br>
 
 - **CSS Universal Selector**
-The universal selector (*) selects all HTML elements on the page. The CSS rule below will affect every HTML element on the page:
+  The universal selector (\*) selects all HTML elements on the page. The CSS rule below will affect every HTML element on the page:
 
 ```css
 * {
-    text-align: center;
-    color: blue;
+  text-align: center;
+  color: blue;
 }
 ```
 
@@ -2708,15 +2776,68 @@ The universal selector (*) selects all HTML elements on the page. The CSS rule b
 
 ## JavaScript Intro
 
-
 JavaScript is a programming language used primarily by Web browsers to create a dynamic and interactive experience for the user. Most of the functions and applications that make the Internet indispensable to modern life are coded in some form of JavaScript. In the past, Web pages were static, offering little user interaction beyond clicking links and loading new pages. For the first time, JavaScript enabled animation, adaptive content and form validation on the page. Initially, JavaScript compatibility was a major issue across the most common platforms.
- 
+
 Some of the dynamic website enhancements performed by JavaScript are:
+
 - Autocomplete
-- Loading new content or data onto the page without reloading - the page
+- Loading new content or data onto the page without reloading the page
 - Rollover effects and dropdown menus
 - Animating page elements such as fading, resizing or relocating
 - Playing audio and video
 - Validating input from Webforms
 - Repairing browser compatibility issues
 
+<br>
+
+### JavaScript Variables:
+
+We use variables to provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves. It is helpful to think of variables as containers that hold information. Their sole purpose is to label and store data in memory. This data can then be used throughout your program.
+
+The names of variables, called identifiers, conform to certain rules:
+
+- A JavaScript identifier must start with a letter, underscore (\_), or dollar sign ($). Subsequent characters can also be digits (0–9).
+
+- Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) as well as "a" through "z" (lowercase).
+
+- You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers. (For more details, see this blog post.) You can also use the Unicode escape sequences as characters in identifiers.
+
+- Some examples of legal names are: Number_hits, temp99, $credit, and \_name.
+
+<br>
+
+## JavaScript Data and Structure types
+
+### The set of types in the JavaScript language consists of primitive values and objects.
+
+#### Seven Data Types that are primitives (immutable datum represented directly at the lowest level of the language)
+
+- Undefined type
+- Boolean type
+- Null type
+- Number type
+- BigInt type
+- String type
+- Symbol type
+
+`undefined` - undefined is a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.
+
+```js
+var x; // create a variable but assign it no value
+console.log(`The variable x has a value of ${x}`); // output => The variable x has a value of undefined
+```
+
+#### Structural Types:
+
+- **Object**: Special non-data but Structural type for any constructed object instance also used as data structures:
+
+  - new Object
+  - new Array
+  - new Map
+  - new Set
+  - new WeakMap
+  - new WeakSet
+  - new Date
+  - and almost everything made with new keyword;
+
+- **Function**: a non-data structure, though it also answers for typeof operator. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
