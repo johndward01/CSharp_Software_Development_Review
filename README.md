@@ -2675,3 +2675,15 @@ The universal selector (*) selects all HTML elements on the page. The CSS rule b
 
 ## JavaScript Intro
 
+
+JavaScript is a programming language used primarily by Web browsers to create a dynamic and interactive experience for the user. Most of the functions and applications that make the Internet indispensable to modern life are coded in some form of JavaScript. In the past, Web pages were static, offering little user interaction beyond clicking links and loading new pages. For the first time, JavaScript enabled animation, adaptive content and form validation on the page. Initially, JavaScript compatibility was a major issue across the most common platforms.
+ 
+Some of the dynamic website enhancements performed by JavaScript are:
+- Autocomplete
+- Loading new content or data onto the page without reloading - the page
+- Rollover effects and dropdown menus
+- Animating page elements such as fading, resizing or relocating
+- Playing audio and video
+- Validating input from Webforms
+- Repairing browser compatibility issues
+
