@@ -2956,3 +2956,48 @@ const name = "John"; // a constant is a variable who's value will never change
 ```
 
 <br>
+<br>
+
+### Duck Typing
+
+Javascript is an Interpreted language, meaning the interpreter assigns variables a type based on the variable’s value at run-time.
+Moreover, Interpreted languages are languages that are not compiled but are parsed on the fly. Javascript and other languages fall into this category as you don’t have a compile step prior to running. Simply save the script and refresh.
+
+When referring to Duck Typing, many use the saying:
+
+> “If it quacks like a duck, walks like a duck...it’s a duck”
+
+**Duck Typing** refers to a duck test program. You will test something, if it quacks like a duck, and flies like a duck, it is a duck. If a method responds to any given object call, it passes the “Duck Test”.
+
+**Duck Typing** is a feature in javascript where the variable attempts to behave in the manner it is used. So if it’s used as a string, it’s a string, etc.
+
+In C# or other statically typed languages, passing methods into objects is deemed suitable based on its type. With duck typing, however, objects are determined whether or not suitable based on what it does, not what it is. It doesn’t matter the type if both objects do the same thing or better yet, have the same capabilities. If the method responds to the object call, basically as long as the object responds TYPE DOESN’T MATTER!
+
+```js
+function Drive(vehicle) {
+  console.log(vehicle + " is now in drive.");
+}
+
+let truck = "tundra";
+let car = "camry";
+let vehicles = [car, truck, 100]; // 2 strings & 1 integer
+
+for (i = 0; i < vehicles.length; i++) {
+  Drive(vehicles[i]);
+}
+
+// outputs =>
+// camry is now in drive.
+// tundra is now in drive.
+// 100 is now in drive (duck typing in action)
+```
+
+> - There is a function called Drive
+> - There is an array called vehicles that contains two strings and an integer.
+> - The for-loop calls the Drive function for the array.
+> - No matter the type, each element of the array is in Drive.
+
+<br>
+<br>
+
+### Truthy and Falsy
