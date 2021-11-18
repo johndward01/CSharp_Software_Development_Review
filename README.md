@@ -2907,4 +2907,32 @@ const bigint2 = BigInt("12483045803948298379847039845508");
 - **Function**: a non-data structure, though it also answers for typeof operator. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
 <br>
+
+**Primitives**: Primitives cannot be altered. Remember that a primitive itself is different from the variable assigned a primitive value.
+
+> The variable may be reassigned a new value, but the existing value can not be changed in the ways that objects, arrays, and functions can be altered.
+
+```js
+// Using a string method doesn't mutate the string (primitive)
+let name = "john";
+console.log(name); // outputs => john
+
+name.toUpperCase();
+console.log(name); // outputs => john
+```
+
+```js
+// Using an array method mutates the array (object)
+let myArray = [];
+console.log(myArray); // outputs => []
+myArray.push("john");
+console.log(myArray); // outputs => ['john']
+```
+
+```js
+let firstName = "john";
+firstName = firstName.toUpperCase();
+console.log(firstName); // outputs => JOHN
+```
+
 <br>
