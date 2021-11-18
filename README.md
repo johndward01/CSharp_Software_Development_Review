@@ -2930,6 +2930,7 @@ console.log(myArray); // outputs => ['john']
 ```
 
 ```js
+// Assignment gives the primitive a new (not a mutated) value
 let firstName = "john";
 firstName = firstName.toUpperCase();
 console.log(firstName); // outputs => JOHN
