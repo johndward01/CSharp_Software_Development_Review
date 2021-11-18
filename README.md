@@ -2813,8 +2813,8 @@ The names of variables, called identifiers, conform to certain rules:
 #### Seven Data Types that are primitives (immutable datum represented directly at the lowest level of the language)
 
 - Undefined type
-- Boolean type
 - Null type
+- Boolean type
 - Number type
 - BigInt type
 - String type
@@ -2823,9 +2823,73 @@ The names of variables, called identifiers, conform to certain rules:
 `undefined` - undefined is a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.
 
 ```js
-var x; // create a variable but assign it no value
+let x; // create a variable but assign it no value
 console.log(`The variable x has a value of ${x}`); // output => The variable x has a value of undefined
+console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
 ```
+
+<br>
+
+`null` - a null value represents a reference that points, generally intentionally, to a nonexistent or invalid object or address.
+
+```js
+let x = null; // create a variable and assign it the value of null
+console.log(`The variable x has a value of ${x}`); // output => The variable x has a value of null
+console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
+```
+
+<br>
+
+`Boolean` - Boolean is a logical data type that can have only the values true or false.
+
+```js
+let x = true; // create a variable and assign it a boolean value
+console.log(`The variable x has a value of ${x}`); // output => The variable x has a value of true
+console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
+```
+
+<br>
+
+`Number` - In JavaScript, Number is a numeric data type in the **double-precision 64-bit floating point format (IEEE 754)**. In other programming languages different numeric types exist; for example, Integers, Floats, Doubles, or Bignums. However, in JavaScript there is only one type of number. Numbers can be written with or without decimals.
+
+```js
+let x = 10; // create a variable and assign it a number value
+let y = 1.999998;
+console.log(`The variable x has a value of ${x}`); // output => The variable x has a value of true
+console.log(`The variable x has a value of ${y}`); // output => The variable x has a value of true
+console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
+console.log(`The variable x has a type of ${typeof y}`); // output => The variable x has a type of undefined
+```
+
+<br>
+
+`String` - In any computer programming language, a string is a sequence of characters used to represent text. In JavaScript, a String is one of the primitive values and the String object is a wrapper around a String primitive.
+
+```js
+// 3 JavaScript String examples:
+let x = "1st string is made with single quotes";
+let y = "2nd string made with double quotes";
+let z = `3rd string made with back-ticks`;
+```
+
+<br>
+
+`BigInt` - BigInt is a numeric data type that can represent integers in the arbitrary precision format.
+
+```js
+// You can create a bigint by appending n to the end of an integer literal
+// Or you can use the BigInt() function
+
+const bigint1 = 498475923759374589357938753897583n;
+const bigint2 = BigInt("12483045803948298379847039845508");
+```
+
+<br>
+
+`Symbol` - A Symbol value represents a unique identifier (MUST BE UNIQUE)
+(we will touch on symbols in a later lesson)
+
+<br>
 
 #### Structural Types:
 
@@ -2841,3 +2905,6 @@ console.log(`The variable x has a value of ${x}`); // output => The variable x h
   - and almost everything made with new keyword;
 
 - **Function**: a non-data structure, though it also answers for typeof operator. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
+
+<br>
+<br>
