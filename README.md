@@ -2936,4 +2936,23 @@ firstName = firstName.toUpperCase();
 console.log(firstName); // outputs => JOHN
 ```
 
+> Remember: A primitive can be replaced but it can't be directly altered.
+
+<br>
+
+```js
+// Using the `var` keyword to declare a variable
+var name = "John";
+```
+
+```js
+// Using the `let` keyword to declare a variable (best practice)
+let name = "John";
+```
+
+```js
+// Using the `const` keyword to declare a constant (best practice)
+const name = "John"; // a constant is a variable who's value will never change
+```
+
 <br>
