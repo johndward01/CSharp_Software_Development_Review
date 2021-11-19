@@ -3009,7 +3009,7 @@ console.log(firstName); // outputs => JOHN
 
 ```js
 // Using the `var` keyword to declare a variable
-var name = "John";
+let name = "John";
 ```
 
 ```js
