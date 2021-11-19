@@ -34,6 +34,7 @@
 **[IDE Parts: Google Chrome Inspector](#google-chrome-inspector)**<br>
 **[HTML Intro](#html-intro)**<br>
 **[CSS Intro](#css-intro)**<br>
+**[JS Intro](#javascript-intro)**<br>
 
 <br>
 
