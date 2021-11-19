@@ -3211,3 +3211,204 @@ The following diagrams show the three main components and which ones reference t
 ![mvc](img/MVC/mvc1.png)
 
 <br>
+
+### Model: objects that represent the data
+
+Model represents the shape of the data and business logic. It maintains the data of the application. Model objects retrieve and store model state in a database.
+
+```cs
+using System.Collections.Generic;
+
+namespace ASP.NET_Core_Identity_Demo.Models
+{
+    public class Product
+    {
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int CategoryID { get; set; }
+        public int OnSale { get; set; }
+        public int StockLevel { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
+    }
+}
+```
+
+> Model is data and business logic.
+
+<br>
+
+### View: View is a user interface that the user sees and interacts with. 
+
+Views display data using the model to the user and also enables them to modify the data.
+
+**Razor** - the ability to use C# in our Views.  We do this with the `@` symbol.  Notice below is a combination of HTML and C#
+
+```html
+@foreach (var product in Model)
+{
+    <tr>
+        <td><a href=/Product/ViewProduct/@product.ProductID>@product.ProductID</a></td>
+        <td>@product.Name</td>
+        <td>@product.Price</td>
+        <td>@product.CategoryID</td>
+        <td>@product.OnSale</td>
+        <td>@product.StockLevel</td>
+    </tr>
+}
+```
+
+```html
+@model AppUser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background-image: url("/imgs/digital-warehouse.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100%;
+            height: 100vh;
+        }
+
+        .login {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border: 3px solid #111111;
+        }
+
+        .logout-button {
+            top: 0;
+            right: 0;
+            position: fixed;
+            margin-top: 80px;
+            margin-right: 150px;
+        }
+    </style>
+    <title>ASP.NET Core MVC Identity Demo</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logout-button">
+            @if (User?.Identity?.IsAuthenticated ?? false)
+            {
+                <a asp-controller="Account" asp-action="Logout" class="btn btn-danger">Logout</a>
+            }
+        </div>
+        <div class="container-fluid">
+            <div class="border border-primary">
+                <h1>Welcome: @Model.UserName</h1>
+            </div>
+        </div>
+        <div class="bestbuy-logo">
+            <img src="~/imgs/best-buy-png-logo-3002.png" />
+            <a href="https://www.freepnglogos.com/pics/best-buy-png-logo">Best Buy Logo from freepnglogos.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
+````
+
+> View is a User Interface.
+
+<br>
+
+### Controller: Handles a request and hands it to the correct view and model.
+
+Controller handles the user request. Typically, users interact with View, which in-turn raises the appropriate URL request, this request will be handled by a controller. The controller renders the appropriate view with the model data as a response.
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ASP.NET_Teacher_Demo_ConsoleUI.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ASP.NET_Teacher_Demo_ConsoleUI.Controllers
+{
+    public class ProductController : Controller
+    {
+        private readonly IProductRepository _repo;
+
+        public ProductController(IProductRepository repo)
+        {
+            this._repo = repo;
+        }
+
+        // GET: /<controller>/
+        public IActionResult Index()
+        {
+            var products = _repo.GetAllProducts();
+
+            return View(products);
+        }
+
+        public IActionResult ViewProduct(int id)
+        {
+            var product = _repo.GetProduct(id);
+
+            return View(product);
+        }
+
+        public IActionResult UpdateProduct(int id)
+        {
+            Product prod = _repo.GetProduct(id);
+
+            _repo.UpdateProduct(prod);
+
+            if (prod == null)
+            {
+                return View("ProductNotFound");
+            }
+
+            return View(prod);
+        }
+
+        public IActionResult UpdateProductToDatabase(Product product)
+        {
+            _repo.UpdateProduct(product);
+
+            return RedirectToAction("ViewProduct", new { id = product.ProductID });
+        }
+
+        public IActionResult InsertProduct()
+        {
+            var prod = _repo.AssignCategory();
+
+            return View(prod);
+        }
+
+        public IActionResult InsertProductToDatabase(Product productToInsert)
+        {
+            _repo.InsertProduct(productToInsert);
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteProduct(Product product)
+        {
+            _repo.DeleteProduct(product);
+
+            return RedirectToAction("Index");
+        }
+        
+    }
+}
+
+```
+
+> Controller is a request handler.
+
