@@ -3068,3 +3068,99 @@ for (i = 0; i < vehicles.length; i++) {
 <br>
 
 ### Truthy and Falsy
+
+In Javascript, all values have an inherit boolean value assigned to it:
+ 
+According to the Mozilla Developer Network, 
+A falsy value is a value that is considered false when encountered in a Boolean context.  We can use these in if statements
+ 
+Falsy Examples: The following all have boolean value of false
+- `false` - Boolean
+- `0` - Int
+- `0n` - BigInt
+- `""`, `''`, ` `` ` - String
+- `null` - Null
+- `undefined` - Undefined
+- `NaN` - Not a number
+
+```js
+// Boolean
+
+if(false){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// Number
+
+if(0){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// BigInt
+
+if(0n){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// String
+
+if(''){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// Null
+
+if(null){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// Undefined
+
+if(undefined){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+```js
+// Not a number
+
+if(Number.NaN){
+    console.log('This value is truty');
+} else{
+    console.log('This value is falsy');
+}
+ // outputs => This value is falsy
+```
+
+<br>
+<br>
+
+### Type Coercion:
