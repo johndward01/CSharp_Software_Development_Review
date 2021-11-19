@@ -3087,7 +3087,7 @@ Falsy Examples: The following all have boolean value of false
 // Boolean
 
 if(false){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3098,7 +3098,7 @@ if(false){
 // Number
 
 if(0){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3109,7 +3109,7 @@ if(0){
 // BigInt
 
 if(0n){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3120,7 +3120,7 @@ if(0n){
 // String
 
 if(''){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3131,7 +3131,7 @@ if(''){
 // Null
 
 if(null){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3142,7 +3142,7 @@ if(null){
 // Undefined
 
 if(undefined){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
@@ -3153,7 +3153,7 @@ if(undefined){
 // Not a number
 
 if(Number.NaN){
-    console.log('This value is truty');
+    console.log('This value is truthy');
 } else{
     console.log('This value is falsy');
 }
