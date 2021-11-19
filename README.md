@@ -3032,7 +3032,7 @@ Moreover, Interpreted languages are languages that are not compiled but are pars
 
 When referring to Duck Typing, many use the saying:
 
-> “If it quacks like a duck, walks like a duck...it’s a duck”
+> "If it quacks like a duck, walks like a duck...it’s a duck"
 
 **Duck Typing** refers to a duck test program. You will test something, if it quacks like a duck, and flies like a duck, it is a duck. If a method responds to any given object call, it passes the “Duck Test”.
 
@@ -3164,3 +3164,37 @@ if(Number.NaN){
 <br>
 
 ### Type Coercion:
+
+The **strict equality** `===` is differnt than the **loose equality** `==` which forces type coercion.
+
+- String coercion
+```js
+let answer = 100 + "";
+console.log(answer); // outputs => 100 (implicit type coercion to string)
+typeof(answer) // 'string'
+```
+
+- Boolean coercion
+```js
+if (2) { console.log("it runs") } // outputs => it runs (because 2 is not  the falsy value of a Number. Also, implicit type coercion to boolean `true`)
+console.log(!!2); // outputs => true (implicit type coercion to boolean `true`)
+console.log(2 || 'hello'); // outputs => 2 (implicit type coercion to boolean `true`) 
+```
+
+- Number coercion
+```js
+console.log(+'123');          // implicity converts to a number
+console.log(123 != '456');    // implicity converts to a number
+console.log(4 > '5');         // implicity converts to a number
+console.log(5 / null);        // implicity converts to a number
+console.log(true | 0);        // implicity converts to a number
+```
+
+> Note: Most of these examples are not good coding practices, so memeorizing all of these edge cases is usually not necessary. They are here to better help us understand **Type Coercion** in JavaScript.
+
+<br>
+<br>
+<br>
+
+## ASP.NET Core MVC 
+
