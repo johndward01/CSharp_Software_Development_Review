@@ -2797,13 +2797,13 @@ We use variables to provide a way of labeling data with a descriptive name, so o
 
 The names of variables, called identifiers, conform to certain rules:
 
-- A JavaScript identifier must start with a letter, underscore (\_), or dollar sign ($). Subsequent characters can also be digits (0–9).
+- A JavaScript identifier must start with a letter, underscore `_`, or dollar sign `$`. Subsequent characters can also be digits `0–9`.
 
-- Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) as well as "a" through "z" (lowercase).
+- Because JavaScript is case sensitive, letters include the characters `A through Z` (uppercase) as well as `a through z` (lowercase).
 
-- You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers. (For more details, see this blog post.) You can also use the Unicode escape sequences as characters in identifiers.
+- You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see this blog post.) You can also use the Unicode escape sequences as characters in identifiers.
 
-- Some examples of legal names are: Number_hits, temp99, $credit, and \_name.
+- Some examples of legal names are: `Number_hits`, `temp99`, `$credit`, and `_name`.
 
 <br>
 
@@ -2905,8 +2905,74 @@ const bigint2 = BigInt("12483045803948298379847039845508");
   - new Date
   - and almost everything made with new keyword;
 
+### 4 different ways to make an object in JavaScript
+```js
+// object literal
+let car = {
+    model: 'ford',
+    color: 'mustang',
+    year: 2004
+}
+console.log(car); // outputs => {model: 'ford', color: 'mustang', year: 2004}
+```
+
+```js
+// constructor function
+function Car(model, color) {
+    this.model = model;
+    this.color = color;
+}
+
+var c1 = new Car('Ford', 'blue');
+console.log(c1); // outputs => Car {model: 'Ford', color: 'blue'}
+```
+
+```js
+// Object.create
+let Car = {
+    model: 'Volvo',
+    color: 'Black'
+}
+
+let car1 = Object.create(Car);
+console.log(car1); // outputs => {} 
+
+let Tesla = Object.create(Car, {
+    type: {
+        value: 'Tesla',
+        writable: true,
+        configurable: false,
+        enumerable: true
+    }
+});
+console.log(Tesla); // outputs => {type: 'Tesla'}
+```
+
 - **Function**: a non-data structure, though it also answers for typeof operator. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.
 
+### 4 different ways to make a function in JavaScript
+
+```js
+// Function Declaration
+function add(x, y) {
+    return x + y;
+}
+
+// Function Expression
+const greet = function(name) {
+    return `Hello, ${name}!`;
+}
+
+// Arrow Function Expression
+const squared = x => {
+    return x * x;
+}
+
+// Concise Arrow Function Expression
+const squared = x => x * x;
+```
+
+<br>
 <br>
 
 **Primitives**: Primitives cannot be altered. Remember that a primitive itself is different from the variable assigned a primitive value.
