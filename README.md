@@ -3161,7 +3161,6 @@ if(Number.NaN){
 ```
 
 <br>
-<br>
 
 ### Type Coercion:
 
@@ -3198,3 +3197,16 @@ console.log(true | 0);        // implicity converts to a number
 
 ## ASP.NET Core MVC 
 
+ASP.NET Core MVC is a rich framework for building web apps and APIs using the Model-View-Controller design pattern.
+
+The Model-View-Controller (MVC) architectural pattern separates an application into three main groups of components: Models, Views, and Controllers. This pattern helps to achieve separation of concerns. Using this pattern, user requests are routed to a Controller which is responsible for working with the Model to perform user actions and/or retrieve results of queries. The Controller chooses the View to display to the user, and provides it with any Model data it requires.
+
+The following diagrams show the three main components and which ones reference the others:
+
+![mvc](img/MVC/mvc.png)
+
+<br>
+
+![mvc](img/MVC/mvc1.png)
+
+<br>
