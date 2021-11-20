@@ -2,6 +2,10 @@
 
 <br>
 
+<img src="https://edent.github.io/SuperTinyIcons/images/svg/github.svg" width="100" />
+
+<br>
+
 ### Table of Contents:
 
 **[Git Commands](#git-commands)**<br>
