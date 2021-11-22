@@ -2688,6 +2688,8 @@ HTML has several semantic elements that define the different parts of a web page
 
 CSS stands for Cascading Style Sheets. Cascading refers to the way CSS applies one style on top of another. Style Sheets control the look and feel of web documents. CSS and HTML work hand in hand. HTML sorts out the page structure. CSS defines how HTML elements are displayed. There are 3 types of CSS.. inline css, internal css, and external css.
 
+<br>
+
 - **Inline CSS**: Using an inline style is one of the ways to insert a style sheet. With an inline style, a unique style is applied to a single element. In order to use an inline style, add the style attribute to the relevant tag.The example below shows how to create a paragraph with a gray background and white text:
 
 ```html
