@@ -155,6 +155,8 @@ A variable is a memory location. It has a name that is associated with that loca
 
   - Example: PascalCaseExample
 
+<br>
+
 - **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
 
   ```cs
