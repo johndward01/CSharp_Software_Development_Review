@@ -128,10 +128,7 @@ C# is a strongly AND statically typed object-oriented programming language.
 
 - **Strongly typed**: once a variable’s type is declared, it cannot change. (Although you can change its value)
 - **Statically typed**: every variable must have a type at compile time.
-- **Signed**: A signed integer is one with either a plus or minus sign
-
-  in front. (It can be either positive or negative)
-
+- **Signed**: A signed integer is one with either a plus or minus sign in front. (It can be either positive or negative)
 - **Unsigned**: integer is assumed to be positive
 - **The Stack**: The Stack is used for static memory allocation. This is where Value Types are stored. It utilizes a LAST IN, FIRST OUT procedure.
 - **The Heap**: The Heap is used for dynamic memory allocation. This is where Reference types are stored. Elements can be removed in any order from the heap.
