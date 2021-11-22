@@ -193,7 +193,11 @@ A variable is a memory location. It has a name that is associated with that loca
   ```cs
   var answer = x < y ? true : false;  // ? is the ternary operator
   ```
-- **Arithmetic Operators**: These are used to perform arithmetic/mathematical operations on operands.
+<br>
+
+### Arithmetic Operators: 
+
+These are used to perform arithmetic/mathematical operations on operands.
 
 ```cs
 int num1 = 0;
@@ -206,8 +210,11 @@ answer = num1 / num2; // Divide
 answer = num1 % num2; // Modulus (gets the remainder after division)
 answer = Math.Pow(num1, num2); // Exponent (the first number raised to the second number)
 ```
+<br>
 
-- **Relational Operators**: Relational operators are used for comparison of two values.
+### Relational Operators:
+
+Relational operators are used for comparison of two values.
 
 ```cs
 int num1 = 0;
@@ -218,8 +225,11 @@ isGreater = num1 < num2; // less than... true
 isGreater = num1 >= num2; // greater than OR equal to... false
 isGreater = num1 <= num2; // less than OR equal to... true
 ```
+<br>
 
-- **Logical Operators**: Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
+### Logical Operators:
+
+Logical operators are used to combine two or more conditions or to complement the evaluation of the original condition in consideration.
 
 ### `&&` **Logical AND**
 
@@ -253,8 +263,10 @@ bool isPresent = true;
 
 Console.WriteLine(!isPresent); // outputs false
 ```
+<br>
 
-- **Assignment Operator**: Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value.
+### Assignment Operator:
+Assignment operators are used to assign a value to a variable. The left side operand of the assignment operator is a variable and the right side operand of the assignment operator is a value.
   > Note: The **value** on the right side must be of the same **data-type** as the variable on the left side, otherwise the compiler will raise an error.
 
 ```cs
@@ -272,9 +284,12 @@ x %= y; // same as long form x = x % y;
 
 ### Null Coalescing Operator:
 
-> Note: Available in C# 8.0 and later
 
 The null coalescing operator allows you to conditionally evaluate an expression, providing a fallback value in the event that the expression is null.
+
+> Note: Only available in C# 8.0 and later
+
+<br>
 
 #### Syntax:
 
@@ -282,7 +297,7 @@ The null coalescing operator allows you to conditionally evaluate an expression,
 var exampleValue = possiblyNullValue ?? someDefaultValue;
 ```
 
-Explanation
+#### Explanation
 
 - In the above example, exampleValue is set to possiblyNullValue if it is non-null, otherwise it is set to someDefaultValue.
 - If someDefaultValue is also null, exampleValue will be set to null.
@@ -291,20 +306,22 @@ Explanation
 
 ### Null-Conditional Operator:
 
-> Note: Available in C# 8.0 and later
 
 The null-conditional operator applies an operation to its operand only if that operand is non-null. Otherwise the result of applying the operator is null.
 
-Example
+> Note: Only available in C# 8.0 and later
+
+#### Example
 
 ```cs
 var exampleList = new List<string>();
 var exampleValue = exampleList?.Add("myString");
 ```
 
-Explanation
-In the above example, exampleValue will be a list with one value, myString.
-If exampleList had been null, i.e. if the first line had been `var exampleList = null;`, exampleValue would have been set to null.
+#### Explanation
+
+- In the above example, exampleValue will be a list with one value, myString.
+- If exampleList had been null, i.e. if the first line had been `var exampleList = null;`, exampleValue would have been set to null.
 
 <br>
 <br>
@@ -371,6 +388,9 @@ else
     Console.WriteLine("If all conditions are false, then this code IS executed");
 }
 ```
+<br>
+
+### `switch/case`
 
 - `switch/case`: A switch is a selection statement that chooses a single case section to execute based on if the value passed in matches the case conditional. The switch statement is a control statement different from the if statement because it evaluates a single expression against a list of possible cases. <span style="text-decoration:underline;">The switch statement is often used as an alternative to an if-else construct if a single expression is tested against three or more conditions.</span>
 - `default`: Specifies the code block to run if all else fails.
@@ -600,9 +620,11 @@ public int Add(int x, int y)
 <br>
 <br>
 
-## Arrays:
+### Arrays:
 
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++. Therefore, using dot notation, you have access to the properties and methods of the abstract [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-5.0) class.
+
+<br>
 
 ### Declaring and Initializing Arrays:
 
@@ -650,9 +672,11 @@ Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeExcept
 <br>
 <br>
 
-## Lists
+### Lists
 
 Lists (Collections) provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+
+<br>
 
 ### Declaring and Initializing Lists:
 
