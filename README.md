@@ -2695,6 +2695,7 @@ CSS stands for Cascading Style Sheets. Cascading refers to the way CSS applies o
 ```
 
 <br>
+<br>
 
 - **Embedded/Internal CSS**: Internal styles are defined within the `style` element, inside the head section of an HTML page.
 
@@ -2717,6 +2718,7 @@ For example, the following code styles all paragraphs:
 </html>
 ```
 
+<br>
 <br>
 
 - **External CSS**: With this method, all styling rules are contained in a single text file, which is saved with the .css extension. This CSS file is then referenced in the HTML using the <link> tag. The <link> element goes inside the head section. Here is an example:
