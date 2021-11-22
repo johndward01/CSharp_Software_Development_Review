@@ -458,26 +458,35 @@ public class PhoneFactory : ICallable
 
 - **CCR**: Clear, Concise, and Readable
 - **Syntax**: the grammar for programming
+
+<br>
+
 - **Best Practices**: This is syntax that is not required, but is considered the best thing to do.
 
 ```cs
 Point p = new Point(); // Explicit
 var p = new Point(); // Inferred (best practice)
 ```
+<br>
 
 - **Syntax Sugar**: This is syntax that is not required and not necessarily best practice, but merely makes coding more convenient or concise.
 
 ```cs
     var isGreater = num1 > num2 ? num1 : num2;
 ```
+<br>
 
 - **Code Smell**: Any indicator in a program that a potentially deep-seated issue is present. (usually subjective and depends on factors including the particular language and experience)
+
+<br>
+
 - **Explicit Typing**: When you specifically say what each variable’s type is.
 
 ```cs
 DateTime d = new DateTime();
 Console.WriteLine(d.ToLongDateString());
 ```
+<br>
 
 - **Inferred Typing**: Inferred typing is where the compiler defines the variable’s type by looking at what the variable’s value is and inferring what the most probable type is.
 
