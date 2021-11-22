@@ -581,7 +581,6 @@ foreach (var num in myList)
 
 ![alt_text](img/Methods/5PartsOfMethods.png)
 
-<br>
 
 ```cs
 // Declaring a public Add Method that accepts 2 whole numbers
