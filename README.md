@@ -681,7 +681,7 @@ Console.WriteLine(cars[4]); // throws an exception (System.IndexOutOfRangeExcept
 
 ### Lists
 
-Lists (Collections) provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
+Lists provide a more flexible way to work with groups of objects. Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change. For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
 <br>
 
