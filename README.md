@@ -1336,8 +1336,8 @@ namespace Factory_Pattern_Exercise
         }
     }
 
-    // User Interface Class - holds helper methods to clean up the Main() method
-    public static class UI
+    // Utilities Class - holds helper methods to clean up the Main() method
+    public static class Util
     {
         public static int GetVehicleType()
         {
@@ -1410,10 +1410,10 @@ namespace Factory_Pattern_Exercise
 
             while (finished == true)
             {
-                int vehicleType = UI.GetVehicleType();
-                List<IVehicle> vehicleList = UI.GetAndAddToVehicleList(vehicles, vehicleType);
-                UI.TraverseVehicleList(vehicleList);
-                finished = UI.QuitOrContinue();
+                int vehicleType = Util.GetVehicleType();
+                List<IVehicle> vehicleList = Util.GetAndAddToVehicleList(vehicles, vehicleType);
+                Util.TraverseVehicleList(vehicleList);
+                finished = Util.QuitOrContinue();
             }
 
         }
