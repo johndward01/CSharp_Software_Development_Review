@@ -1669,6 +1669,8 @@ Use **Step Into**, **Step Out**, and **Step Over** to navigate through your code
 
 Use `Try/Catch` blocks to "catch" exceptions instead of letting the program crash. There is some overhead with throwing and catching exceptions, so just like the name implies it should be reserved for exceptional conditions that are not the norm. If a test can be run to prevent the exception then that’s usually the best practice. Typically, reserved for exceptional conditions like AccessDenied, ConnectionNotAvailable, etc that are not the norm for the application, the exception can be a very useful tool in your arsenal if used wisely.
 
+<br>
+
 ### Try
 
 - A `try` block is used by C# programmers to partition code that might be affected by an exception.
@@ -1677,6 +1679,8 @@ Use `Try/Catch` blocks to "catch" exceptions instead of letting the program cras
 - A `try` block requires one or more associated `catch` blocks, or a `finally` block, or both.
 
 > Note: A `try` block without a `catch` or `finally` block will throw a compiler error
+
+<br>
 
 ### Catch
 
@@ -1715,6 +1719,7 @@ public class Program
     }
 }
 ```
+<br>
 
 ### Finally
 
