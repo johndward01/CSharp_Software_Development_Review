@@ -2232,7 +2232,12 @@ The Dapper framework actually extends the **IDbConnection interface** available 
 - The Dapper Execute is designed for any database writes, like INSERT, UPDATE, and DELETE.
 - Execute only returns the number of records affected, so it can be ignored if you aren't interested in the affected records.
 
-> Full Code Below:
+### Full Code Below:
+
+#### Don't forget to add your Nuget Packages:
+> - Dapper
+> - Microsoft.Extensions.Configuration.Json
+> - MySql.Data
 
 ```cs
 using ASP.NET_Core_Identity_Demo.Models;
@@ -2307,6 +2312,8 @@ namespace ASP.NET_Core_Identity_Demo
     }
 }
 ```
+
+
 
 <br>
 <br>
