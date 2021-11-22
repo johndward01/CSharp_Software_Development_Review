@@ -2769,6 +2769,7 @@ p {
 > - `text-align` is a property, and center is the property value.
 
 <br>
+<br>
 
 ### CSS Selectors
 
@@ -2785,6 +2786,7 @@ p {
 ```
 
 <br>
+<br>
 
 - **CSS ID Selector**: The id selector uses the id attribute of an HTML element to select a specific element. The id of an element is unique within a page, so the id selector is used to select one unique element. To select an element with a specific id, write a hash (#) character, followed by the id of the element. The CSS rule below will be applied to the HTML element with id="myId":
 
@@ -2799,6 +2801,7 @@ p {
 <p id="myId">lorem</p>
 ```
 
+<br>
 <br>
 
 - **CSS Class Selector**
@@ -2817,6 +2820,7 @@ p {
 </div>
 ```
 
+<br>
 <br>
 
 - **CSS Universal Selector**
