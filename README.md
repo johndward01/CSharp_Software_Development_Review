@@ -1,9 +1,6 @@
 # C# Software Development Review
 
 <br>
-
-<img src="img/Banner/banner.png">
-
 <br>
 <br>
 <br>
