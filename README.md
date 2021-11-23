@@ -2883,6 +2883,8 @@ The names of variables, called identifiers, conform to certain rules:
 - String type
 - Symbol type
 
+<br>
+
 `undefined` - undefined is a primitive value automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.
 
 ```js
@@ -2891,6 +2893,7 @@ console.log(`The variable x has a value of ${x}`); // output => The variable x h
 console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
 ```
 
+<br>
 <br>
 
 `null` - a null value represents a reference that points, generally intentionally, to a nonexistent or invalid object or address.
@@ -2902,6 +2905,7 @@ console.log(`The variable x has a type of ${typeof x}`); // output => The variab
 ```
 
 <br>
+<br>
 
 `Boolean` - Boolean is a logical data type that can have only the values true or false.
 
@@ -2911,6 +2915,7 @@ console.log(`The variable x has a value of ${x}`); // output => The variable x h
 console.log(`The variable x has a type of ${typeof x}`); // output => The variable x has a type of undefined
 ```
 
+<br>
 <br>
 
 `Number` - In JavaScript, Number is a numeric data type in the **double-precision 64-bit floating point format (IEEE 754)**. In other programming languages different numeric types exist; for example, Integers, Floats, Doubles, or Bignums. However, in JavaScript there is only one type of number. Numbers can be written with or without decimals.
@@ -2925,6 +2930,7 @@ console.log(`The variable x has a type of ${typeof y}`); // output => The variab
 ```
 
 <br>
+<br>
 
 `String` - In any computer programming language, a string is a sequence of characters used to represent text. In JavaScript, a String is one of the primitive values and the String object is a wrapper around a String primitive.
 
@@ -2935,6 +2941,7 @@ let y = "2nd string made with double quotes";
 let z = `3rd string made with back-ticks`;
 ```
 
+<br>
 <br>
 
 `BigInt` - BigInt is a numeric data type that can represent integers in the arbitrary precision format.
@@ -2948,10 +2955,17 @@ const bigint2 = BigInt("12483045803948298379847039845508");
 ```
 
 <br>
+<br>
 
 `Symbol` - A Symbol value represents a unique identifier (MUST BE UNIQUE)
-(we will touch on symbols in a later lesson)
+```js
+let s1 = Symbol("The same string");
+let s2 = Symbol("The same string");
 
+console.log(s1 == s2); // false
+```
+
+<br>
 <br>
 
 #### Structural Types:
