@@ -594,6 +594,15 @@ public int Add(int x, int y)
 }
 ```
 
+```cs
+// Declaring a public Greet Method that accepts 2 strings
+
+public void Greet(string firstName, string lastName)
+{
+    return $"Hello, {firstName} {lastName}!";
+}
+```
+
 <br>
 <br>
 <br>
