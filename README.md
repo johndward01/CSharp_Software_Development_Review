@@ -595,7 +595,7 @@ public int Add(int x, int y)
 
 public void Greet(string firstName, string lastName)
 {
-    return $"Hello, {firstName} {lastName}!";
+    Console.WriteLine($"Hello, {firstName} {lastName}!");
 }
 ```
 
