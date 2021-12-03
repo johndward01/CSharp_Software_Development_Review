@@ -594,6 +594,8 @@ public int Add(int x, int y)
 }
 ```
 
+<br>
+
 ```cs
 // Declaring a public Greet Method that accepts 2 strings
 
