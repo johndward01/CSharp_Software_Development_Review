@@ -626,12 +626,21 @@ public void AddSpaces(int numberOfSpaces)
 
 ### Other useful methods:
 ```cs
+// Console class common methods
 Console.WriteLine();
 Console.Write();
 Console.ReadLine();
+
+// Math class common methods
+Math.Pow();
+Math.Round();
+
+// parse methods
 int.Parse();
 Convert.ToInt32();
 int.TryParse();
+
+// string methods
 .ToString();
 .ToUpper();
 
