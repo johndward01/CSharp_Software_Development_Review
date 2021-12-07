@@ -156,19 +156,21 @@ A variable is a memory location. It has a name that is associated with that loca
 
 <br>
 
-- **Declaring a Variable**: To declare a variable, you must specify the data type and the variable name.
+### **Declaring a Variable**
+To declare a variable, you must specify the data type and the variable name.
 
   ```cs
   string firstName;
   ```
 
-- **Initializing a Variable**: To initialize a variable, you must assign that variable a value
+### **Initializing a Variable**
+To initialize a variable, you must assign that variable a value
 
   ```cs
   firstName = "John";
   ```
 
-- **Declaring and Initializing a variable**:
+### **Declaring and Initializing a variable**
   ```cs
   int age = 11; // Declaring and Initializing a variable
   ```
