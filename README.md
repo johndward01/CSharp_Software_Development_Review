@@ -653,9 +653,9 @@ int.TryParse();
 ## Method Overloading
 
 - **Method Overloading**: When multiple methods share the same name but have a different signature
-  - 1. The number of parameters
-  - 2. The order of the parameters
-  - 3. The data types of the parameters
+  - The number of parameters
+  - The order of the parameters
+  - The data types of the parameters
 - **Signature**: A method signature is a unique identification of a method for the C# compiler. The signature consists of a method name and the type and kind (value, reference, or output) of each of its formal parameters. Method signature does not include the return type.
 
 ![Method Overloading](img/Method%20Overloading/MethodOverloading.png)
