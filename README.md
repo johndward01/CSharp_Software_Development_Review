@@ -144,10 +144,15 @@ A variable is a memory location. It has a name that is associated with that loca
 - **Variable Name**: A variable name is an identifier for the value stored in a particular location of computer memory
 - **Data Type**: A data type specifies the size and type of variable values.
 - **Camel Case**: The first letter of the first word will be lowercase, for the first time, but uppercase everytime after
-  - Example: camelCaseExample
+  - Example:
+  ```cs
+  string camelCaseExample;
+  ```
 - **Pascal Case**: The first letter of every word is uppercase
-
-  - Example: PascalCaseExample
+  - Example:
+  ```cs
+  string PascalCaseExample;
+  ```
 
 <br>
 
