@@ -601,6 +601,15 @@ public void Greet(string firstName, string lastName)
 
 <br>
 <br>
+
+### Other useful methods:
+```cs
+int.Parse();
+Convert.ToInt32();
+```
+
+<br>
+<br>
 <br>
 
 ## Method Overloading
