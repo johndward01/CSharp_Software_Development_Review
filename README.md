@@ -600,12 +600,34 @@ public void Greet(string firstName, string lastName)
 ```
 
 <br>
+
+```cs
+// Declaring a public AddSpaces Method that accepts 1 integer
+
+public void AddSpaces(int numberOfSpaces)
+{
+    while(numberOfSpaces > 0)
+    {
+        Console.WriteLine();
+        numberOfSpaces--;
+    }
+}
+```
+
+<br>
 <br>
 
 ### Other useful methods:
 ```cs
+Console.WriteLine();
+Console.Write();
+Console.ReadLine();
 int.Parse();
 Convert.ToInt32();
+int.TryParse();
+.ToString();
+.ToUpper();
+
 ```
 
 <br>
