@@ -1551,7 +1551,7 @@ squares.ForEach(x => Console.WriteLine(x)); // prints the collection to the cons
 
 ```cs
 // OrderBy() - Sorts in Ascending Order
-var unOrdered = new List<string>() {"ccc", "fff", "ddd", "aaa", "bbb", "eee", "ggg"}
+var unOrdered = new List<string>() {"ccc", "fff", "ddd", "aaa", "bbb", "eee", "ggg"};
 var ordered = unOrdered.OrderBy(x => x).ToList(); // ordering by the string's char values
 
 ordered.ForEach(x => Console.WriteLine(x)); // prints the collection to the console
